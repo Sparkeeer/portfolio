@@ -22,5 +22,3 @@ jobs:
       - name: Sync files to S3
         run: |
           aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} --exclude ".git*" --deletegit add .github/workflows/deploy.yml
-git commit -m "Add GitHub Action for AWS deploy"
-git push origin main

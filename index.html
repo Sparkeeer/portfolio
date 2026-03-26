@@ -21,6 +21,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
+
+        #landing-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 1s ease;
+}
+
+.landing-content {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--accent);
+}
+
+.landing-content h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.landing-content p {
+    font-size: 10px;
+    color: var(--text-dim);
+}
+
+
         :root {
             --bg1: #0a0a0a;
             --bg2: #111111;
@@ -115,7 +147,7 @@
             border-radius: 4px; margin-bottom: 25px; border: 1px solid var(--accent);
         }
         .status-tooltip {
-            position: absolute; top: 50px; left: 0; background: var(--bg2); border: 1px solid var(--border);
+            position: absolute; top: -28px; left: 110%; background: var(--bg2); border: 1px solid var(--border);
             padding: 15px; border-radius: 8px; font-size: 10px; display: none; z-index: 10; width: 220px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5); line-height: 1.8; color: var(--text);
         }
@@ -183,12 +215,19 @@
     </style>
 </head>
 
+<div id="landing-screen">
+    <div class="landing-content">
+        <h1>Hey, I'm Shakeer Ahmad.</h1>
+        <p>I work with cloud</p>
+    </div>
+</div>
+
 <body>
 
 <div id="scroll-progress"></div>
 
 <nav>
-    <div class="logo">SHAKEER.SYS</div>
+    <div class="logo">SHAKEER.DEV</div>
     <ul>
         <li><a href="#skills">STACK</a></li>
         <li><a href="#projects">QUESTS</a></li>
@@ -214,7 +253,7 @@
             <p>> AVAILABILITY: HIGH</p>
         </div>
     </div>
-    <h1>SHAKEER AHMAD</h1>
+    <h1>>_SHAKEER AHMAD</h1>
     <p class="intro-text">Hey, I'm Shakeer, a Cloud and DevOps Engineer. A highly curious student and learner exploring different cloud services and experimenting for fun. Here, you can get a glimpse of what I do and who I am.
 
 Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability infrastructure and automated migrations. Turning complex system problems into elegant, scalable solutions.
@@ -236,6 +275,7 @@ Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability 
         <div class="stack-tag"><i class="devicon-python-plain"></i> PYTHON</div>
         <div class="stack-tag"><i class="devicon-linux-plain"></i> LINUX</div>
         <div class="stack-tag"><i class="ri-terminal-box-line"></i> BASH</div>
+        <div class="stack-tag"><i class="devicon-mysql-plain"></i> MYSQL</div>
     </div>
 </section>
 
@@ -255,7 +295,7 @@ Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability 
     <div class="timeline">
         <div class="timeline-item">
             <span class="milestone-tag">2025 - PRESENT</span>
-            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">IT SUPPORT ENGINEER // PRINCETON IT</h3>
+            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">IT ENGINEER // PRINCETON IT</h3>
             <p style="color:var(--text-dim);">Driving digital transformation through Microsoft 365 migrations and automated infrastructure management for global enterprises.</p>
         </div>
         <div class="timeline-item">
@@ -303,6 +343,21 @@ Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability 
 </footer>
 
 <script>
+
+    window.addEventListener("load", () => {
+    const landing = document.getElementById("landing-screen");
+
+    setTimeout(() => {
+        landing.style.opacity = "0";
+
+        setTimeout(() => {
+            landing.style.display = "none";
+        }, 1000); // matches fade time
+
+    }, 2000); // how long landing shows (2s)
+});
+
+
     // Scroll Progress logic
     window.onscroll = function() {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;

@@ -1,58 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shakeer Ahmad | Cloud DevOps Engineer</title>
-
+    <link rel="icon" type="image/png" href="favicon.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Shakeer Ahmad",
       "jobTitle": "Cloud DevOps Engineer",
-      "knowsAbout": ["AWS", "Azure", "Docker", "Python", "DevOps", "Cloud Migration", "M365"],
+      "knowsAbout": ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "Python", "DevOps", "Cloud Migration", "M365"],
       "url": "https://shakeerahmad.dev"
     }
-    </script>
-
+</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <style>
-
-        #landing-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-    transition: opacity 1s ease;
-}
-
-.landing-content {
-    text-align: center;
-    font-family: 'Press Start 2P', cursive;
-    color: var(--accent);
-}
-
-.landing-content h1 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.landing-content p {
-    font-size: 10px;
-    color: var(--text-dim);
-}
-
-
         :root {
             --bg1: #0a0a0a;
             --bg2: #111111;
@@ -73,32 +41,77 @@
             --border: rgba(0, 0, 0, 0.1);
         }
 
-        /* V5 CURSOR & BASICS */
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
-        html { scroll-behavior: smooth; }
-        
+        #landing-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 1s ease;
+        }
+
+        .landing-content {
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            color: var(--accent);
+        }
+
+        .landing-content h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .landing-content p {
+            font-size: 10px;
+            font-weight: bold;
+            color: var(--text-dim);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: crosshair;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text);
             background-color: var(--bg1);
             line-height: 1.6;
-            transition: background 0.3s ease;
+            transition: 0.3s ease;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* SCROLL PROGRESS BAR */
         #scroll-progress {
-            position: fixed; top: 0; left: 0; height: 3px; background: var(--accent);
-            z-index: 2000; width: 0%; transition: width 0.1s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.1s;
             box-shadow: 0 0 10px var(--accent);
         }
 
-        /* V5.0 REFINED GRID OVERLAY */
         body::after {
             content: "";
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: radial-gradient(var(--accent) 0.5px, transparent 0.5px);
             background-size: 40px 40px;
             mask-image: linear-gradient(to bottom, black, transparent);
@@ -107,207 +120,1074 @@
             pointer-events: none;
         }
 
-        h1, h2, .logo, nav a, .status-pill, .btn-pixel, .milestone-tag, .log-date, .quick-link, .cmd-prompt {
+        h1,
+        h2,
+        .logo,
+        nav a,
+        .status-pill,
+        .btn-pixel,
+        .milestone-tag,
+        .log-date,
+        .quick-link,
+        .cmd-prompt {
             font-family: 'Press Start 2P', cursive;
         }
 
-        /* NAVIGATION */
         nav {
-            position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between;
-            align-items: center; padding: 20px 8%; z-index: 1000;
-            backdrop-filter: blur(15px); border-bottom: 1px solid var(--border);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            z-index: 1000;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
             background: rgba(10, 10, 10, 0.7);
         }
-        .light nav { background: rgba(248, 250, 252, 0.7); }
-        nav ul { display: flex; gap: 25px; list-style: none; }
-        nav a { text-decoration: none; color: var(--text-dim); font-size: 8px; transition: 0.3s; }
-        nav a:hover { color: var(--accent); text-shadow: 0 0 8px var(--accent); }
 
-        /* SIDEBAR SOCIALS */
-        .side-socials { 
-            position: fixed; left: 30px; bottom: 40px; display: flex; 
-            flex-direction: column; gap: 25px; z-index: 100; 
+        .light nav {
+            background: rgba(248, 250, 252, 0.7);
         }
-        .side-socials a { 
-            color: var(--text-dim); font-size: 22px; 
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 10px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            text-shadow: 0 0 8px var(--accent);
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            /* border: 1px solid rgba(56, 189, 248, 0.2); */
+            background: rgba(255, 255, 255, 0.04);
+            /* box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03); overflow: hidden; */
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+
+        .side-socials {
+            position: fixed;
+            left: 30px;
+            bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            z-index: 100;
+        }
+
+        .side-socials a {
+            color: var(--text-dim);
+            font-size: 22px;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
         }
-        .side-socials a:hover { 
-            color: var(--accent); transform: translateY(-5px); 
+
+        .side-socials a:hover {
+            color: var(--accent);
+            transform: translateY(-5px);
             filter: drop-shadow(0 0 8px var(--accent));
         }
 
-        /* HERO & STATUS */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 15%; }
-        .status-wrapper { position: relative; width: fit-content; }
+        .hero {
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 15%;
+        }
+
+        .status-wrapper {
+            position: relative;
+            width: fit-content;
+        }
+
         .status-pill {
-            display: flex; align-items: center; gap: 10px; font-size: 8px; color: var(--accent);
-            background: rgba(56, 189, 248, 0.1); padding: 12px 20px;
-            border-radius: 4px; margin-bottom: 25px; border: 1px solid var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 8px;
+            color: var(--accent);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 12px 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            border: 1px solid var(--accent);
         }
+
         .status-tooltip {
-            position: absolute; top: -28px; left: 110%; background: var(--bg2); border: 1px solid var(--border);
-            padding: 15px; border-radius: 8px; font-size: 10px; display: none; z-index: 10; width: 220px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); line-height: 1.8; color: var(--text);
+            position: absolute;
+            top: -28px;
+            left: 110%;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 10px;
+            display: none;
+            z-index: 10;
+            width: 220px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+            color: var(--text);
         }
-        .status-wrapper:hover .status-tooltip { display: block; }
-        .pulse { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; animation: p 1.5s infinite; }
-        @keyframes p { 0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); } 100% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); } }
 
-        .hero h1 { font-size: clamp(28px, 6vw, 50px); margin-bottom: 20px; color: var(--accent); }
-        .intro-text { font-size: 1.1rem; color: var(--text-dim); max-width: 750px; margin-bottom: 35px; }
-        
-        .cta-group { display: flex; gap: 20px; }
+        .status-wrapper:hover .status-tooltip {
+            display: block;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: p 1.5s infinite;
+        }
+
+        @keyframes p {
+            0% {
+                box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(28px, 6vw, 50px);
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 750px;
+            margin-bottom: 35px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+        }
+
         .btn-pixel {
-            padding: 15px 25px; font-size: 10px; text-decoration: none;
-            background: var(--accent); color: var(--bg1); border: none; transition: 0.3s; display: inline-block;
+            padding: 15px 25px;
+            font-size: 10px;
+            text-decoration: none;
+            background: var(--accent);
+            color: var(--bg1);
+            border: none;
+            transition: 0.3s;
+            display: inline-block;
         }
-        .btn-pixel:hover { filter: brightness(1.2); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--text); }
 
-        /* TECH STACK */
-        section { padding: 100px 15%; }
-        h2 { font-size: 14px; color: var(--accent); margin-bottom: 40px; position: relative; }
-        h2::after { content: ""; position: absolute; left: 0; bottom: -10px; width: 50px; height: 2px; background: var(--accent); }
-
-        .stack-grid { display: flex; flex-wrap: wrap; gap: 15px; }
-        .stack-tag {
-            background: var(--glass); border: 1px solid var(--border); padding: 12px 20px;
-            border-radius: 6px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600;
+        .btn-pixel:hover {
+            filter: brightness(1.2);
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 var(--text);
         }
-        .stack-tag i { font-size: 20px; color: var(--accent); }
 
-        /* PROJECTS */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .project-card { background: var(--glass); border: 1px solid var(--border); padding: 35px; border-radius: 12px; transition: 0.3s;}
-        .project-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .quick-link { display: inline-block; margin-top: 20px; font-size: 7px; color: var(--accent); text-decoration: none; }
-
-        /* EXPERIENCE */
-        .timeline { border-left: 2px solid var(--border); padding-left: 40px; }
-        .timeline-item { position: relative; margin-bottom: 50px; }
-        .timeline-item::before {
-            content: ""; position: absolute; left: -47px; top: 5px; width: 12px; height: 12px;
-            background: var(--accent); border: 3px solid var(--bg1); border-radius: 50%;
+        section {
+            padding: 100px 15%;
         }
-        .milestone-tag { font-size: 8px; color: var(--accent); margin-bottom: 12px; display: block; }
 
-        /* TERMINAL LOGS */
-        .logs-container { background: #000; border: 1px solid var(--border); border-radius: 8px; padding: 25px; font-family: 'Courier New', monospace; }
-        .cmd-line { color: var(--accent); margin-bottom: 20px; font-size: 12px; display: flex; gap: 10px; }
-        .log-entry { border-bottom: 1px dashed var(--border); padding: 15px 0; cursor: pointer; transition: 0.2s; }
-        .log-entry:hover { background: rgba(56, 189, 248, 0.05); }
-
-        /* SYNC SECTION */
-        .connect-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .connect-card {
-            background: var(--glass); padding: 40px; border-radius: 16px; border: 1px solid var(--border);
-            text-align: center; text-decoration: none; color: inherit; transition: 0.3s;
+        h2 {
+            font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 40px;
+            position: relative;
         }
-        .connect-card:hover { border-color: var(--accent); background: var(--accent); color: var(--bg1); }
-        .connect-card i { font-size: 35px; margin-bottom: 15px; display: block; }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .about-content {
+            max-width: 750px;
+        }
+
+        .about-content p {
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /*  TECH STACK  */
+        .stack-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        @media (max-width: 1100px) {
+            .stack-categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
         @media (max-width: 768px) {
-            section, .hero { padding: 60px 8%; }
-            .side-socials, nav ul { display: none; }
-            .cta-group { flex-direction: column; }
+            .stack-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stack-category {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .stack-category:hover {
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+
+        .stack-category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(56, 189, 248, 0.04);
+        }
+
+        .stack-category-header i {
+            font-size: 18px;
+            color: var(--accent);
+        }
+
+        .stack-category-title {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 8px;
+            color: var(--accent);
+            letter-spacing: 0.05em;
+        }
+
+        .stack-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px 24px;
+        }
+
+        .stack-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 16px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.03);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text);
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .stack-item:hover {
+            border-color: var(--accent);
+            background: rgba(56, 189, 248, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(56, 189, 248, 0.12);
+        }
+
+        .stack-item i {
+            font-size: 16px;
+            color: var(--accent);
+        }
+
+        .stack-item .badge {
+            font-size: 8px;
+            color: var(--text-dim);
+            font-family: 'Press Start 2P', cursive;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            padding: 2px 7px;
+            border-radius: 3px;
+            margin-left: 4px;
+        }
+
+        .stack-item.soon {
+            opacity: 0.55;
+            border-style: dashed;
+        }
+
+        .stack-item.soon .badge {
+            color: #facc15;
+            border-color: rgba(250, 204, 21, 0.3);
+            background: rgba(250, 204, 21, 0.06);
+        }
+
+        /*  PROJECTS  */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 35px;
+            border-radius: 12px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .btn-wrapper {
+            margin-top: auto;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 14px 0;
+        }
+
+        .project-tag {
+            font-size: 12px;
+            padding: 4px 10px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 4px;
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .quick-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 7px;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.88);
+            z-index: 2000;
+            padding: 24px;
+        }
+
+        .light .modal {
+            background: rgba(0, 0, 0, 0.558);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: min(100%, 860px);
+            max-height: min(100%, 90vh);
+            overflow: auto;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+            padding: 38px 32px 28px;
+            position: relative;
+        }
+
+        .light .modal-content {
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 32px;
+            width: 140px;
+            height: 28px;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-bottom: none;
+            border-radius: 10px 10px 0 0;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.04);
+            cursor: pointer;
+            transition: 0.2s ease;
+            font-size: 14px;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .modal h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            margin-bottom: 18px;
+            color: var(--accent);
+        }
+
+        .modal p,
+        .modal ul {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .modal ul {
+            padding-left: 20px;
+            margin-top: 16px;
+        }
+
+        .modal ul li {
+            margin-bottom: 10px;
+        }
+
+        .modal-footer {
+            margin-top: 28px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .modal-footer .btn-pixel {
+            padding: 12px 22px;
+            font-size: 10px;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /*  TIMELINE  */
+        .timeline {
+            border-left: 2px solid var(--border);
+            padding-left: 40px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s ease;
+        }
+
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -47px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border: 3px solid var(--bg1);
+            border-radius: 50%;
+        }
+
+        .milestone-tag {
+            font-size: 8px;
+            color: var(--accent);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+
+        .timeline-item.expandable {
+            cursor: pointer;
+        }
+
+        .timeline-item.expandable .tl-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .tl-header-left {
+            flex: 1;
+        }
+
+        .tl-chevron {
+            flex-shrink: 0;
+            margin-top: 4px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 13px;
+            transition: transform 0.35s ease, border-color 0.2s, color 0.2s;
+        }
+
+        .timeline-item.expandable:hover .tl-chevron {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .timeline-item.expandable.open .tl-chevron {
+            transform: rotate(180deg);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .expandable-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .expandable-details.open {
+            max-height: 900px;
+            opacity: 1;
+        }
+
+        .details-inner {
+            margin-top: 18px;
+            padding: 20px 24px;
+            background: rgba(56, 189, 248, 0.04);
+            border: 1px solid rgba(56, 189, 248, 0.12);
+            border-radius: 8px;
+        }
+
+        .details-inner ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .details-inner ul li {
+            position: relative;
+            padding-left: 20px;
+            color: var(--text-dim);
+            font-size: 0.875rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .details-inner ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .details-inner ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .milestone-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .milestone-tech-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 4px;
+            color: var(--accent);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /*  LOGS */
+        .logs-container {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .cmd-line {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 12px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .log-entry {
+            border-bottom: 1px dashed var(--border);
+            padding: 15px 0;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .log-entry:hover {
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        /* CONNECT */
+        .connect-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .connect-card {
+            background: var(--glass);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        .connect-card:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: var(--bg1);
+        }
+
+        .connect-card i {
+            font-size: 35px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+
+            section,
+            .hero {
+                padding: 60px 8%;
+            }
+
+            .side-socials,
+            nav ul {
+                display: none;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 
-<div id="landing-screen">
-    <div class="landing-content">
-        <h1>Hey, I'm Shakeer Ahmad.</h1>
-        <p>I work with cloud</p>
-    </div>
-</div>
-
 <body>
-
-<div id="scroll-progress"></div>
-
-<nav>
-    <div class="logo">SHAKEER.DEV</div>
-    <ul>
-        <li><a href="#skills">STACK</a></li>
-        <li><a href="#projects">QUESTS</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#logs">LOGS</a></li>
-        <li><a href="#connect">SYNC</a></li>
-    </ul>
-    <div id="theme-btn" onclick="toggleTheme()" style="cursor:pointer; font-size: 18px;"><i class="ri-contrast-2-line"></i></div>
-</nav>
-
-<div class="side-socials">
-    <a href="https://github.com/Sparkeeer" target="_blank" title="GitHub"><i class="ri-github-line"></i></a>
-    <a href="https://linkedin.com/in/shakeerahmad05" target="_blank" title="LinkedIn"><i class="ri-linkedin-line"></i></a>
-    <a href="mailto:ahmad.shakeer.md@email.com" title="Email"><i class="ri-mail-line"></i></a>
-</div>
-
-<section class="hero" id="home">
-    <div class="status-wrapper">
-        <div class="status-pill"><div class="pulse"></div>SYSTEMS_ACTIVE</div>
-        <div class="status-tooltip">
-            <p style="color:var(--accent); margin-bottom:5px;">> UPTIME: 99.9%</p>
-            <p style="margin-bottom:5px;">> FOCUS: Infrastructure as Code</p>
-            <p>> AVAILABILITY: HIGH</p>
+    <div id="landing-screen">
+        <div class="landing-content">
+            <h1>Hey, I'm Shakeer Ahmad.</h1>
+            <p>I work with cloud</p>
         </div>
     </div>
-    <h1>>_SHAKEER AHMAD</h1>
-    <p class="intro-text">Hey, I'm Shakeer, a Cloud and DevOps Engineer. A highly curious student and learner exploring different cloud services and experimenting for fun. Here, you can get a glimpse of what I do and who I am.
-
-Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability infrastructure and automated migrations. Turning complex system problems into elegant, scalable solutions.
-
-</p>
-    <div class="cta-group">
-        <a href="#connect" class="btn-pixel">CONNECT</a>
-        <a href="#projects" class="btn-pixel" style="background:transparent; border:1px solid var(--accent); color:var(--accent);">VIEW_WORKS</a>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>TECH_STACK</h2>
-    <div class="stack-grid">
-        <div class="stack-tag"><i class="devicon-amazonwebservices-plain"></i> AWS</div>
-        <div class="stack-tag"><i class="devicon-azure-plain"></i> AZURE</div>
-        <div class="stack-tag"><i class="ri-microsoft-line"></i> M365</div>
-        <div class="stack-tag"><i class="devicon-docker-plain"></i> DOCKER</div>
-        <div class="stack-tag"><i class="devicon-python-plain"></i> PYTHON</div>
-        <div class="stack-tag"><i class="devicon-linux-plain"></i> LINUX</div>
-        <div class="stack-tag"><i class="ri-terminal-box-line"></i> BASH</div>
-        <div class="stack-tag"><i class="devicon-mysql-plain"></i> MYSQL</div>
-    </div>
-</section>
-
-<section id="projects" style="background: var(--bg2);">
-    <h2>PROJECT_QUESTS</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 15px;">AWS TWO-TIER ARCHITECTURE</h3>
-            <p style="color:var(--text-dim);">Architected a containerized environment using Flask and MySQL. Orchestrated via Docker with Nginx load balancing.</p>
-            <a href="project-aws.html" class="quick-link">VIEW_FULL_REPORT →</a>
+    <div id="scroll-progress"></div>
+    <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true"
+        onclick="if (event.target === this) closeProjectModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal()" aria-label="Close project details">×</button>
+            <div id="modal-body"></div>
+            <div class="modal-footer">
+                <a href="#projects" class="btn-pixel" onclick="closeProjectModal(); return false;">CLOSE</a>
+            </div>
         </div>
     </div>
-</section>
-
-<section id="experience">
-    <h2>PROFESSIONAL_EXPERIENCE</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <span class="milestone-tag">2025 - PRESENT</span>
-            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">IT ENGINEER // PRINCETON IT</h3>
-            <p style="color:var(--text-dim);">Driving digital transformation through Microsoft 365 migrations and automated infrastructure management for global enterprises.</p>
-        </div>
-        <div class="timeline-item">
-            <span class="milestone-tag">PROJECT MILESTONE</span>
-            <h3 style="font-size: 1.1rem; margin-bottom: 10px;">MULTI-TENANT CONSOLIDATION</h3>
-            <p style="color:var(--text-dim);">Migrated 500+ users from Google Workspace to Azure/M365 using AvePoint Fly. Managed DNS cutovers and identity synchronization.</p>
-            <a href="migration-case-study.html" class="quick-link">READ_CASE_STUDY //</a>
-        </div>
+    <nav>
+        <div class="logo"><img src="logo-nobg.png" alt="Logo"></div>
+        <ul>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#skills">STACK</a></li>
+            <li><a href="#projects">QUESTS</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <!-- <li><a href="#logs">LOGS</a></li> -->
+            <li><a href="#connect">SYNC</a></li>
+        </ul>
+        <div id="theme-btn" onclick="toggleTheme()" style="cursor:pointer; font-size: 18px;"><i
+                class="ri-contrast-2-line"></i></div>
+    </nav>
+    <div class="side-socials">
+        <a href="https://github.com/Sparkeeer" target="_blank" title="GitHub"><i class="ri-github-line"></i></a>
+        <a href="https://linkedin.com/in/shakeerahmad05" target="_blank" title="LinkedIn"><i
+                class="ri-linkedin-line"></i></a>
+        <a href="mailto:ahmad.shakeer.md@gmail.com" title="Email"><i class="ri-mail-line"></i></a>
     </div>
-</section>
+    <section class="hero" id="home">
+        <div class="status-wrapper">
+            <div class="status-pill">
+                <div class="pulse"></div>SYSTEMS_ACTIVE
+            </div>
+            <div class="status-tooltip">
+                <p style="color:var(--accent); margin-bottom:5px;">> UPTIME: 99.9%</p>
+                <p style="margin-bottom:5px;">> FOCUS: Infrastructure as Code</p>
+                <p>> AVAILABILITY: HIGH</p>
+            </div>
+        </div>
+        <h1>>_SHAKEER AHMAD</h1>
+        <p class="intro-text">a Cloud and DevOps Engineer.</p>
+        <div class="cta-group">
+            <a href="#connect" class="btn-pixel">CONNECT</a>
+            <a href="#projects" class="btn-pixel"
+                style="background:transparent; border:1px solid var(--accent); color:var(--accent);">VIEW_WORKS</a>
+        </div>
+    </section>
+    <section id="about" , style="background: var(--bg2);">
+        <h2>ABOUT_ME</h2>
+        <div class="about-content">
+            <p>
+                Hey, I'm Shakeer, a Cloud and DevOps Engineer. A highly curious student and learner exploring different
+                cloud services and experimenting for fun. Here, you can get a glimpse of what I do and who I am.
+            </p>
+            <p>
+                Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability infrastructure and
+                automated migrations. Turning complex system problems into elegant, scalable solutions.
+            </p>
+        </div>
+    </section>
+    <!-- TECH STACK -->
+    <section id="skills">
+        <h2>TECH_STACK</h2>
+        <div class="stack-categories">
+            <!-- Cloud -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-cloud-line"></i>
+                    <span class="stack-category-title">CLOUD</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-amazonwebservices-plain"></i> AWS</div>
+                    <div class="stack-item"><i class="ri-server-line"></i> AWS EKS <span class="badge">K8S</span></div>
+                    <div class="stack-item"><i class="ri-function-line"></i> AWS Lambda <span class="badge">FN</span>
+                    </div>
+                    <div class="stack-item"><i class="devicon-azure-plain"></i> Azure</div>
+                </div>
+            </div>
+            <!-- Containers & Orchestration -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-box-3-line"></i>
+                    <span class="stack-category-title">CONTAINERS &amp; ORCHESTRATION</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-docker-plain"></i> Docker</div>
+                    <div class="stack-item"><i class="devicon-kubernetes-plain"></i> Kubernetes</div>
+                    <!-- <div class="stack-item soon"><i class="ri-steering-2-line"></i> Helm <span class="badge">SOON</span></div> -->
+                </div>
+            </div>
+            <!-- CI/CD -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-git-merge-line"></i>
+                    <span class="stack-category-title">CI/CD</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-github-original"></i> GitHub Actions</div>
+                </div>
+            </div>
+            <!-- Infrastructure as Code -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-code-s-slash-line"></i>
+                    <span class="stack-category-title">INFRASTRUCTURE AS CODE</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-terraform-plain"></i> Terraform</div>
+                    <!-- <div class="stack-item soon"><i class="ri-settings-4-line"></i> Ansible <span class="badge">SOON</span></div> -->
+                </div>
+            </div>
+            <!-- Monitoring & Logging -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-pulse-line"></i>
+                    <span class="stack-category-title">MONITORING &amp; LOGGING</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-prometheus-original"></i> Prometheus</div>
+                    <div class="stack-item"><i class="devicon-grafana-original"></i> Grafana</div>
+                    <div class="stack-item"><i class="ri-bar-chart-box-line"></i> ELK Stack <span
+                            class="badge">ES+LS+KB</span></div>
+                </div>
+            </div>
+            <!-- OS & Scripting -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-terminal-box-line"></i>
+                    <span class="stack-category-title">OS &amp; SCRIPTING</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-linux-plain"></i> Linux</div>
+                    <div class="stack-item"><i class="ri-terminal-line"></i> Bash</div>
+                    <div class="stack-item"><i class="devicon-python-plain"></i> Python</div>
+                </div>
+            </div>
+            <!-- Version Control -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-git-branch-line"></i>
+                    <span class="stack-category-title">VERSION CONTROL</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-git-plain"></i> Git</div>
+                    <div class="stack-item"><i class="devicon-github-original"></i> GitHub</div>
+                </div>
+            </div>
+            <!-- Networking -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-global-line"></i>
+                    <span class="stack-category-title">NETWORKING</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="ri-router-line"></i> VPC</div>
+                    <div class="stack-item"><i class="ri-node-tree"></i> Subnets</div>
+                    <div class="stack-item"><i class="ri-earth-line"></i> DNS</div>
+                    <div class="stack-item"><i class="ri-scales-line"></i> Load Balancers</div>
+                    <div class="stack-item"><i class="ri-exchange-line"></i> NAT Gateway</div>
+                </div>
+            </div>
+            <!-- Security -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-shield-keyhole-line"></i>
+                    <span class="stack-category-title">SECURITY</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="ri-user-settings-line"></i> IAM <span class="badge">AWS/AZ</span>
+                    </div>
+                    <div class="stack-item"><i class="ri-shield-line"></i> Security Groups / NSG</div>
+                    <div class="stack-item"><i class="ri-key-2-line"></i> Secrets Management</div>
+                </div>
+            </div>
+            <!-- Databases -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-database-2-line"></i>
+                    <span class="stack-category-title">DATABASES</span>
+                </div>
+                <div class="stack-items">
+                    <div class="stack-item"><i class="devicon-mysql-plain"></i> MySQL</div>
+                    <div class="stack-item"><i class="devicon-postgresql-plain"></i> PostgreSQL</div>
+                </div>
+            </div>
+            <!-- DevOps Tools -->
+            <div class="stack-category">
+                <div class="stack-category-header">
+                    <i class="ri-tools-line"></i>
+                    <span class="stack-category-title">DEVOPS TOOLS</span>
+                </div>
+                <div class="stack-items">
+                    <!-- <div class="stack-item soon"><i class="ri-git-repository-commits-line"></i> ArgoCD <span class="badge">SOON</span></div> -->
+                    <div class="stack-item"><i class="ri-settings-3-line"></i> Jenkins</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PROJECTS  -->
+    <section id="projects" style="background: var(--bg2);">
+        <h2>PROJECT_QUESTS</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 15px;">AWS TWO-TIER
+                    ARCHITECTURE</h3>
+                <p style="color:var(--text-dim);">Architected a containerized environment using Flask and MySQL.
+                    Orchestrated via Docker with Nginx load balancing.</p>
+                <div class="btn-wrapper">
+                    <div class="project-tags">
+                        <span class="project-tag">#aws</span>
+                        <span class="project-tag">#docker</span>
+                        <span class="project-tag">#nginx</span>
+                        <span class="project-tag">#mysql</span>
+                        <span class="project-tag">#vpc</span>
+                    </div>
+                    <a href="#" class="quick-link" onclick="openProject('aws'); return false;">VIEW_FULL_REPORT →</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 15px;">PORTFOLIO CI/CD PIPELINE
+                </h3>
+                <p style="color:var(--text-dim);">Built a static portfolio website hosted on AWS S3 with a fully
+                    automated GitHub Actions deployment pipeline. Auto-deploys on every Git push, using IAM + GitHub
+                    Secrets for secure authentication. Reduced deployment time to under 60 seconds.</p>
+                <div class="btn-wrapper">
+                    <div class="project-tags">
+                        <span class="project-tag">#aws</span>
+                        <span class="project-tag">#s3</span>
+                        <span class="project-tag">#github-actions</span>
+                        <span class="project-tag">#iam</span>
+                        <span class="project-tag">#yaml</span>
+                    </div>
+                    <a href="#" class="quick-link" onclick="openProject('cicd'); return false;">VIEW_FULL_REPORT →</a>
+                </div>
+            </div>
+    </section>
+    <!-- EXPERIENCE  -->
+    <section id="experience">
+        <h2>PROFESSIONAL_EXPERIENCE</h2>
+        <div class="timeline">
+            <div class="timeline-item expandable" onclick="toggleExpand(this)" aria-expanded="false">
+                <span class="milestone-tag">2025 - PRESENT</span>
+                <div class="tl-header">
+                    <div class="tl-header-left">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">IT ENGINEER // PRINCETON IT</h3>
+                        <p style="color:var(--text-dim);">Driving digital transformation through Microsoft 365
+                            migrations and automated infrastructure management for global enterprises.</p>
+                    </div>
+                    <span class="tl-chevron"><i class="ri-arrow-down-s-line"></i></span>
+                </div>
+                <div class="expandable-details">
+                    <div class="details-inner">
+                        <ul>
+                            <li>Provide L1/L2 technical support for Windows and Linux environments, resolving 20+
+                                incidents weekly across enterprise systems.</li>
+                            <li>Administer Microsoft 365 tenants including user provisioning, licensing management,
+                                mailbox configuration, and access control.</li>
+                            <li>Assist in cross-tenant migration planning and execution, ensuring minimal downtime and
+                                accurate data transfer.</li>
+                            <li>Troubleshoot networking and cloud service issues related to DNS, authentication, and
+                                connectivity.</li>
+                            <li>Document troubleshooting procedures and operational workflows to improve internal
+                                knowledge sharing.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="timeline-item">
+                <span class="milestone-tag">PROJECT MILESTONE</span>
+                <h3 style="font-size: 1.1rem; margin-bottom: 10px;">MULTI-TENANT CONSOLIDATION</h3>
+                <p style="color:var(--text-dim);">Migrated 500+ users from Google Workspace to Azure/M365 using AvePoint
+                    Fly. Managed DNS cutovers and identity synchronization.</p>
+                <!-- <a href="migration-case-study.html" class="quick-link">READ_CASE_STUDY //</a> -->
+            <!-- </div> -->
 
-<section id="logs" style="background: var(--bg2);">
+            <div class="timeline-item expandable" onclick="toggleExpand(this)" aria-expanded="false">
+                <span class="milestone-tag">PROJECT MILESTONE</span>
+                <div class="tl-header">
+                    <div class="tl-header-left">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">CROSS-TENANT M365 CONSOLIDATION</h3>
+                        <p style="color:var(--text-dim);">Consolidating 7 Microsoft 365 US tenants into a single
+                            India-based tenant with staged cutover and zero data loss.</p>
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tech-tag">#AvePoint-Fly</span>
+                            <span class="milestone-tech-tag">#M365</span>
+                            <span class="milestone-tech-tag">#Exchange-Online</span>
+                            <span class="milestone-tech-tag">#DNS</span>
+                        </div>
+                    </div>
+                    <span class="tl-chevron"><i class="ri-arrow-down-s-line"></i></span>
+                </div>
+                <div class="expandable-details">
+                    <div class="details-inner">
+                        <ul>
+                            <li>Participating in consolidation of 7 Microsoft 365 US tenants into a single India-based
+                                tenant.</li>
+                            <li>Executing staged cross-tenant mailbox migrations with pre-synchronization and controlled
+                                production cutover.</li>
+                            <li>Managing DNS configuration including MX, SPF, and DKIM records during domain transfer.
+                            </li>
+                            <li>Recreating users, groups, and license mappings while maintaining permission alignment.
+                            </li>
+                            <li>Performing mailbox, OneDrive, and SharePoint migrations with delta synchronization.</li>
+                            <li>Conducting post-migration validation to ensure data integrity and service continuity.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item expandable" onclick="toggleExpand(this)" aria-expanded="false">
+                <span class="milestone-tag">PROJECT MILESTONE</span>
+                <div class="tl-header">
+                    <div class="tl-header-left">
+                        <h3 style="font-size: 1.1rem; margin-bottom: 10px;">GOOGLE WORKSPACE → M365 MIGRATION</h3>
+                        <p style="color:var(--text-dim);">Migrated 40 users from Google Workspace to Microsoft 365,
+                            transferring mail, calendar, contacts, and files with uninterrupted email delivery.</p>
+                        <div class="milestone-tags-row">
+                            <span class="milestone-tech-tag">#Exchange-Online</span>
+                            <span class="milestone-tech-tag">#M365</span>
+                            <span class="milestone-tech-tag">#DNS</span>
+                            <span class="milestone-tech-tag">#OneDrive</span>
+                            <span class="milestone-tech-tag">#SharePoint</span>
+                        </div>
+                    </div>
+                    <span class="tl-chevron"><i class="ri-arrow-down-s-line"></i></span>
+                </div>
+                <div class="expandable-details">
+                    <div class="details-inner">
+                        <ul>
+                            <li>Migrated 40 users from Google Workspace to Microsoft 365 using Microsoft Migration
+                                Tools.</li>
+                            <li>Transferred Gmail, Contacts, and Calendar data into Exchange Online with full fidelity.
+                            </li>
+                            <li>Managed MX record transition and DNS updates to ensure uninterrupted email delivery
+                                throughout cutover.</li>
+                            <li>Assisted users in migrating files from Google Drive to OneDrive and SharePoint.</li>
+                            <li>Performed post-migration validation and issue resolution to confirm data integrity and
+                                service continuity.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  LOGS  -->
+    <!-- <section id="logs" style="background: var(--bg2);">
     <h2>SYSTEM_LOGS (BLOG)</h2>
     <div class="logs-container">
         <div class="cmd-line">
@@ -320,63 +1200,125 @@ Professionally, I'm a Cloud & DevOps Engineer specializing in high-availability 
             <p style="color: var(--text-dim); font-size: 0.9rem;">Exploring AI-driven Terraform generation... <span class="quick-link" style="margin:0">READ_MORE</span></p>
         </div>
     </div>
-</section>
+</section> -->
+    <!--  CONNECT -->
+    <section id="connect">
+        <h2>LET'S_SYNC</h2>
+        <div class="connect-container">
+            <a href="https://cal.com/sparkeer/15min" target="_blank" class="connect-card">
+                <i class="ri-calendar-event-line"></i>
+                <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 10px;">CAL.COM</h3>
+                <p>Schedule a technical deep-dive.</p>
+            </a>
+            <a href="mailto:ahmad.shakeer.md@gmail.com" class="connect-card">
+                <i class="ri-mail-send-line"></i>
+                <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 10px;">EMAIL</h3>
+                <p>Direct endpoint for inquiries.</p>
+            </a>
+        </div>
+    </section>
+    <footer style="text-align: center; padding: 40px; opacity: 0.4; font-size: 10px; font-family:'Press Start 2P';">
+        &copy; <span id="year"></span> SHAKEER_AHMAD // V5.2_COMMAND_CENTER <br><br>
+        Built from scratch &bull; Deployed via GitHub Actions &rarr; AWS S3
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        function hideLanding() {
+            const landing = document.getElementById("landing-screen");
+            if (!landing || landing.style.display === "none") return;
+            landing.style.opacity = "0";
+            setTimeout(() => { landing.style.display = "none"; }, 500);
+        }
 
-<section id="connect">
-    <h2>LET'S_SYNC</h2>
-    <div class="connect-container">
-        <a href="https://cal.com/sparkeer/15min" target="_blank" class="connect-card">
-            <i class="ri-calendar-event-line"></i>
-            <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 10px;">CAL.COM</h3>
-            <p>Schedule a technical deep-dive.</p>
-        </a>
-        <a href="mailto:ahmad.shakeer.md@email.com" class="connect-card">
-            <i class="ri-mail-send-line"></i>
-            <h3 style="font-family:'Press Start 2P'; font-size: 10px; margin-bottom: 10px;">EMAIL</h3>
-            <p>Direct endpoint for inquiries.</p>
-        </a>
-    </div>
-</section>
-
-<footer style="text-align: center; padding: 40px; opacity: 0.4; font-size: 8px; font-family:'Press Start 2P';">
-    © 2026 SHAKEER_AHMAD // V5.2_COMMAND_CENTER
-</footer>
-
-<script>
-
-    window.addEventListener("load", () => {
-    const landing = document.getElementById("landing-screen");
-
-    setTimeout(() => {
-        landing.style.opacity = "0";
-
-        setTimeout(() => {
-            landing.style.display = "none";
-        }, 1000); // matches fade time
-
-    }, 2000); // how long landing shows (2s)
-});
-
-
-    // Scroll Progress logic
-    window.onscroll = function() {
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        document.getElementById("scroll-progress").style.width = scrolled + "%";
-    };
-
-    function toggleTheme() {
-        document.body.classList.toggle("light");
-        const isLight = document.body.classList.contains("light");
-        localStorage.setItem("theme", isLight ? "light" : "dark");
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "light") document.body.classList.add("light");
-    });
-</script>
-
+        window.addEventListener("load", () => setTimeout(hideLanding, 500));
+        setTimeout(hideLanding, 1000);
+        window.onscroll = function () {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        };
+        function toggleTheme() {
+            document.body.classList.toggle("light");
+            const isLight = document.body.classList.contains("light");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+        }
+        window.addEventListener("DOMContentLoaded", () => {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") document.body.classList.add("light");
+        });
+        window.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            const items = document.querySelectorAll(".timeline-item");
+            items.forEach(item => {
+                observer.observe(item);
+                if (item.getBoundingClientRect().top < window.innerHeight) {
+                    item.classList.add("show");
+                }
+            });
+        });
+        function toggleExpand(item) {
+            const details = item.querySelector(".expandable-details");
+            const isOpen = item.classList.contains("open");
+            item.classList.toggle("open", !isOpen);
+            details.classList.toggle("open", !isOpen);
+            item.setAttribute("aria-expanded", String(!isOpen));
+        }
+        const projectDetails = {
+            aws: {
+                title: 'AWS TWO-TIER ARCHITECTURE',
+                description: 'Designed and deployed a scalable two-tier architecture using Flask and MySQL on AWS.',
+                items: [
+                    'Containerized application using Docker',
+                    'Nginx as reverse proxy & load balancer',
+                    'Separated app & database layers for scalability',
+                    'Implemented secure networking with VPC',
+                ]
+            },
+            cicd: {
+                title: 'PORTFOLIO CI/CD PIPELINE',
+                description: 'Designed and implemented a CI/CD pipeline for a static portfolio website, enabling fast and reliable deployments.',
+                items: [
+                    'Built and deployed a static portfolio website using AWS S3',
+                    'Configured a GitHub Actions workflow for automated deployments',
+                    'Triggered auto-deployments on every push to the main branch',
+                    'Implemented secure authentication using IAM roles and GitHub Secrets',
+                    'Optimized deployment process to complete in under 60 seconds',
+                ]
+            }
+        };
+        function openProject(projectKey) {
+            const project = projectDetails[projectKey];
+            if (!project) return;
+            const modal = document.getElementById('project-modal');
+            const body = document.getElementById('modal-body');
+            body.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <ul>${project.items.map(item => `<li>${item}</li>`).join('')}</ul>
+        `;
+            modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        }
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        }
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeProjectModal();
+        });
+    </script>
 </body>
+
 </html>

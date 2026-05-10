@@ -2,7 +2,7 @@
 
 A personal portfolio website built with a terminal-inspired aesthetic, deployed to AWS S3 via an automated GitHub Actions pipeline. The project demonstrates practical application of cloud hosting, CI/CD automation, and IAM security principles.
 
-**Live site:** [shakeer-portfolio-2026.s3.ap-south-1.amazonaws.com/index.html](https://shakeer-portfolio-2026.s3.ap-south-1.amazonaws.com/index.html)
+**Live site:** [shakeer.space](https://www.shakeer.space/)
 
 ---
 

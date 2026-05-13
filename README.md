@@ -54,11 +54,3 @@ git push → GitHub Actions → S3 sync → CloudFront invalidation → Live
 Credentials are stored as GitHub repository secrets. The IAM user has scoped permissions — S3 write access and CloudFront invalidation only.
 
 ---
-
-## Local development
-
-No build step. Open `index.html` directly in a browser or use any static server:
-
-```bash
-npx serve .
-```

@@ -1,4 +1,4 @@
-/* ═══ CONFIG — EDIT THESE ═══ */
+
 const GITHUB_USERNAME  = "Sparkeeer";
 const EMAILJS_SERVICE  = "service_rt2f6h1";
 const EMAILJS_TEMPLATE = "template_fauo5dc";

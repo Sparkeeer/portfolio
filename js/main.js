@@ -109,7 +109,7 @@ window.addEventListener("scroll",()=>{
 
 /* ═══ ACTIVE NAV ═══ */
 (function(){
-  const SECS=["about","skills","github","projects","experience","contact"];
+  const SECS=["about","skills","github","projects","experience","certs","contact"];
   const links=document.querySelectorAll(".nav-link");
   const ind=document.getElementById("nav-indicator");
   const navList=document.getElementById("nav-list");
@@ -379,6 +379,24 @@ function closeMobileNav(){
 
 /* ═══ PROJECT MODAL ═══ */
 const PROJECT_DETAILS={
+  d365:{
+    title:"DYNAMICS 365 MAIL-TO-TICKET AUTOMATION",
+    description:"End-to-end mail-to-case automation built on Dynamics 365 Customer Service, Power Automate, and Automatic Record Creation (ARC) rules. Designed for the internal IT support team at Princeton IT Services.",
+    metrics:[
+      {value:"~80%",label:"Less Manual Work"},
+      {value:"<10 min",label:"First Response Time"},
+      {value:"Threaded",label:"Mail-to-Case"}
+    ],
+    items:[
+      "Configured Automatic Record Creation (ARC) rules in Dynamics 365 Customer Service to auto-create cases from inbound support emails.",
+      "Built Power Automate flows to handle auto-replies, agent assignment, escalation, and case-closure notifications.",
+      "Implemented mail threading so subsequent replies attach to the original case instead of creating duplicates.",
+      "Reduced manual ticket creation by ~80% and cut first-response time from hours to under 10 minutes.",
+      "Designed dashboards in Dynamics 365 for ticket volume, agent workload, and SLA tracking.",
+      "Onboarded teammates with admin access and trained them on the new workflow."
+    ],
+    github:"https://github.com/Sparkeeer"
+  },
   aws:{
     title:"AWS TWO-TIER ARCHITECTURE",
     description:"Designed and deployed a scalable two-tier architecture on AWS using Flask and MySQL, containerized with Docker and load-balanced via Nginx.",

@@ -4,53 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#060810" />
-
   <title>Shakeer Ahmad — Cloud Operations Engineer | Hyderabad, India</title>
-  <meta name="description" content="Cloud Operations Engineer running production Microsoft 365 + Azure environments for 50+ users. AZ-900 certified, AZ-104 in progress. Cross-tenant migrations, identity & access, Dynamics 365 automation. Hyderabad, India." />
+  <meta name="description" content="Cloud Operations Engineer focused on Microsoft 365, Azure operations, identity, cross-tenant migrations, and Dynamics 365 automation." />
   <meta name="keywords" content="Cloud Operations Engineer, M365 Engineer, Azure Administrator, Entra ID, Exchange Online, Dynamics 365, Power Automate, Cross-Tenant Migration, IAM, AZ-900, AZ-104, Hyderabad, India" />
   <meta name="author" content="Mohammed Shakeer Ahmad" />
-
   <meta property="og:title" content="Shakeer Ahmad | Cloud Operations Engineer" />
-  <meta property="og:description" content="Running production M365 + Azure operations. AZ-900 certified. Built Dynamics 365 automation cutting ticket creation by ~80%." />
+  <meta property="og:description" content="Cloud operations, identity, migrations, and automation — built on Microsoft 365 and Azure." />
   <meta property="og:url" content="https://shakeer.space" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://shakeer.space/assets/shakeer_ahmad_og_image.svg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-
   <link rel="canonical" href="https://shakeer.space" />
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png" />
   <link rel="shortcut icon" href="./assets/favicon.ico" />
   <link rel="manifest" href="./assets/site.webmanifest" />
-
-  <!-- Performance: preconnect to external origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <link rel="preconnect" href="https://api.github.com" />
   <link rel="dns-prefetch" href="https://learn.microsoft.com" />
-
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Mohammed Shakeer Ahmad","alternateName":"Shakeer Ahmad","jobTitle":"Cloud Operations Engineer","worksFor":{"@type":"Organization","name":"Princeton IT Services"},"address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},"email":"ahmad.shakeer.md@gmail.com","telephone":"+91-88975-69928","knowsAbout":["Microsoft 365","Azure","Entra ID","Exchange Online","Intune","Dynamics 365","Power Automate","Cloud Operations","Incident Response","Identity & Access Management","Cross-Tenant Migration","PowerShell","AWS"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Microsoft Certified: Azure Fundamentals (AZ-900)","credentialCategory":"certification","url":"https://learn.microsoft.com/api/credentials/share/en-us/ShakeerAhmadMohammed-5103/EC012880F1F6994B?sharingId=4C40979F9799946E"}],"sameAs":["https://github.com/Sparkeeer","https://linkedin.com/in/shakeerahmad05"],"url":"https://shakeer.space"}
-  </script>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./css/styles.css" />
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Mohammed Shakeer Ahmad","alternateName":"Shakeer Ahmad","jobTitle":"Cloud Operations Engineer","worksFor":{"@type":"Organization","name":"Princeton IT Services"},"address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},"email":"ahmad.shakeer.md@gmail.com","telephone":"+91-88975-69928","knowsAbout":["Microsoft 365","Azure","Entra ID","Exchange Online","Intune","Dynamics 365","Power Automate","Cloud Operations","Incident Response","Identity & Access Management","Cross-Tenant Migration","PowerShell","AWS"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Microsoft Certified: Azure Fundamentals (AZ-900)","credentialCategory":"certification","url":"https://learn.microsoft.com/api/credentials/share/en-us/ShakeerAhmadMohammed-5103/EC012880F1F6994B?sharingId=4C40979F9799946E"}],"sameAs":["https://github.com/Sparkeeer","https://linkedin.com/in/shakeerahmad05"],"url":"https://shakeer.space"}
+  </script>
 </head>
-
 <body>
-
-<!-- Skip link for a11y -->
 <a href="#main" class="skip-link">Skip to main content</a>
-
 <div id="cursor-dot" aria-hidden="true"></div>
 <div id="copy-toast" role="status" aria-live="polite">✓ EMAIL COPIED</div>
 <canvas id="dot-canvas" aria-hidden="true"></canvas>
 
-<!-- LOADING -->
 <div id="loading-screen" aria-hidden="true">
   <div class="loading-inner">
     <div class="loading-line">$ whoami</div>
@@ -58,37 +45,31 @@
     <div class="loading-line">→ Booting...<span class="loading-cursor"></span></div>
   </div>
 </div>
-
 <div id="scroll-progress" aria-hidden="true"></div>
 
-<!-- MODAL -->
-<div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="if(event.target===this)closeProjectModal()">
+<div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeProjectModal()" aria-label="Close dialog">×</button>
+    <button class="modal-close" type="button" onclick="closeProjectModal()" aria-label="Close dialog">×</button>
     <div id="modal-body"></div>
     <div class="modal-footer">
       <a id="modal-github-link" href="#" target="_blank" rel="noopener" class="btn-pixel outline" style="display:none">VIEW ON GITHUB</a>
-      <button class="btn-pixel outline" onclick="closeProjectModal()">CLOSE</button>
+      <button type="button" class="btn-pixel outline" onclick="closeProjectModal()">CLOSE</button>
     </div>
   </div>
 </div>
 
-<!-- MOBILE NAV -->
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
   <a href="#about" onclick="closeMobileNav()">ABOUT</a>
   <a href="#skills" onclick="closeMobileNav()">TECH STACK</a>
   <a href="#projects" onclick="closeMobileNav()">PROJECTS</a>
   <a href="#experience" onclick="closeMobileNav()">EXPERIENCE</a>
   <a href="#certs" onclick="closeMobileNav()">CERTS</a>
-  <a href="#testimonials" onclick="closeMobileNav()">RECOMMENDATIONS</a>
-  <a href="#github" onclick="closeMobileNav()">GITHUB</a>
   <a href="#contact" onclick="closeMobileNav()">CONTACT</a>
   <a href="./assets/resume.pdf" target="_blank" rel="noopener">RESUME</a>
 </nav>
 
-<!-- NAV -->
 <nav aria-label="Primary navigation">
-  <div class="logo"><img src="./assets/logo.png" alt="Shakeer Ahmad Logo" width="52" height="52" /></div>
+  <a href="#home" class="logo" aria-label="Home"><img src="./assets/logo.png" alt="Shakeer Ahmad Logo" width="52" height="52" /></a>
   <ul id="nav-list">
     <div class="nav-indicator" id="nav-indicator" aria-hidden="true"></div>
     <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
@@ -100,14 +81,11 @@
   </ul>
   <div class="nav-right">
     <a href="./assets/resume.pdf" target="_blank" rel="noopener" class="nav-resume" aria-label="Download resume PDF"><i class="ri-download-line" aria-hidden="true"></i> RESUME</a>
-    <button id="theme-btn" onclick="toggleTheme()" aria-label="Toggle light/dark theme" title="Toggle theme"><i class="ri-contrast-2-line" aria-hidden="true"></i></button>
-    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-      <span></span><span></span><span></span>
-    </button>
+    <button id="theme-btn" type="button" onclick="toggleTheme()" aria-label="Toggle light/dark theme" title="Toggle theme"><i class="ri-contrast-2-line" aria-hidden="true"></i></button>
+    <button class="hamburger" id="hamburger" type="button" onclick="toggleMobileNav()" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- SIDE SOCIALS -->
 <div class="side-socials" aria-label="Social links">
   <a href="https://github.com/Sparkeeer" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="ri-github-line" aria-hidden="true"></i></a>
   <a href="https://linkedin.com/in/shakeerahmad05" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="ri-linkedin-line" aria-hidden="true"></i></a>
@@ -115,483 +93,150 @@
 </div>
 
 <main id="main">
-
-<!-- ═══ HERO ═══ -->
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">// CLOUD OPERATIONS ENGINEER</p>
-    <h1><span id="typed-text"></span><span id="cursor-blink" aria-hidden="true"></span></h1>
-    <p class="hero-tagline">Running production Microsoft&nbsp;365 &amp; Azure for 50+ users — every day.</p>
-    <div class="hero-meta">
-      <span class="hero-location"><i class="ri-map-pin-2-line" aria-hidden="true"></i>Hyderabad, India</span>
-    </div>
-    <p class="intro-text">
-      I keep cloud services reliable, secure, and efficient. Tenant administration,
-      identity &amp; access governance, cross-tenant migrations, incident response, and
-      automation through Power Automate &amp; Dynamics 365 — that's my day-to-day.
-    </p>
-    <div class="cta-group">
-      <a href="./assets/resume.pdf" target="_blank" rel="noopener" class="btn-pixel"><i class="ri-download-line" aria-hidden="true"></i> DOWNLOAD_RESUME</a>
-      <a href="#projects" class="btn-pixel outline">VIEW_PROJECTS</a>
-      <a href="#contact" class="btn-pixel ghost">CONNECT</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ ABOUT ═══ -->
-<section id="about" style="background:var(--bg2)">
-  <h2>ABOUT_ME</h2>
-  <div class="terminal-window reveal-item" id="main-terminal">
-    <div class="terminal-titlebar">
-      <button class="tb-dot red" title="Close" onclick="terminalClose()" aria-label="Close terminal"></button>
-      <button class="tb-dot yel" title="Minimize" onclick="terminalMinimize()" aria-label="Minimize terminal"></button>
-      <button class="tb-dot grn" title="Maximize" onclick="terminalMaximize()" aria-label="Maximize terminal"></button>
-      <span class="terminal-title">shakeer@cloudops ~ bash</span>
-    </div>
-    <div class="terminal-body" id="terminal-body">
-      <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cmd"> whoami</span></span>
-      <span class="t-out"><strong>Mohammed Shakeer Ahmad</strong> — Cloud Operations Engineer based in <strong>Hyderabad, Telangana</strong>. Microsoft Certified: Azure Fundamentals (AZ-900). Currently pursuing AZ-104.</span>
-      <span class="t-blank"></span>
-      <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cmd"> cat day_2_ops.log</span></span>
-      <span class="t-out">At <strong>Princeton IT Services</strong> — running  operations on Microsoft 365 + Azure for <strong>50+ users</strong>: tenant administration, identity governance, mail flow, incident response, and <strong>3+ cross-tenant migrations</strong> with zero data loss.</span>
-      <span class="t-blank"></span>
-      <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cmd"> cat impact.yml</span></span>
-      <span class="t-out">flagship: <strong>Dynamics 365 Mail-to-Ticket Automation</strong><br />→ <strong style="color:#22c55e;">~80% reduction</strong> in manual ticket creation<br />→ first-response time: hours → <strong>&lt;10 min</strong><br />→ <strong>99%+</strong> mail delivery uptime maintained across 50+ mailboxes</span>
-      <span class="t-blank"></span>
-      <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cursor" aria-hidden="true"></span></span>
-    </div>
-  </div>
-  <div class="terminal-restore" id="terminal-restore" onclick="terminalRestore()" role="button" tabindex="0">&gt;_ shakeer@cloudops — click to restore terminal</div>
-</section>
-
-<!-- ═══ TECH STACK ═══ -->
-<section id="skills">
-  <h2>TECH_STACK</h2>
-  <div class="cmd-palette reveal-item" id="cmd-palette">
-    <div class="cmd-search-row">
-      <i class="ri-search-line cmd-search-icon" aria-hidden="true"></i>
-      <input class="cmd-search-input" id="cmd-search" type="text" placeholder="SEARCH SKILLS... (press /)" autocomplete="off" spellcheck="false" aria-label="Search skills" />
-      <span class="cmd-skill-counter" id="cmd-counter" aria-live="polite"></span>
-    </div>
-    <div class="cmd-body" id="cmd-body">
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">🟦 MICROSOFT 365</span>
-        <div class="cmd-row" data-skill="Exchange Online Entra ID Intune SharePoint OneDrive M365" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#0078D4"></span><span class="cmd-skill-name">M365 Admin</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Exchange Online</li><li>Entra ID</li><li>Intune</li><li>SharePoint</li><li>OneDrive</li><li>Conditional Access</li><li>MFA</li><li>RBAC</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div><a class="cmd-proj-link" href="#experience">↗ 50+ users · 3+ cross-tenant migrations</a></div></div></div>
-        <div class="cmd-row" data-skill="Dynamics 365 Power Automate ARC Rules" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#742774"></span><span class="cmd-skill-name">Dynamics 365 + Power Automate</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Customer Service</li><li>Power Automate flows</li><li>ARC rules</li><li>Case auto-creation</li><li>Mail threading</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Mail-to-Ticket Automation</a></div></div></div>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">// CLOUD OPERATIONS ENGINEER</p>
+      <h1><span id="typed-text"></span><span id="cursor-blink" aria-hidden="true"></span></h1>
+      <p class="hero-tagline">Identity • Migrations • Automation • Cloud Infrastructure</p>
+      <div class="hero-meta">
+        <span class="hero-location"><i class="ri-map-pin-2-line" aria-hidden="true"></i>Hyderabad, India</span>
       </div>
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">☁ CLOUD</span>
-        <div class="cmd-row" data-skill="Azure" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#0089D6"></span><span class="cmd-skill-name">Azure</span><span class="cmd-badge active-badge">AZ-900 ✓</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Entra ID</li><li>Resource Groups</li><li>VNets</li><li>Storage Accounts</li><li>VPN Gateway</li><li>ARM Templates</li><li>Azure CLI</li><li>Cost Management</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#certs">↗ AZ-900 certified · AZ-104 in progress</a></div></div></div>
-        <div class="cmd-row" data-skill="AWS" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#FF9900"></span><span class="cmd-skill-name">AWS</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>EC2</li><li>S3</li><li>IAM</li><li>VPC</li><li>CloudFront</li><li>ACM</li><li>Route 53</li><li>CloudWatch</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Portfolio CI/CD · Two-Tier Architecture</a></div></div></div>
-      </div>
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">🔒 IDENTITY &amp; ACCESS</span>
-        <div class="cmd-row" data-skill="Entra ID RBAC MFA Conditional Access IAM Governance" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#DD344C"></span><span class="cmd-skill-name">Entra ID / IAM</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>RBAC role assignments</li><li>MFA enforcement</li><li>Conditional Access policies</li><li>Access governance reviews</li><li>Least privilege</li><li>AWS IAM</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div><a class="cmd-proj-link" href="#experience">↗ Identity &amp; Access for 50+ users</a></div></div></div>
-      </div>
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">⚙ AUTOMATION &amp; SCRIPTING</span>
-        <div class="cmd-row" data-skill="PowerShell Bash" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#012456"></span><span class="cmd-skill-name">PowerShell / Bash</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>M365 PowerShell modules</li><li>Exchange Online PS</li><li>Bulk user ops</li><li>Cron</li><li>Runbooks</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ M365 Ops Toolkit</a></div></div></div>
-        <div class="cmd-row" data-skill="Python" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#3776AB"></span><span class="cmd-skill-name">Python</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Scripting</li><li>Automation</li><li>boto3</li><li>Flask</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div></div></div></div>
-        <div class="cmd-row" data-skill="Power Automate Workflows" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#0066FF"></span><span class="cmd-skill-name">Power Automate</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Cloud flows</li><li>Approvals</li><li>Connectors</li><li>Triggers</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div></div></div></div>
-      </div>
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">📊 MONITORING &amp; OBSERVABILITY</span>
-        <div class="cmd-row" data-skill="M365 Service Health" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#0078D4"></span><span class="cmd-skill-name">M365 Service Health</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Mail flow reports</li><li>Quarantine</li><li>Message trace</li><li>Incident response</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div></div></div></div>
-        <div class="cmd-row" data-skill="Azure Monitor" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#0089D6"></span><span class="cmd-skill-name">Azure Monitor</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Metrics</li><li>Log Analytics</li><li>Alerts</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label beginner">BEGINNER</span><div class="cmd-prof-track"><div class="cmd-prof-fill beginner"></div></div></div></div></div></div>
-        <div class="cmd-row" data-skill="CloudWatch" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#FF9900"></span><span class="cmd-skill-name">CloudWatch</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Logs</li><li>Metrics</li><li>Alarms</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label beginner">BEGINNER</span><div class="cmd-prof-track"><div class="cmd-prof-fill beginner"></div></div></div></div></div></div>
-        <div class="cmd-row soon-row" data-skill="Grafana Prometheus" tabindex="-1"><div class="cmd-row-main"><span class="cmd-dot" style="color:#818cf8"></span><span class="cmd-skill-name" style="opacity:.6">Grafana / Prometheus</span><span class="cmd-badge soon">SOON</span></div></div>
-      </div>
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">🔗 NETWORKING</span>
-        <div class="cmd-row" data-skill="DNS TLS MX SPF DKIM DMARC" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#38bdf8"></span><span class="cmd-skill-name">DNS &amp; Mail Records</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>MX / SPF / DKIM / DMARC</li><li>DNS cutovers</li><li>Route 53</li><li>ACM certs</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div><a class="cmd-proj-link" href="#experience">↗ Cross-tenant DNS cutovers</a></div></div></div>
-        <div class="cmd-row" data-skill="VPC Subnets VNet" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#38bdf8"></span><span class="cmd-skill-name">VPC / VNet</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Public/Private subnets</li><li>Route tables</li><li>IGW</li><li>VPN Gateway</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div></div></div></div>
-      </div>
-
-      <div class="cmd-group" data-group>
-        <span class="cmd-group-title">📦 CONTAINERS &amp; CI/CD</span>
-        <div class="cmd-row" data-skill="Docker" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#2496ED"></span><span class="cmd-skill-name">Docker</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Docker Compose</li><li>Dockerfiles</li><li>Multi-stage builds</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Two-Tier Architecture</a></div></div></div>
-        <div class="cmd-row" data-skill="GitHub Actions CI CD" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#e8eaf6"></span><span class="cmd-skill-name">GitHub Actions</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Workflows</li><li>Secrets</li><li>Deploy pipelines</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Portfolio CI/CD Pipeline</a></div></div></div>
-        <div class="cmd-row soon-row" data-skill="Kubernetes Terraform" tabindex="-1"><div class="cmd-row-main"><span class="cmd-dot" style="color:#818cf8"></span><span class="cmd-skill-name" style="opacity:.6">Kubernetes / Terraform</span><span class="cmd-badge soon">SOON</span></div></div>
-      </div>
-
-      <div class="cmd-no-results" id="cmd-no-results"><span aria-hidden="true">⌀</span>NO RESULTS FOUND</div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ PROJECTS ═══ -->
-<section id="projects" style="background:var(--bg2)">
-  <h2>PROJECTS</h2>
-
-  <div class="project-filter-bar" role="toolbar" aria-label="Project filters">
-    <span class="filter-label">FILTER:</span>
-    <button class="filter-btn active" data-filter="all">ALL</button>
-    <button class="filter-btn" data-filter="m365">M365</button>
-    <button class="filter-btn" data-filter="dynamics365">DYNAMICS 365</button>
-    <button class="filter-btn" data-filter="powershell">POWERSHELL</button>
-    <button class="filter-btn" data-filter="power-automate">POWER AUTOMATE</button>
-    <button class="filter-btn" data-filter="aws">AWS</button>
-    <button class="filter-btn" data-filter="docker">DOCKER</button>
-    <button class="filter-btn" data-filter="github-actions">CI/CD</button>
-  </div>
-
-  <div class="project-grid" id="project-grid">
-
-    <!-- Project 1: Dynamics 365 Mail-to-Ticket -->
-    <article class="project-card reveal-item" data-tags="m365 dynamics365 power-automate">
-      <div class="project-illustration" aria-hidden="true">
-        <svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="44" width="60" height="44" rx="10" fill="rgba(0,120,212,0.08)" stroke="#0078D4" stroke-width="1.5"/>
-          <text x="40" y="62" fill="#0078D4" font-family="monospace" font-size="8" text-anchor="middle">📧 Email</text>
-          <text x="40" y="76" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">support@</text>
-          <line x1="70" y1="66" x2="88" y2="66" stroke="#0078D4" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></line>
-          <polygon points="88,62 96,66 88,70" fill="#0078D4"/>
-          <rect x="96" y="44" width="68" height="44" rx="10" fill="rgba(116,39,116,0.1)" stroke="#742774" stroke-width="1.5"/>
-          <text x="130" y="60" fill="#a35ea3" font-family="monospace" font-size="8" text-anchor="middle">ARC Rule</text>
-          <text x="130" y="72" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">+ Flow</text>
-          <circle cx="130" cy="82" r="4" fill="none" stroke="#742774" stroke-width="1.5" stroke-dasharray="6 6"><animateTransform attributeName="transform" type="rotate" from="0 130 82" to="360 130 82" dur="1.8s" repeatCount="indefinite"/></circle>
-          <line x1="164" y1="66" x2="182" y2="66" stroke="#742774" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.4s" repeatCount="indefinite"/></line>
-          <polygon points="182,62 190,66 182,70" fill="#742774"/>
-          <rect x="190" y="44" width="60" height="44" rx="10" fill="rgba(34,197,94,0.08)" stroke="#22c55e" stroke-width="1.5"/>
-          <text x="220" y="62" fill="#22c55e" font-family="monospace" font-size="8" text-anchor="middle">Case</text>
-          <text x="220" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">D365</text>
-          <line x1="250" y1="66" x2="268" y2="66" stroke="#22c55e" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.8s" repeatCount="indefinite"/></line>
-          <polygon points="268,62 276,66 268,70" fill="#22c55e"/>
-          <rect x="276" y="44" width="36" height="44" rx="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1.5"/>
-          <text x="294" y="62" fill="#38bdf8" font-family="monospace" font-size="8" text-anchor="middle">Agent</text>
-          <text x="294" y="74" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle">&lt;10m</text>
-          <text x="160" y="112" fill="#7986a8" font-family="monospace" font-size="8" text-anchor="middle">⚡ ~80% less manual work · auto-reply · threading</text>
-        </svg>
-      </div>
-      <div class="project-card-inner">
-        <span class="project-flag flagship">★ FLAGSHIP</span>
-        <h3 class="project-title">DYNAMICS 365 MAIL-TO-TICKET AUTOMATION</h3>
-        <p class="project-desc">End-to-end mail-to-case automation on Dynamics 365 Customer Service, Power Automate, and ARC rules. Auto-creates cases from inbound mail, threads replies, sends auto-replies, assigns agents, and notifies on closure.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-value">~80%</span><span class="metric-label">Less Manual Work</span></div>
-          <div class="metric"><span class="metric-value">&lt;10m</span><span class="metric-label">First Response</span></div>
-          <div class="metric"><span class="metric-value">Threaded</span><span class="metric-label">Mail-to-Case</span></div>
-        </div>
-        <div class="btn-wrapper">
-          <div class="project-tags"><span class="project-tag">#dynamics365</span><span class="project-tag">#power-automate</span><span class="project-tag">#arc-rules</span><span class="project-tag">#m365</span></div>
-          <a href="#" class="quick-link" onclick="openProject('d365');return false">VIEW_CASE_STUDY →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 2: M365 Ops Toolkit (NEW) -->
-    <article class="project-card reveal-item" data-tags="m365 powershell" style="transition-delay:.1s">
-      <div class="project-illustration" aria-hidden="true">
-        <svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="20" y="32" width="280" height="68" rx="8" fill="rgba(1,36,86,0.15)" stroke="#012456" stroke-width="1.5"/>
-          <rect x="20" y="32" width="280" height="14" rx="8" fill="rgba(1,36,86,0.4)"/>
-          <circle cx="32" cy="39" r="2.5" fill="#ff5f57"/>
-          <circle cx="42" cy="39" r="2.5" fill="#febc2e"/>
-          <circle cx="52" cy="39" r="2.5" fill="#28c840"/>
-          <text x="160" y="42" fill="#7986a8" font-family="monospace" font-size="6" text-anchor="middle">PS C:\&gt; M365-Ops-Toolkit.ps1</text>
-          <text x="30" y="60" fill="#22c55e" font-family="monospace" font-size="7">PS&gt;</text>
-          <text x="50" y="60" fill="#38bdf8" font-family="monospace" font-size="7">Get-MailboxStats -All</text>
-          <text x="30" y="72" fill="#7986a8" font-family="monospace" font-size="6">→ Processed 50 mailboxes in 4.2s ✓</text>
-          <text x="30" y="84" fill="#22c55e" font-family="monospace" font-size="7">PS&gt;</text>
-          <text x="50" y="84" fill="#38bdf8" font-family="monospace" font-size="7">Set-MFA -Bulk -Enforce</text>
-          <text x="30" y="96" fill="#7986a8" font-family="monospace" font-size="6">→ MFA enforced on 50 users ✓</text>
-          <text x="160" y="118" fill="#7986a8" font-family="monospace" font-size="8" text-anchor="middle">⚡ Reusable runbooks for daily M365 ops</text>
-        </svg>
-      </div>
-      <div class="project-card-inner">
-        <span class="project-flag ops">⚙ CLOUD OPS</span>
-        <h3 class="project-title">M365 OPERATIONS POWERSHELL TOOLKIT</h3>
-        <p class="project-desc">A library of PowerShell runbooks for daily M365 operations: bulk user provisioning, mailbox audits, MFA enforcement, license cleanup, and quarantine triage — battle-tested across 50+ user tenant ops.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-value">10+</span><span class="metric-label">Runbooks</span></div>
-          <div class="metric"><span class="metric-value">Bulk</span><span class="metric-label">User Ops</span></div>
-          <div class="metric"><span class="metric-value">Audited</span><span class="metric-label">Mailbox Health</span></div>
-        </div>
-        <div class="btn-wrapper">
-          <div class="project-tags"><span class="project-tag">#powershell</span><span class="project-tag">#m365</span><span class="project-tag">#automation</span><span class="project-tag">#runbooks</span></div>
-          <a href="#" class="quick-link" onclick="openProject('m365ops');return false">VIEW_CASE_STUDY →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 3: CI/CD -->
-    <article class="project-card reveal-item" data-tags="aws s3 github-actions iam cloudfront" style="transition-delay:.15s">
-      <div class="project-illustration" aria-hidden="true">
-        <svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="44" width="54" height="44" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
-          <text x="37" y="64" fill="#e4e4e7" font-family="monospace" font-size="8" text-anchor="middle">GitHub</text>
-          <text x="37" y="76" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">push</text>
-          <text x="37" y="88" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="middle">main</text>
-          <line x1="64" y1="66" x2="82" y2="66" stroke="#e4e4e7" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></line>
-          <polygon points="82,62 90,66 82,70" fill="#e4e4e7"/>
-          <rect x="90" y="44" width="68" height="44" rx="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1.5"/>
-          <text x="124" y="62" fill="#38bdf8" font-family="monospace" font-size="8" text-anchor="middle">Actions</text>
-          <text x="124" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">+ IAM</text>
-          <circle cx="124" cy="82" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6"><animateTransform attributeName="transform" type="rotate" from="0 124 82" to="360 124 82" dur="1.5s" repeatCount="indefinite"/></circle>
-          <line x1="158" y1="66" x2="176" y2="66" stroke="#38bdf8" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.4s" repeatCount="indefinite"/></line>
-          <polygon points="176,62 184,66 176,70" fill="#38bdf8"/>
-          <rect x="184" y="44" width="44" height="44" rx="10" fill="rgba(255,153,0,0.08)" stroke="#FF9900" stroke-width="1.5"/>
-          <text x="206" y="62" fill="#FF9900" font-family="monospace" font-size="8" text-anchor="middle">AWS</text>
-          <text x="206" y="74" fill="#FF9900" font-family="monospace" font-size="7" text-anchor="middle">S3</text>
-          <line x1="228" y1="66" x2="246" y2="66" stroke="#FF9900" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.8s" repeatCount="indefinite"/></line>
-          <polygon points="246,62 254,66 246,70" fill="#FF9900"/>
-          <rect x="254" y="44" width="52" height="44" rx="10" fill="rgba(129,140,248,0.08)" stroke="#818cf8" stroke-width="1.5"/>
-          <text x="280" y="62" fill="#818cf8" font-family="monospace" font-size="8" text-anchor="middle">Cloud</text>
-          <text x="280" y="74" fill="#818cf8" font-family="monospace" font-size="7" text-anchor="middle">Front</text>
-          <text x="280" y="84" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle">✓ LIVE</text>
-          <text x="160" y="112" fill="#7986a8" font-family="monospace" font-size="8" text-anchor="middle">⚡ &lt;60s end-to-end · HTTPS · OAC</text>
-        </svg>
-      </div>
-      <div class="project-card-inner">
-        <h3 class="project-title">PORTFOLIO CI/CD PIPELINE</h3>
-        <p class="project-desc">Production static site on AWS S3 + CloudFront with custom domain, HTTPS via ACM, and a GitHub Actions pipeline that auto-deploys on every push to main.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-value">&lt;60s</span><span class="metric-label">Deploy Time</span></div>
-          <div class="metric"><span class="metric-value">OAC</span><span class="metric-label">Secure Origin</span></div>
-          <div class="metric"><span class="metric-value">Zero</span><span class="metric-label">Manual Steps</span></div>
-        </div>
-        <div class="btn-wrapper">
-          <div class="project-tags"><span class="project-tag">#aws</span><span class="project-tag">#s3</span><span class="project-tag">#cloudfront</span><span class="project-tag">#github-actions</span><span class="project-tag">#iam</span></div>
-          <a href="#" class="quick-link" onclick="openProject('cicd');return false">VIEW_CASE_STUDY →</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 4: Two-Tier -->
-    <article class="project-card reveal-item" data-tags="aws docker nginx mysql vpc" style="transition-delay:.2s">
-      <div class="project-illustration" aria-hidden="true">
-        <svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="65" r="18" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.06)"/>
-          <text x="30" y="62" fill="#38bdf8" font-family="monospace" font-size="8" text-anchor="middle">WWW</text>
-          <text x="30" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">:80</text>
-          <line x1="48" y1="65" x2="72" y2="65" stroke="#38bdf8" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></line>
-          <polygon points="72,61 80,65 72,69" fill="#38bdf8"/>
-          <rect x="80" y="48" width="50" height="34" rx="7" fill="rgba(34,197,94,0.08)" stroke="#22c55e" stroke-width="1.5"/>
-          <text x="105" y="63" fill="#22c55e" font-family="monospace" font-size="9" text-anchor="middle">NGINX</text>
-          <text x="105" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">LB</text>
-          <line x1="130" y1="65" x2="154" y2="65" stroke="#22c55e" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.3s" repeatCount="indefinite"/></line>
-          <polygon points="154,61 162,65 154,69" fill="#22c55e"/>
-          <rect x="162" y="48" width="54" height="34" rx="7" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1.5"/>
-          <text x="189" y="63" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="middle">FLASK</text>
-          <text x="189" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">:5000</text>
-          <line x1="216" y1="65" x2="240" y2="65" stroke="#38bdf8" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.6s" repeatCount="indefinite"/></line>
-          <polygon points="240,61 248,65 240,69" fill="#38bdf8"/>
-          <rect x="248" y="48" width="54" height="34" rx="7" fill="rgba(68,121,161,0.08)" stroke="#4479A1" stroke-width="1.5"/>
-          <text x="275" y="63" fill="#4479A1" font-family="monospace" font-size="9" text-anchor="middle">MySQL</text>
-          <text x="275" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">:3306</text>
-          <rect x="62" y="96" width="240" height="18" rx="4" fill="rgba(56,189,248,0.05)" stroke="rgba(56,189,248,0.2)" stroke-width="1" stroke-dasharray="4 3"/>
-          <text x="182" y="109" fill="rgba(56,189,248,0.6)" font-family="monospace" font-size="8" text-anchor="middle">AWS VPC — Public + Private Subnets</text>
-        </svg>
-      </div>
-      <div class="project-card-inner">
-        <h3 class="project-title">AWS TWO-TIER ARCHITECTURE</h3>
-        <p class="project-desc">Containerized two-tier environment using Flask and MySQL on AWS. Orchestrated with Docker Compose, Nginx as load balancer, inside a custom VPC with proper subnet separation.</p>
-        <div class="project-metrics">
-          <div class="metric"><span class="metric-value">2-tier</span><span class="metric-label">Architecture</span></div>
-          <div class="metric"><span class="metric-value">Docker</span><span class="metric-label">Containerized</span></div>
-          <div class="metric"><span class="metric-value">VPC</span><span class="metric-label">Isolated Network</span></div>
-        </div>
-        <div class="btn-wrapper">
-          <div class="project-tags"><span class="project-tag">#aws</span><span class="project-tag">#docker</span><span class="project-tag">#nginx</span><span class="project-tag">#mysql</span><span class="project-tag">#vpc</span></div>
-          <a href="#" class="quick-link" onclick="openProject('aws');return false">VIEW_CASE_STUDY →</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ═══ EXPERIENCE ═══ -->
-<section id="experience">
-  <h2>PROFESSIONAL_EXPERIENCE</h2>
-  <div class="timeline">
-    <div class="timeline-item expandable" onclick="toggleExpand(this)" tabindex="0" role="button" aria-expanded="false">
-      <div class="tl-header">
-        <div class="tl-header-left">
-          <div class="tl-role-block">
-            <span class="tl-date">OCT 2025 — PRESENT · 9+ MONTHS</span>
-            <span class="tl-job-title">CLOUD OPERATIONS / M365 ENGINEER</span>
-            <div><span class="tl-company-name">Princeton IT Services, Inc.</span><div class="tl-company-loc"><i class="ri-map-pin-line" aria-hidden="true"></i>Gudivada, Andhra Pradesh, India</div></div>
-          </div>
-          <p style="color:var(--text-dim);margin-top:10px">Work with Microsoft 365 and Azure for 50+ users — administering tenants, managing identity &amp; access, executing cross-tenant migrations, and automating IT workflows through Dynamics 365.</p>
-        </div>
-        <span class="tl-chevron" aria-hidden="true"><i class="ri-arrow-down-s-line"></i></span>
-      </div>
-      <div class="expandable-details">
-        <div class="details-inner"><ul>
-          <li>Built an end-to-end mail-to-ticket system using <strong>Dynamics 365 Customer Service, Power Automate &amp; ARC rules</strong> — reducing manual ticket creation by <strong>~80%</strong> and cutting first-response time from hours to <strong>under 10 minutes</strong>.</li>
-          <li>Administer <strong>Exchange Online</strong> tenant for <strong>50+ users</strong> — mailbox provisioning, shared mailbox &amp; Send-As permissions, mail flow rules, and quarantine management with <strong>99%+ mail delivery uptime</strong>.</li>
-          <li>Executed <strong>3+ cross-tenant migrations</strong> across Exchange Online, OneDrive, and SharePoint — including <strong>US-to-India tenant moves</strong> for compliance, with directory sync, DNS cutovers, and post-migration validation at <strong>zero data loss</strong>.</li>
-          <li>Manage identity &amp; access for 50+ users via <strong>Entra ID</strong> — RBAC role assignments, MFA enforcement, Conditional Access policies, and quarterly access governance reviews.</li>
-          <li>Monitor service health via M365 Admin Center and Exchange reports — handling incidents, mail flow issues, and license-related escalations.</li>
-          <li>Author SOPs, runbooks, and operational workflows to reduce repeat incidents and improve internal knowledge sharing.</li>
-        </ul></div>
+      <p class="intro-text">I work across Microsoft 365, Azure, identity, migrations, and automation — keeping cloud environments reliable, secure, and operationally clean.</p>
+      <div class="cta-group">
+        <a href="./assets/resume.pdf" target="_blank" rel="noopener" class="btn-pixel"><i class="ri-download-line" aria-hidden="true"></i> DOWNLOAD_RESUME</a>
+        <a href="#projects" class="btn-pixel outline">VIEW_PROJECTS</a>
+        <a href="#contact" class="btn-pixel ghost">CONNECT</a>
       </div>
     </div>
+  </section>
 
-    <div class="timeline-item expandable" onclick="toggleExpand(this)" tabindex="0" role="button" aria-expanded="false">
-      <div class="tl-header">
-        <div class="tl-header-left">
-          <div class="tl-role-block">
-            <span class="tl-date">PROJECT — 2025/26</span>
-            <span class="tl-job-title">CROSS-TENANT M365 CONSOLIDATION (US → INDIA)</span>
-            <div class="tl-company-loc"><i class="ri-building-line" aria-hidden="true"></i>Princeton IT Services · Gudivada, AP</div>
-          </div>
-          <p style="color:var(--text-dim);margin-top:10px">Consolidating 7 Microsoft 365 US tenants into a single India-based tenant with staged cutover, delta sync, and zero data loss — for compliance &amp; data residency.</p>
-          <div class="milestone-tags-row"><span class="milestone-tech-tag">#AvePoint-Fly</span><span class="milestone-tech-tag">#M365 Admin Center</span><span class="milestone-tech-tag">#Exchange Online</span><span class="milestone-tech-tag">#DNS</span><span class="milestone-tech-tag">#Entra ID</span></div>
-        </div>
-        <span class="tl-chevron" aria-hidden="true"><i class="ri-arrow-down-s-line"></i></span>
+  <section id="about" style="background:var(--bg2)">
+    <h2>ABOUT_ME</h2>
+    <div class="terminal-window reveal-item" id="main-terminal">
+      <div class="terminal-titlebar">
+        <button class="tb-dot red" type="button" title="Close" onclick="terminalClose()" aria-label="Close terminal"></button>
+        <button class="tb-dot yel" type="button" title="Minimize" onclick="terminalMinimize()" aria-label="Minimize terminal"></button>
+        <button class="tb-dot grn" type="button" title="Maximize" onclick="terminalMaximize()" aria-label="Maximize terminal"></button>
+        <span class="terminal-title">shakeer@cloudops ~ bash</span>
       </div>
-      <div class="expandable-details">
-        <div class="details-inner"><ul>
-          <li>Participating in consolidation of <strong>7 Microsoft 365 US tenants</strong> into a single India-based tenant.</li>
-          <li>Executing staged cross-tenant mailbox migrations with pre-synchronization and controlled production cutover.</li>
-          <li>Managing DNS configuration — <strong>MX, SPF, DKIM</strong> records — during domain transfer.</li>
-          <li>Recreating users, groups, and license mappings while maintaining permission alignment.</li>
-          <li>Performing mailbox, OneDrive, and SharePoint migrations with delta synchronization.</li>
-          <li>Conducting post-migration validation to ensure data integrity and service continuity.</li>
-        </ul></div>
+      <div class="terminal-body" id="terminal-body">
+        <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cmd"> whoami</span></span>
+        <span class="t-out"><strong>Mohammed Shakeer Ahmad</strong> — Cloud Operations Engineer based in <strong>Hyderabad, Telangana</strong>. Microsoft Certified: Azure Fundamentals (AZ-900). Currently pursuing AZ-104.</span>
+        <span class="t-blank"></span>
+        <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cmd"> cat ops_focus.yml</span></span>
+        <span class="t-out">focus: <strong>Microsoft 365 administration</strong>, <strong>Azure fundamentals</strong>, identity &amp; access governance, mail flow, cross-tenant migrations, incident handling, and automation.</span>
+        <span class="t-blank"></span>
+        <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cmd"> cat impact.yml</span></span>
+        <span class="t-out">flagship: <strong>Dynamics 365 Mail-to-Ticket Automation</strong><br />→ reduced manual ticket creation<br />→ improved response workflow<br />→ maintained clean email threading and case tracking</span>
+        <span class="t-blank"></span>
+        <span><span class="t-prompt">shakeer@cloudops:~$</span><span class="t-cursor" aria-hidden="true"></span></span>
       </div>
     </div>
+    <div class="terminal-restore" id="terminal-restore" onclick="terminalRestore()" role="button" tabindex="0">&gt;_ shakeer@cloudops — click to restore terminal</div>
+  </section>
 
-    <div class="timeline-item expandable" onclick="toggleExpand(this)" tabindex="0" role="button" aria-expanded="false">
-      <div class="tl-header">
-        <div class="tl-header-left">
-          <div class="tl-role-block">
-            <span class="tl-date">PROJECT — 2025</span>
-            <span class="tl-job-title">GOOGLE WORKSPACE → M365 MIGRATION (40 USERS)</span>
-            <div class="tl-company-loc"><i class="ri-building-line" aria-hidden="true"></i>Princeton IT Services · Gudivada, AP</div>
-          </div>
-          <p style="color:var(--text-dim);margin-top:10px">Migrated 40 users from Google Workspace to Microsoft 365 — mail, calendar, contacts, and files — with uninterrupted email delivery throughout cutover.</p>
-          <div class="milestone-tags-row"><span class="milestone-tech-tag">#Exchange Online</span><span class="milestone-tech-tag">#Microsoft Migration Tools</span><span class="milestone-tech-tag">#DNS</span><span class="milestone-tech-tag">#OneDrive</span></div>
-        </div>
-        <span class="tl-chevron" aria-hidden="true"><i class="ri-arrow-down-s-line"></i></span>
+  <section id="skills">
+    <h2>TECH_STACK</h2>
+    <div class="cmd-palette reveal-item" id="cmd-palette">
+      <div class="cmd-search-row">
+        <i class="ri-search-line cmd-search-icon" aria-hidden="true"></i>
+        <input class="cmd-search-input" id="cmd-search" type="text" placeholder="SEARCH SKILLS... (press /)" autocomplete="off" spellcheck="false" aria-label="Search skills" />
+        <span class="cmd-skill-counter" id="cmd-counter" aria-live="polite"></span>
       </div>
-      <div class="expandable-details">
-        <div class="details-inner"><ul>
-          <li>Migrated 40 users from Google Workspace to Microsoft 365 using Microsoft Migration Tools.</li>
-          <li>Transferred Gmail, Contacts, and Calendar data into Exchange Online with full fidelity.</li>
-          <li>Managed MX record transition and DNS updates to ensure uninterrupted email delivery throughout cutover.</li>
-          <li>Assisted users in migrating files from Google Drive to OneDrive and SharePoint.</li>
-          <li>Performed post-migration validation and issue resolution to confirm data integrity and service continuity.</li>
-        </ul></div>
+      <div class="cmd-body" id="cmd-body">
+        <div class="cmd-group" data-group>
+          <span class="cmd-group-title">MICROSOFT 365</span>
+          <article class="cmd-row" data-skill="Exchange Online Entra ID Intune SharePoint OneDrive M365" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#0078D4"></span><span class="cmd-skill-name">M365 Admin</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Exchange Online</li><li>Entra ID</li><li>Intune</li><li>SharePoint</li><li>OneDrive</li><li>Conditional Access</li><li>MFA</li><li>RBAC</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div><a class="cmd-proj-link" href="#experience">↗ Experience section</a></div></div></article>
+          <article class="cmd-row" data-skill="Dynamics 365 Power Automate ARC Rules" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#742774"></span><span class="cmd-skill-name">Dynamics 365 + Power Automate</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Customer Service</li><li>Power Automate flows</li><li>ARC rules</li><li>Case auto-creation</li><li>Mail threading</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Mail-to-Ticket Automation</a></div></div></article>
+        </div>
+        <div class="cmd-group" data-group>
+          <span class="cmd-group-title">CLOUD</span>
+          <article class="cmd-row" data-skill="Azure Entra ID Resource Groups VNets Storage Accounts VPN Gateway ARM Templates Azure CLI Cost Management" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#0089D6"></span><span class="cmd-skill-name">Azure</span><span class="cmd-badge active-badge">AZ-900 ✓</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Resource Groups</li><li>VNets</li><li>Storage Accounts</li><li>VPN Gateway</li><li>ARM Templates</li><li>Azure CLI</li><li>Cost Management</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#certs">↗ AZ-900 certified · AZ-104 in progress</a></div></div></article>
+          <article class="cmd-row" data-skill="AWS EC2 S3 IAM VPC CloudFront ACM Route 53 CloudWatch" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#FF9900"></span><span class="cmd-skill-name">AWS</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>EC2</li><li>S3</li><li>IAM</li><li>VPC</li><li>CloudFront</li><li>ACM</li><li>Route 53</li><li>CloudWatch</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Portfolio CI/CD · Two-Tier Architecture</a></div></div></article>
+        </div>
+        <div class="cmd-group" data-group>
+          <span class="cmd-group-title">IDENTITY & ACCESS</span>
+          <article class="cmd-row" data-skill="Entra ID RBAC MFA Conditional Access IAM Governance" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#DD344C"></span><span class="cmd-skill-name">Entra ID / IAM</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>RBAC role assignments</li><li>MFA enforcement</li><li>Conditional Access policies</li><li>Access governance reviews</li><li>Least privilege</li><li>AWS IAM</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div><a class="cmd-proj-link" href="#experience">↗ Identity & access work</a></div></div></article>
+        </div>
+        <div class="cmd-group" data-group>
+          <span class="cmd-group-title">AUTOMATION & SCRIPTING</span>
+          <article class="cmd-row" data-skill="PowerShell Bash Exchange Online PowerShell M365" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#012456"></span><span class="cmd-skill-name">PowerShell / Bash</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>M365 PowerShell modules</li><li>Exchange Online PS</li><li>Bulk user ops</li><li>Runbooks</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div></div></div></article>
+          <article class="cmd-row" data-skill="Python Flask Automation boto3" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#3776AB"></span><span class="cmd-skill-name">Python</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Scripting</li><li>Automation</li><li>boto3</li><li>Flask</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div></div></div></article>
+          <article class="cmd-row" data-skill="Power Automate Workflows" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#0066FF"></span><span class="cmd-skill-name">Power Automate</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Cloud flows</li><li>Approvals</li><li>Connectors</li><li>Triggers</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div></div></div></article>
+        </div>
+        <div class="cmd-group" data-group>
+          <span class="cmd-group-title">MONITORING & NETWORKING</span>
+          <article class="cmd-row" data-skill="M365 Service Health Message Trace Quarantine Mail Flow" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#0078D4"></span><span class="cmd-skill-name">M365 Service Health</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Mail flow reports</li><li>Quarantine</li><li>Message trace</li><li>Incident response</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label proficient">PROFICIENT</span><div class="cmd-prof-track"><div class="cmd-prof-fill proficient"></div></div></div></div></div></article>
+          <article class="cmd-row" data-skill="DNS TLS MX SPF DKIM DMARC VPC VNet Subnets" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot pulse" style="background:#38bdf8"></span><span class="cmd-skill-name">DNS / VPC / VNet</span><span class="cmd-badge active-badge">PRODUCTION</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>MX / SPF / DKIM / DMARC</li><li>DNS cutovers</li><li>Public / private subnets</li><li>Route tables</li><li>VPN Gateway</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div></div></div></article>
+        </div>
+        <div class="cmd-group" data-group>
+          <span class="cmd-group-title">CONTAINERS & CI/CD</span>
+          <article class="cmd-row" data-skill="Docker GitHub Actions CI CD" tabindex="0"><div class="cmd-row-main"><span class="cmd-dot" style="background:#2496ED"></span><span class="cmd-skill-name">Docker / GitHub Actions</span><span class="cmd-badge active-badge">LEARNING</span><i class="ri-arrow-down-s-line cmd-chevron" aria-hidden="true"></i></div><div class="cmd-expand"><div class="cmd-expand-inner"><ul class="cmd-sub-list"><li>Docker Compose</li><li>Dockerfiles</li><li>Workflows</li><li>Secrets</li><li>Deploy pipelines</li></ul><div class="cmd-prof-bar-wrap"><span class="cmd-prof-label intermediate">INTERMEDIATE</span><div class="cmd-prof-track"><div class="cmd-prof-fill intermediate"></div></div></div><a class="cmd-proj-link" href="#projects">↗ Portfolio CI/CD · Two-Tier Architecture</a></div></div></article>
+          <article class="cmd-row soon-row" data-skill="Kubernetes Terraform Grafana Prometheus" tabindex="-1"><div class="cmd-row-main"><span class="cmd-dot" style="color:#818cf8"></span><span class="cmd-skill-name" style="opacity:.6">Kubernetes / Terraform / Grafana</span><span class="cmd-badge soon">SOON</span></div></article>
+        </div>
+        <div class="cmd-no-results" id="cmd-no-results"><span aria-hidden="true">⌀</span>NO RESULTS FOUND</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ CERTIFICATIONS ═══ -->
-<section id="certs" style="background:var(--bg2)">
-  <h2>CERTIFICATIONS</h2>
-  <div class="certs-grid">
-    <a class="cert-card reveal-item" href="https://learn.microsoft.com/api/credentials/share/en-us/ShakeerAhmadMohammed-5103/EC012880F1F6994B?sharingId=4C40979F9799946E" target="_blank" rel="noopener" aria-label="Verify Azure Fundamentals credential on Microsoft Learn">
-      <div class="cert-icon"><i class="ri-medal-line" aria-hidden="true"></i></div>
-      <div class="cert-meta">
-        <span class="cert-status done">✓ CERTIFIED · JUN 2026</span>
-        <h3>Microsoft Certified: Azure Fundamentals</h3>
-        <p>AZ-900 · Score 826 / 1000</p>
-        <div class="milestone-tags-row">
-          <span class="milestone-tech-tag">#Azure</span>
-          <span class="milestone-tech-tag">#Cloud Concepts</span>
-          <span class="milestone-tech-tag">#Microsoft</span>
-        </div>
-        <span class="cert-verify"><i class="ri-external-link-line" aria-hidden="true"></i> Verify on Microsoft Learn</span>
-      </div>
-    </a>
-
-    <div class="cert-card reveal-item" style="transition-delay:.1s">
-      <div class="cert-icon progress"><i class="ri-loader-4-line" aria-hidden="true"></i></div>
-      <div class="cert-meta">
-        <span class="cert-status progress">⏳ IN PROGRESS</span>
-        <h3>Microsoft Certified: Azure Administrator</h3>
-        <p>AZ-104 — Azure Administrator Associate</p>
-        <div class="milestone-tags-row">
-          <span class="milestone-tech-tag">#Azure</span>
-          <span class="milestone-tech-tag">#Administrator</span>
-          <span class="milestone-tech-tag">#Operations</span>
-        </div>
-      </div>
+  <section id="projects" style="background:var(--bg2)">
+    <h2>PROJECTS</h2>
+    <div class="project-filter-bar" role="toolbar" aria-label="Project filters">
+      <span class="filter-label">FILTER:</span>
+      <button type="button" class="filter-btn active" data-filter="all">ALL</button>
+      <button type="button" class="filter-btn" data-filter="m365">M365</button>
+      <button type="button" class="filter-btn" data-filter="dynamics365">DYNAMICS 365</button>
+      <button type="button" class="filter-btn" data-filter="power-automate">POWER AUTOMATE</button>
+      <button type="button" class="filter-btn" data-filter="aws">AWS</button>
+      <button type="button" class="filter-btn" data-filter="docker">DOCKER</button>
+      <button type="button" class="filter-btn" data-filter="github-actions">CI/CD</button>
     </div>
-  </div>
-</section>
-
-<!-- ═══ GITHUB ═══ -->
-<section id="github" style="background:var(--bg2)">
-  <h2>GITHUB_ACTIVITY</h2>
-  <div id="github-loading" class="github-loading">$ fetching github data...</div>
-  <div id="github-stats-grid" class="github-stats-grid" style="display:none">
-    <div class="github-stat-card"><span class="github-stat-value" id="gh-repos">—</span><span class="github-stat-label">Public Repos</span></div>
-    <div class="github-stat-card"><span class="github-stat-value" id="gh-stars">—</span><span class="github-stat-label">Total Stars</span></div>
-    <div class="github-stat-card"><span class="github-stat-value" id="gh-followers">—</span><span class="github-stat-label">Followers</span></div>
-    <div class="github-stat-card"><span class="github-stat-value" id="gh-following">—</span><span class="github-stat-label">Following</span></div>
-  </div>
-  <div id="github-repos-list" class="github-repos-list"></div>
-</section>
-
-<!-- ═══ CONTACT ═══ -->
-<section id="contact">
-  <h2>LET'S_CONNECT</h2>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <h3>SAY HELLO</h3>
-      <p>Open to roles in <strong>Cloud Operations</strong>, <strong>M365 Administration</strong>, or <strong>Cloud Engineering</strong>. Drop a message — I usually respond within 24 hours.</p>
-      <div class="contact-detail"><i class="ri-mail-line" aria-hidden="true"></i><span>ahmad.shakeer.md@gmail.com</span></div>
-      <div class="contact-detail"><i class="ri-phone-line" aria-hidden="true"></i><span>+91 88975 69928</span></div>
-      <div class="contact-detail"><i class="ri-map-pin-line" aria-hidden="true"></i><span>Hyderabad, Telangana, India</span></div>
-      <div class="contact-detail"><i class="ri-calendar-line" aria-hidden="true"></i><a href="https://cal.com/sparkeer/15min" target="_blank" rel="noopener">Book a 15-min call →</a></div>
-      <div class="contact-socials">
-        <a href="https://github.com/Sparkeeer" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a>
-        <a href="https://linkedin.com/in/shakeerahmad05" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a>
-      </div>
+    <div class="project-grid" id="project-grid">
+      <article class="project-card reveal-item" data-tags="m365 dynamics365 power-automate">
+        <div class="project-illustration" aria-hidden="true">
+          <svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="44" width="60" height="44" rx="10" fill="rgba(0,120,212,0.08)" stroke="#0078D4" stroke-width="1.5"/><text x="40" y="62" fill="#0078D4" font-family="monospace" font-size="8" text-anchor="middle">Email</text><text x="40" y="76" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">support@</text><line x1="70" y1="66" x2="88" y2="66" stroke="#0078D4" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></line><polygon points="88,62 96,66 88,70" fill="#0078D4"/><rect x="96" y="44" width="68" height="44" rx="10" fill="rgba(116,39,116,0.1)" stroke="#742774" stroke-width="1.5"/><text x="130" y="60" fill="#a35ea3" font-family="monospace" font-size="8" text-anchor="middle">ARC Rule</text><text x="130" y="72" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">+ Flow</text><circle cx="130" cy="82" r="4" fill="none" stroke="#742774" stroke-width="1.5" stroke-dasharray="6 6"><animateTransform attributeName="transform" type="rotate" from="0 130 82" to="360 130 82" dur="1.8s" repeatCount="indefinite"/></circle><line x1="164" y1="66" x2="182" y2="66" stroke="#742774" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.4s" repeatCount="indefinite"/></line><polygon points="182,62 190,66 182,70" fill="#742774"/><rect x="190" y="44" width="60" height="44" rx="10" fill="rgba(34,197,94,0.08)" stroke="#22c55e" stroke-width="1.5"/><text x="220" y="62" fill="#22c55e" font-family="monospace" font-size="8" text-anchor="middle">Case</text><text x="220" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">D365</text><line x1="250" y1="66" x2="268" y2="66" stroke="#22c55e" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.8s" repeatCount="indefinite"/></line><polygon points="268,62 276,66 268,70" fill="#22c55e"/><rect x="276" y="44" width="36" height="44" rx="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1.5"/><text x="294" y="62" fill="#38bdf8" font-family="monospace" font-size="8" text-anchor="middle">Agent</text><text x="294" y="74" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle">&lt;10m</text><text x="160" y="112" fill="#7986a8" font-family="monospace" font-size="8" text-anchor="middle">auto-reply · assignment · threading</text></svg>
+        </div>
+        <div class="project-card-inner"><span class="project-flag flagship">★ FLAGSHIP</span><h3 class="project-title">DYNAMICS 365 MAIL-TO-TICKET AUTOMATION</h3><p class="project-desc">End-to-end mail-to-case automation using Dynamics 365 Customer Service, Power Automate, and ARC rules. Auto-creates cases from inbound mail, threads replies, sends auto-replies, assigns agents, and notifies on closure.</p><div class="project-metrics"><div class="metric"><span class="metric-value">Auto</span><span class="metric-label">Case Creation</span></div><div class="metric"><span class="metric-value">Threaded</span><span class="metric-label">Replies</span></div><div class="metric"><span class="metric-value">Flow</span><span class="metric-label">Notifications</span></div></div><div class="btn-wrapper"><div class="project-tags"><span class="project-tag">#dynamics365</span><span class="project-tag">#power-automate</span><span class="project-tag">#arc-rules</span><span class="project-tag">#m365</span></div><a href="#" class="quick-link" onclick="openProject('d365');return false">VIEW_CASE_STUDY →</a></div></div>
+      </article>
+      <article class="project-card reveal-item" data-tags="aws s3 github-actions iam cloudfront" style="transition-delay:.1s">
+        <div class="project-illustration" aria-hidden="true"><svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="44" width="54" height="44" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><text x="37" y="64" fill="#e4e4e7" font-family="monospace" font-size="8" text-anchor="middle">GitHub</text><text x="37" y="76" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">push</text><line x1="64" y1="66" x2="82" y2="66" stroke="#e4e4e7" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></line><polygon points="82,62 90,66 82,70" fill="#e4e4e7"/><rect x="90" y="44" width="68" height="44" rx="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1.5"/><text x="124" y="62" fill="#38bdf8" font-family="monospace" font-size="8" text-anchor="middle">Actions</text><text x="124" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">+ IAM</text><circle cx="124" cy="82" r="4" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6"><animateTransform attributeName="transform" type="rotate" from="0 124 82" to="360 124 82" dur="1.5s" repeatCount="indefinite"/></circle><line x1="158" y1="66" x2="176" y2="66" stroke="#38bdf8" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.4s" repeatCount="indefinite"/></line><polygon points="176,62 184,66 176,70" fill="#38bdf8"/><rect x="184" y="44" width="44" height="44" rx="10" fill="rgba(255,153,0,0.08)" stroke="#FF9900" stroke-width="1.5"/><text x="206" y="62" fill="#FF9900" font-family="monospace" font-size="8" text-anchor="middle">AWS</text><text x="206" y="74" fill="#FF9900" font-family="monospace" font-size="7" text-anchor="middle">S3</text><line x1="228" y1="66" x2="246" y2="66" stroke="#FF9900" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.8s" repeatCount="indefinite"/></line><polygon points="246,62 254,66 246,70" fill="#FF9900"/><rect x="254" y="44" width="52" height="44" rx="10" fill="rgba(129,140,248,0.08)" stroke="#818cf8" stroke-width="1.5"/><text x="280" y="62" fill="#818cf8" font-family="monospace" font-size="8" text-anchor="middle">Cloud</text><text x="280" y="74" fill="#818cf8" font-family="monospace" font-size="7" text-anchor="middle">Front</text><text x="160" y="112" fill="#7986a8" font-family="monospace" font-size="8" text-anchor="middle">HTTPS · OAC · CI/CD</text></svg></div>
+        <div class="project-card-inner"><h3 class="project-title">PORTFOLIO CI/CD PIPELINE</h3><p class="project-desc">Static portfolio hosted on AWS S3 and CloudFront with HTTPS, Origin Access Control, custom domain routing, and GitHub Actions deployment.</p><div class="project-metrics"><div class="metric"><span class="metric-value">S3</span><span class="metric-label">Static Hosting</span></div><div class="metric"><span class="metric-value">OAC</span><span class="metric-label">Secure Origin</span></div><div class="metric"><span class="metric-value">CI/CD</span><span class="metric-label">GitHub Actions</span></div></div><div class="btn-wrapper"><div class="project-tags"><span class="project-tag">#aws</span><span class="project-tag">#s3</span><span class="project-tag">#cloudfront</span><span class="project-tag">#github-actions</span><span class="project-tag">#iam</span></div><a href="#" class="quick-link" onclick="openProject('cicd');return false">VIEW_CASE_STUDY →</a></div></div>
+      </article>
+      <article class="project-card reveal-item" data-tags="aws docker nginx mysql vpc" style="transition-delay:.15s">
+        <div class="project-illustration" aria-hidden="true"><svg viewBox="0 0 320 130" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="65" r="18" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.06)"/><text x="30" y="62" fill="#38bdf8" font-family="monospace" font-size="8" text-anchor="middle">WWW</text><text x="30" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">:80</text><line x1="48" y1="65" x2="72" y2="65" stroke="#38bdf8" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></line><polygon points="72,61 80,65 72,69" fill="#38bdf8"/><rect x="80" y="48" width="50" height="34" rx="7" fill="rgba(34,197,94,0.08)" stroke="#22c55e" stroke-width="1.5"/><text x="105" y="63" fill="#22c55e" font-family="monospace" font-size="9" text-anchor="middle">NGINX</text><text x="105" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">LB</text><line x1="130" y1="65" x2="154" y2="65" stroke="#22c55e" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.3s" repeatCount="indefinite"/></line><polygon points="154,61 162,65 154,69" fill="#22c55e"/><rect x="162" y="48" width="54" height="34" rx="7" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1.5"/><text x="189" y="63" fill="#38bdf8" font-family="monospace" font-size="9" text-anchor="middle">FLASK</text><text x="189" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">:5000</text><line x1="216" y1="65" x2="240" y2="65" stroke="#38bdf8" stroke-width="1.5"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.6s" repeatCount="indefinite"/></line><polygon points="240,61 248,65 240,69" fill="#38bdf8"/><rect x="248" y="48" width="54" height="34" rx="7" fill="rgba(68,121,161,0.08)" stroke="#4479A1" stroke-width="1.5"/><text x="275" y="63" fill="#4479A1" font-family="monospace" font-size="9" text-anchor="middle">MySQL</text><text x="275" y="74" fill="#7986a8" font-family="monospace" font-size="7" text-anchor="middle">:3306</text><rect x="62" y="96" width="240" height="18" rx="4" fill="rgba(56,189,248,0.05)" stroke="rgba(56,189,248,0.2)" stroke-width="1" stroke-dasharray="4 3"/><text x="182" y="109" fill="rgba(56,189,248,0.6)" font-family="monospace" font-size="8" text-anchor="middle">AWS VPC — Public + Private Subnets</text></svg></div>
+        <div class="project-card-inner"><h3 class="project-title">AWS TWO-TIER ARCHITECTURE</h3><p class="project-desc">Containerized two-tier environment using Flask and MySQL on AWS. Orchestrated with Docker Compose, Nginx as load balancer, inside a custom VPC with subnet separation.</p><div class="project-metrics"><div class="metric"><span class="metric-value">2-tier</span><span class="metric-label">Architecture</span></div><div class="metric"><span class="metric-value">Docker</span><span class="metric-label">Containerized</span></div><div class="metric"><span class="metric-value">VPC</span><span class="metric-label">Network</span></div></div><div class="btn-wrapper"><div class="project-tags"><span class="project-tag">#aws</span><span class="project-tag">#docker</span><span class="project-tag">#nginx</span><span class="project-tag">#mysql</span><span class="project-tag">#vpc</span></div><a href="#" class="quick-link" onclick="openProject('aws');return false">VIEW_CASE_STUDY →</a></div></div>
+      </article>
     </div>
-    <form class="contact-form" onsubmit="event.preventDefault();submitContactForm()" novalidate>
-      <div class="form-row">
-        <div class="form-field">
-          <label class="form-label" for="cf-name">NAME *</label>
-          <input type="text" id="cf-name" class="form-input" placeholder="Your name" required aria-required="true" />
-        </div>
-        <div class="form-field">
-          <label class="form-label" for="cf-email">EMAIL *</label>
-          <input type="email" id="cf-email" class="form-input" placeholder="your@email.com" required aria-required="true" />
-        </div>
-      </div>
-      <div class="form-field">
-        <label class="form-label" for="cf-subject">SUBJECT</label>
-        <input type="text" id="cf-subject" class="form-input" placeholder="Cloud Ops / M365 opportunity / Project / Just saying hi" />
-      </div>
-      <div class="form-field">
-        <label class="form-label" for="cf-message">MESSAGE *</label>
-        <textarea id="cf-message" class="form-textarea" placeholder="Tell me what's on your mind..." required aria-required="true"></textarea>
-      </div>
-      <button type="submit" class="form-submit" id="form-submit-btn">
-        <span id="form-btn-text">SEND MESSAGE</span>
-        <i class="ri-send-plane-line" aria-hidden="true"></i>
-      </button>
-      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
+  </section>
 
+  <section id="experience">
+    <h2>PROFESSIONAL_EXPERIENCE</h2>
+    <div class="timeline">
+      <div class="timeline-item expandable" onclick="toggleExpand(this)" tabindex="0" role="button" aria-expanded="false"><div class="tl-header"><div class="tl-header-left"><div class="tl-role-block"><span class="tl-date">OCT 2025 — PRESENT · 9+ MONTHS</span><span class="tl-job-title">CLOUD OPERATIONS / M365 ENGINEER</span><div><span class="tl-company-name">Princeton IT Services, Inc.</span><div class="tl-company-loc"><i class="ri-map-pin-line" aria-hidden="true"></i>Gudivada, Andhra Pradesh, India</div></div></div><p style="color:var(--text-dim);margin-top:10px">Work with Microsoft 365 and Azure — administering tenants, managing identity & access, executing cross-tenant migrations, and automating IT workflows through Dynamics 365.</p></div><span class="tl-chevron" aria-hidden="true"><i class="ri-arrow-down-s-line"></i></span></div><div class="expandable-details"><div class="details-inner"><ul><li>Built a mail-to-ticket system using <strong>Dynamics 365 Customer Service, Power Automate & ARC rules</strong>.</li><li>Administer <strong>Exchange Online</strong> — mailbox provisioning, shared mailbox permissions, mail flow rules, and quarantine management.</li><li>Work on cross-tenant migrations across Exchange Online, OneDrive, and SharePoint, including DNS cutovers and post-migration validation.</li><li>Manage identity and access through <strong>Entra ID</strong>, including RBAC, MFA, Conditional Access, and access review support.</li><li>Author SOPs, runbooks, and operational workflows to reduce repeat incidents and improve handover quality.</li></ul></div></div></div>
+      <div class="timeline-item expandable" onclick="toggleExpand(this)" tabindex="0" role="button" aria-expanded="false"><div class="tl-header"><div class="tl-header-left"><div class="tl-role-block"><span class="tl-date">PROJECT — 2025/26</span><span class="tl-job-title">CROSS-TENANT M365 CONSOLIDATION (US → INDIA)</span><div class="tl-company-loc"><i class="ri-building-line" aria-hidden="true"></i>Princeton IT Services · Gudivada, AP</div></div><p style="color:var(--text-dim);margin-top:10px">Microsoft 365 tenant consolidation with staged cutover, delta sync, and post-migration checks.</p><div class="milestone-tags-row"><span class="milestone-tech-tag">#AvePoint-Fly</span><span class="milestone-tech-tag">#M365 Admin Center</span><span class="milestone-tech-tag">#Exchange Online</span><span class="milestone-tech-tag">#DNS</span><span class="milestone-tech-tag">#Entra ID</span></div></div><span class="tl-chevron" aria-hidden="true"><i class="ri-arrow-down-s-line"></i></span></div><div class="expandable-details"><div class="details-inner"><ul><li>Assisting with Microsoft 365 tenant consolidation activities.</li><li>Executing staged mailbox migration tasks with pre-sync and controlled cutover.</li><li>Managing DNS configuration such as MX, SPF, DKIM during domain transfer.</li><li>Recreating users, groups, and license mappings while checking permission alignment.</li><li>Performing post-migration validation for data integrity and service continuity.</li></ul></div></div></div>
+      <div class="timeline-item expandable" onclick="toggleExpand(this)" tabindex="0" role="button" aria-expanded="false"><div class="tl-header"><div class="tl-header-left"><div class="tl-role-block"><span class="tl-date">PROJECT — 2025</span><span class="tl-job-title">GOOGLE WORKSPACE → M365 MIGRATION</span><div class="tl-company-loc"><i class="ri-building-line" aria-hidden="true"></i>Princeton IT Services · Gudivada, AP</div></div><p style="color:var(--text-dim);margin-top:10px">Migration from Google Workspace to Microsoft 365, covering mail, calendar, contacts, and files.</p><div class="milestone-tags-row"><span class="milestone-tech-tag">#Exchange Online</span><span class="milestone-tech-tag">#Microsoft Migration Tools</span><span class="milestone-tech-tag">#DNS</span><span class="milestone-tech-tag">#OneDrive</span></div></div><span class="tl-chevron" aria-hidden="true"><i class="ri-arrow-down-s-line"></i></span></div><div class="expandable-details"><div class="details-inner"><ul><li>Migrated Gmail, contacts, and calendar data into Exchange Online.</li><li>Managed MX record transition and DNS updates during cutover.</li><li>Assisted users with Google Drive to OneDrive / SharePoint migration activities.</li><li>Performed post-migration validation and issue resolution.</li></ul></div></div></div>
+    </div>
+  </section>
+
+  <section id="certs" style="background:var(--bg2)">
+    <h2>CERTIFICATIONS</h2>
+    <div class="certs-grid">
+      <a class="cert-card reveal-item" href="https://learn.microsoft.com/api/credentials/share/en-us/ShakeerAhmadMohammed-5103/EC012880F1F6994B?sharingId=4C40979F9799946E" target="_blank" rel="noopener" aria-label="Verify Azure Fundamentals credential on Microsoft Learn"><div class="cert-icon"><i class="ri-medal-line" aria-hidden="true"></i></div><div class="cert-meta"><span class="cert-status done">✓ CERTIFIED · JUN 2026</span><h3>Microsoft Certified: Azure Fundamentals</h3><p>AZ-900 · Score 826 / 1000</p><div class="milestone-tags-row"><span class="milestone-tech-tag">#Azure</span><span class="milestone-tech-tag">#Cloud Concepts</span><span class="milestone-tech-tag">#Microsoft</span></div><span class="cert-verify"><i class="ri-external-link-line" aria-hidden="true"></i> Verify on Microsoft Learn</span></div></a>
+      <div class="cert-card reveal-item" style="transition-delay:.1s"><div class="cert-icon progress"><i class="ri-loader-4-line" aria-hidden="true"></i></div><div class="cert-meta"><span class="cert-status progress">IN PROGRESS</span><h3>Microsoft Certified: Azure Administrator</h3><p>AZ-104 — Azure Administrator Associate</p><div class="milestone-tags-row"><span class="milestone-tech-tag">#Azure</span><span class="milestone-tech-tag">#Administrator</span><span class="milestone-tech-tag">#Operations</span></div></div></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>LET'S_CONNECT</h2>
+    <div class="contact-grid">
+      <div class="contact-info"><h3>SAY HELLO</h3><p>Open to roles in <strong>Cloud Operations</strong>, <strong>M365 Administration</strong>, or <strong>Cloud Engineering</strong>. Drop a message — I usually respond within 24 hours.</p><div class="contact-detail"><i class="ri-mail-line" aria-hidden="true"></i><span>ahmad.shakeer.md@gmail.com</span></div><div class="contact-detail"><i class="ri-phone-line" aria-hidden="true"></i><span>+91 88975 69928</span></div><div class="contact-detail"><i class="ri-map-pin-line" aria-hidden="true"></i><span>Hyderabad, Telangana, India</span></div><div class="contact-detail"><i class="ri-calendar-line" aria-hidden="true"></i><a href="https://cal.com/sparkeer/15min" target="_blank" rel="noopener">Book a 15-min call →</a></div><div class="contact-socials"><a href="https://github.com/Sparkeeer" target="_blank" rel="noopener" aria-label="GitHub"><i class="ri-github-line"></i></a><a href="https://linkedin.com/in/shakeerahmad05" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ri-linkedin-line"></i></a></div></div>
+      <form class="contact-form" onsubmit="event.preventDefault();submitContactForm()" novalidate><div class="form-row"><div class="form-field"><label class="form-label" for="cf-name">NAME *</label><input type="text" id="cf-name" class="form-input" placeholder="Your name" required aria-required="true" /></div><div class="form-field"><label class="form-label" for="cf-email">EMAIL *</label><input type="email" id="cf-email" class="form-input" placeholder="your@email.com" required aria-required="true" /></div></div><div class="form-field"><label class="form-label" for="cf-subject">SUBJECT</label><input type="text" id="cf-subject" class="form-input" placeholder="Cloud Ops / M365 opportunity / Project / Just saying hi" /></div><div class="form-field"><label class="form-label" for="cf-message">MESSAGE *</label><textarea id="cf-message" class="form-textarea" placeholder="Tell me what's on your mind..." required aria-required="true"></textarea></div><button type="submit" class="form-submit" id="form-submit-btn"><span id="form-btn-text">SEND MESSAGE</span><i class="ri-send-plane-line" aria-hidden="true"></i></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form>
+    </div>
+  </section>
 </main>
 
-<!-- ═══ FOOTER ═══ -->
-<footer>
-  &copy; <span id="year"></span> SHAKEER_AHMAD &bull; CLOUD OPERATIONS ENGINEER<br /><br />
-  Built from scratch &bull; Deployed via GitHub Actions &rarr; AWS S3 + CloudFront
-  <div class="footer-links">
-    <a href="#home">HOME</a><a href="#about">ABOUT</a>
-    <a href="#projects">PROJECTS</a><a href="#experience">EXPERIENCE</a>
-    <a href="#certs">CERTS</a>
-    <a href="#contact">CONTACT</a><a href="./assets/resume.pdf" target="_blank" rel="noopener">RESUME</a>
-  </div>
-</footer>
-
+<footer>&copy; <span id="year"></span> SHAKEER_AHMAD &bull; CLOUD OPERATIONS ENGINEER<br /><br />Built from scratch &bull; Deployed via GitHub Actions &rarr; AWS S3 + CloudFront<div class="footer-links"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a href="#experience">EXPERIENCE</a><a href="#certs">CERTS</a><a href="#contact">CONTACT</a><a href="./assets/resume.pdf" target="_blank" rel="noopener">RESUME</a></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 <script src="./js/main.js" defer></script>
 </body>
 </html>

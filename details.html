@@ -114,10 +114,11 @@
       <article class="entry">
         <div class="entry-meta">Cloud</div>
         <div>
-          <h3>This site: CI/CD on AWS</h3>
-          <p>Static site on S3 and CloudFront with HTTPS via ACM. Every push to main deploys automatically through GitHub Actions.</p>
-          <ul class="ticks"><li>CloudFront with Origin Access Control in front of a private bucket.</li><li>Least-privilege IAM user, with credentials in GitHub Secrets.</li><li>Custom domain, www redirect and DNS configured end to end.</li></ul>
-          <ul class="tags"><li>S3</li><li>CloudFront</li><li>GitHub Actions</li><li>IAM</li></ul>
+          <h3>Cloud Portfolio &amp; CI/CD</h3>
+          <p>Production static portfolio hosted on Azure Static Web Apps with GitHub Actions-based continuous deployment. Every push to the main branch automatically publishes the latest version.</p>
+          <ol class="flow"><li>GitHub repository</li><li>GitHub Actions</li><li>Azure Static Web Apps</li><li>shakeer.space</li></ol>
+          <ul class="ticks"><li>Azure Static Web Apps (Free plan) hosts the production static site.</li><li>GitHub Actions automatically deploys changes pushed to main.</li><li>Cloudflare manages DNS for the custom domain shakeer.space.</li><li>HTTPS/custom-domain support is configured through Azure Static Web Apps.</li><li>Previously hosted on AWS S3/CloudFront; migrated to Azure Static Web Apps.</li></ul>
+          <ul class="tags"><li>Azure Static Web Apps</li><li>GitHub Actions</li><li>Cloudflare</li><li>CI/CD</li></ul>
           <p style="margin-top:14px"><a class="link" href="https://github.com/Sparkeeer/portfolio" target="_blank" rel="noopener">View on GitHub <i class="ri-arrow-right-up-line"></i></a></p>
         </div>
       </article>

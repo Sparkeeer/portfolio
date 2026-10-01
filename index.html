@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shakeer Ahmad - Cloud Engineer</title>
-  <meta name="description" content="Shakeer Ahmad — Microsoft 365 & Cloud Engineer working across Exchange Online, Entra ID, Intune, cross-tenant migrations, and automation with PowerShell and Power Automate. AZ-900 certified." />
+  <title>Shakeer Ahmad - Microsoft 365 & Cloud Engineer</title>
+  <meta name="description" content="Shakeer Ahmad - Microsoft 365 & Cloud Engineer working across Exchange Online, Entra ID, Intune, cross-tenant migrations, and automation with PowerShell and Power Automate. AZ-900 certified." />
   <meta name="theme-color" content="#14130f" />
   <meta property="og:title" content="Shakeer Ahmad | Microsoft 365 & Cloud Engineer" />
   <meta property="og:description" content="M365 & Cloud Engineer. Entra ID, Exchange Online, Intune, cloud migrations and automation." />
@@ -174,7 +174,7 @@
       </div>
       <div class="card skill-card">
         <h3><i class="ri-arrow-left-right-line"></i>Migrations &amp; DNS</h3>
-        <ul class="chips"><li>Cross-tenant migration</li><li>Google Workspace → M365</li><li>AvePoint Fly</li><li>MX / SPF / DKIM</li><li>DNS cutovers</li></ul>
+        <ul class="chips"><li>Cross-tenant migration</li><li>Google Workspace → M365</li><li>AvePoint Fly</li><li>MX / SPF / DKIM</li><li>DNS cutovers</li><li>Cloudflare DNS</li></ul>
       </div>
       <div class="card skill-card">
         <h3><i class="ri-flow-chart"></i>Automation</h3>
@@ -182,11 +182,11 @@
       </div>
       <div class="card skill-card">
         <h3><i class="ri-cloud-line"></i>Azure<small>studying for AZ-104</small></h3>
-        <ul class="chips"><li>Virtual Machines</li><li>Availability sets &amp; zones</li><li>Scale sets</li><li>App Service</li><li>AZ-104 labs</li></ul>
+        <ul class="chips"><li>Virtual Machines</li><li>Availability sets &amp; zones</li><li>Scale sets</li><li>App Service</li><li>Static Web Apps</li><li>AZ-104 labs</li></ul>
       </div>
       <div class="card skill-card">
-        <h3><i class="ri-server-line"></i>AWS<small>this site runs on it</small></h3>
-        <ul class="chips"><li>S3</li><li>CloudFront</li><li>IAM</li><li>ACM</li><li>Route 53</li></ul>
+        <h3><i class="ri-server-line"></i>AWS<small>previously hosted this site</small></h3>
+        <ul class="chips"><li>S3</li><li>CloudFront</li><li>IAM</li></ul>
       </div>
     </div>
   </div>
@@ -296,17 +296,19 @@
 
       <article data-cat="cloud" class="card project">
         <div class="project-top"><span class="tag-type">Cloud</span><i class="ri-rocket-line"></i></div>
-        <h3>This site: CI/CD on AWS</h3>
-        <p>Static site on S3 and CloudFront, deployed on every push through GitHub Actions.</p>
+        <h3>Cloud Portfolio &amp; CI/CD</h3>
+        <p>Production static portfolio hosted on Azure Static Web Apps with GitHub Actions-based continuous deployment. Every push to the main branch automatically publishes the latest version.</p>
         <details>
           <summary>Details</summary>
           <ul class="ticks">
-            <li>CloudFront with Origin Access Control in front of a private bucket.</li>
-            <li>Least-privilege IAM user; credentials in GitHub Secrets.</li>
-            <li>Custom domain, www redirect and DNS configured end to end.</li>
+            <li>Azure Static Web Apps hosts the production static site.</li>
+            <li>GitHub Actions automatically deploys changes pushed to main.</li>
+            <li>Cloudflare manages DNS for the custom domain shakeer.space.</li>
+            <li>HTTPS/custom-domain support is configured through Azure Static Web Apps.</li>
+            <li>Previously hosted on AWS S3/CloudFront; migrated to Azure Static Web Apps.</li>
           </ul>
         </details>
-        <ul class="tags"><li>S3</li><li>CloudFront</li><li>GitHub Actions</li><li>IAM</li></ul>
+        <ul class="tags"><li>Azure Static Web Apps</li><li>GitHub Actions</li><li>Cloudflare</li><li>CI/CD</li></ul>
         <a class="link" href="https://github.com/Sparkeeer/portfolio" target="_blank" rel="noopener">View on GitHub <i class="ri-arrow-right-up-line"></i></a>
       </article>
 
@@ -392,7 +394,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <span>© <span id="year"></span> Shakeer Ahmad · Plain HTML, CSS &amp; JS</span>
-    <span class="muted"><i class="ri-git-commit-line"></i> Last updated <span id="last-updated">—</span> · Azure Static Web Apps via GitHub Actions</span>
+    <span class="muted"><i class="ri-git-commit-line"></i> Last updated <span id="last-updated">-</span> · Azure Static Web Apps via GitHub Actions</span>
   </div>
   <div class="container footer-end">
     <p class="psst">psst… <span class="t-desk">triple-click</span><span class="t-touch">triple-tap</span> the logo · press <kbd>Ctrl</kbd> <kbd>K</kbd> for shortcuts</p>
@@ -414,7 +416,7 @@
 
 <!-- Print-only header -->
 <div class="print-only print-head">
-  <strong>Shakeer Ahmad</strong> — Microsoft 365 &amp; Cloud Engineer · Hyderabad, India<br />
+  <strong>Shakeer Ahmad</strong> - Microsoft 365 &amp; Cloud Engineer · Hyderabad, India<br />
   ahmad.shakeer.md@gmail.com · linkedin.com/in/shakeerahmad05 · github.com/Sparkeeer · shakeer.space
 </div>
 

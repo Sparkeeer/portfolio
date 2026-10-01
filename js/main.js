@@ -1,4 +1,4 @@
-/* ═══ CONFIG — edit these ═══ */
+/* ═══ CONFIG - edit these ═══ */
 const EMAILJS_SERVICE  = "service_rt2f6h1";
 const EMAILJS_TEMPLATE = "template_fauo5dc";
 const EMAILJS_KEY      = "a4H-VSCPY1gaWM7x2";
@@ -102,7 +102,7 @@ document.querySelectorAll(".scramble").forEach(el => setTimeout(() => decode(el,
 /* ═══ MULTILINGUAL HELLO ═══ */
 (function(){
   const el = $("hello");
-  const setTip = i => el.dataset.tip = `"${HELLOS[i][0]}" — ${HELLOS[i][1]}. I speak all four.`;
+  const setTip = i => el.dataset.tip = `"${HELLOS[i][0]}" - ${HELLOS[i][1]}. I speak all four.`;
   setTip(0);
   if (reduceMotion) return;
   let i = 0;
@@ -117,7 +117,7 @@ document.querySelectorAll(".scramble").forEach(el => setTimeout(() => decode(el,
   }, 2400);
 })();
 
-/* ═══ "Open to roles" — inline pills ═══ */
+/* ═══ "Open to roles" - inline pills ═══ */
 (function(){
   const btn = $("status-btn"), pop = $("status-pop");
   btn.addEventListener("click", () => {
@@ -157,7 +157,7 @@ document.querySelectorAll(".card, main h2").forEach(el => {
   revealObs.observe(el);
 });
 
-/* ═══ Cursor spotlight — desktop only ═══ */
+/* ═══ Cursor spotlight - desktop only ═══ */
 (function(){
   if (reduceMotion || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
   const root = document.documentElement; let raf;
@@ -174,7 +174,7 @@ document.querySelectorAll(".card, main h2").forEach(el => {
 
 /* ═══ COPY EMAIL ═══ */
 function copyEmail(){
-  navigator.clipboard.writeText(EMAIL).then(() => toast("Copied — no phishing, I promise"), () => location.href = `mailto:${EMAIL}`);
+  navigator.clipboard.writeText(EMAIL).then(() => toast("Copied - no phishing, I promise"), () => location.href = `mailto:${EMAIL}`);
 }
 $("copy-email").addEventListener("click", copyEmail);
 
@@ -190,20 +190,20 @@ const COMMANDS = {
   help: { desc: "list commands", run: () => out(
     Object.entries(COMMANDS).filter(([, c]) => !c.hidden)
       .map(([k, c]) => `  <b>${k.padEnd(18)}</b><span class="dim">${c.desc}</span>`).join("\n")) },
-  whoami: { desc: "who I am, in one line", run: () => out("Shakeer Ahmad — Microsoft 365 &amp; Cloud Engineer at Princeton IT Services.\n<span class=\"dim\">Identity, mail, migrations, automation. Working toward AZ-104.</span>") },
+  whoami: { desc: "who I am, in one line", run: () => out("Shakeer Ahmad - Microsoft 365 &amp; Cloud Engineer at Princeton IT Services.\n<span class=\"dim\">Identity, mail, migrations, automation. Working toward AZ-104.</span>") },
   skills: { desc: "what I work with", run: () => out([
     "<b>M365</b>       Exchange Online · SharePoint · OneDrive · Teams · Dynamics 365",
     "<b>Identity</b>   Entra ID · Conditional Access · MFA · RBAC · Intune",
     "<b>Migration</b>  Cross-tenant · Google Workspace → M365 · MX/SPF/DKIM",
     "<b>Automate</b>   PowerShell · Power Automate · Copilot Studio · GitHub Actions",
-    "<b>Cloud</b>      Azure (AZ-104 labs) · AWS S3 / CloudFront / IAM",
+    "<b>Cloud</b>      Azure Static Web Apps · Azure (AZ-104 labs) · AWS S3 / CloudFront / IAM",
   ].join("\n")) },
   projects: { desc: "things I've built", run: () => { out([
     "<span class=\"ok\"></span> Mail-to-Ticket System     <span class=\"dim\">~80% less manual work</span>",
     "  Cross-Tenant Migrations   <span class=\"dim\">3+ tenants, zero data loss</span>",
     "  Google Workspace → M365   <span class=\"dim\">40 users</span>",
     "  Princeton Engage bot      <span class=\"dim\">birthdays &amp; anniversaries</span>",
-    "  This site                 <span class=\"dim\">S3 + CloudFront + GitHub Actions</span>",
+    "  Cloud Portfolio &amp; CI/CD   <span class=\"dim\">Azure Static Web Apps + GitHub Actions</span>",
   ].join("\n")); setTimeout(() => go("#projects"), 900); } },
   certs: { desc: "certifications", run: () => out("<span class=\"ok\">✓</span> AZ-900  Azure Fundamentals\n<span class=\"dim\">…</span> AZ-104  Azure Administrator <span class=\"dim\">(in progress)</span>") },
   contact: { desc: "how to reach me", run: () => out(`<b>email</b>     <a href="mailto:${EMAIL}">${EMAIL}</a>\n<b>linkedin</b>  <a href="${LINKEDIN}" target="_blank" rel="noopener">${LINKEDIN.replace("https://", "")}</a>\n<b>github</b>    <a href="${GITHUB}" target="_blank" rel="noopener">${GITHUB.replace("https://", "")}</a>`) },
@@ -212,16 +212,16 @@ const COMMANDS = {
   "sudo hire shakeer": { desc: "you know you want to ", run: sudoHire },
   clear: { desc: "clear the screen", run: () => { cliOut.innerHTML = ""; } },
   /* hidden extras */
-  troublesome: { hidden: true, run: () => out('<span class="leaf">"What a drag…" — but I automated it anyway.</span>') },
+  troublesome: { hidden: true, run: () => out('<span class="leaf">"What a drag…" - but I automated it anyway.</span>') },
   shikamaru:   { hidden: true, run: () => out('<span class="leaf">He wanted to be a cloud. I manage them instead.</span>') },
-  clouds:      { hidden: true, run: () => out('<span class="dim">Watching clouds…</span>\n<span class="dim">Azure: in progress · AWS: this site · M365: every day</span>') },
-  dattebayo:   { hidden: true, run: () => out('<span class="leaf">Never giving up on a ticket — that\'s my ninja way.</span>') },
+  clouds:      { hidden: true, run: () => out('<span class="dim">Watching clouds…</span>\n<span class="dim">Azure: this site + AZ-104 · AWS: previously hosted this site · M365: every day</span>') },
+  dattebayo:   { hidden: true, run: () => out('<span class="leaf">Never giving up on a ticket - that\'s my ninja way.</span>') },
   "believe it":{ hidden: true, run: () => out('<span class="leaf">Believe it! Now go check the projects.</span>') },
   ls:   { hidden: true, run: () => out("about  skills  experience  projects  certs  contact") },
   pwd:  { hidden: true, run: () => out("/home/shakeer/portfolio") },
   date: { hidden: true, run: () => out(new Date().toString()) },
   sudo: { hidden: true, run: () => out("<span class=\"dim\">sudo: what should I run? Try</span> <b>sudo hire shakeer</b>") },
-  exit: { hidden: true, run: () => out("<span class=\"dim\">Nice try — there's no leaving. Scroll down </span>") },
+  exit: { hidden: true, run: () => out("<span class=\"dim\">Nice try - there's no leaving. Scroll down </span>") },
 };
 
 async function sudoHire(){
@@ -247,7 +247,7 @@ async function runCommand(raw){
   if (COMMANDS[key]) return COMMANDS[key].run();
   if (key.startsWith("echo ")) return out(esc(cmd.slice(5)));
   if (key.startsWith("sudo ")) return out(`<span class="err">Permission denied.</span> <span class="dim">Only</span> <b>sudo hire shakeer</b> <span class="dim">is allowed here </span>`);
-  out(`<span class="err">command not found:</span> ${esc(cmd)} <span class="dim">— try</span> <b>help</b>`);
+  out(`<span class="err">command not found:</span> ${esc(cmd)} <span class="dim">- try</span> <b>help</b>`);
 }
 
 $("cli-form").addEventListener("submit", e => { e.preventDefault(); runCommand(cliInput.value); cliInput.value = ""; });
@@ -281,18 +281,18 @@ const SKILLS = {
   "Entra ID": { d: "Identity & access management (formerly Azure AD).", u: ["MFA enforcement", "RBAC roles", "Conditional Access", "Access reviews"], p: ["Cross-Tenant Migrations"] },
   "Conditional Access": { d: "Sign-in rules based on user, device and risk.", u: ["Requiring MFA for sign-ins", "Protecting 50+ user accounts"] },
   "MFA": { d: "A second proof of identity beyond the password.", u: ["Enforcing MFA for all users"] },
-  "RBAC": { d: "Give people only the permissions their role needs.", u: ["Assigning admin roles in Entra ID", "Least-privilege IAM for this site's deploys"], p: ["This Site — CI/CD"] },
+  "RBAC": { d: "Give people only the permissions their role needs.", u: ["Assigning admin roles in Entra ID", "Least-privilege IAM deploy user (previous AWS hosting)"], p: ["Cloud Portfolio & CI/CD"] },
   "Intune": { d: "Device management and compliance.", u: ["Device policies and compliance"] },
   "Access reviews": { d: "Periodic checks that access is still needed.", u: ["Quarterly access reviews"] },
   "Cross-tenant migration": { d: "Moving users, mail and files between M365 organisations.", u: ["Pre-sync, cutover & delta sync", "US-to-India tenant moves for compliance"], p: ["Cross-Tenant Migrations"] },
   "Google Workspace → M365": { d: "Moving from Google to Microsoft 365.", u: ["Gmail, Calendar & Contacts to Exchange", "Drive to OneDrive / SharePoint"], p: ["Google Workspace → M365"] },
   "AvePoint Fly": { d: "Third-party M365 migration tool.", u: ["Tenant-to-tenant migrations"], p: ["Cross-Tenant Migrations"] },
   "MX / SPF / DKIM": { d: "DNS records for mail routing and anti-spoofing.", u: ["Updating records during domain transfer", "Keeping mail flowing at cutover"], p: ["Cross-Tenant Migrations", "Google Workspace → M365"] },
-  "DNS cutovers": { d: "Switching DNS so traffic or mail moves to the new system.", u: ["Migration cutovers", "Custom domain for this site"], p: ["Cross-Tenant Migrations", "This Site — CI/CD"] },
+  "DNS cutovers": { d: "Switching DNS so traffic or mail moves to the new system.", u: ["Migration cutovers", "Custom domain for this site via Cloudflare DNS"], p: ["Cross-Tenant Migrations", "Cloud Portfolio & CI/CD"] },
   "PowerShell": { d: "Microsoft's scripting shell for admin automation.", u: ["Bulk admin tasks in M365"] },
-  "Power Automate": { d: "Low-code workflows — 'when X happens, do Y'.", u: ["Case routing & auto-replies", "Scheduled daily flows", "Teams posts & HTML emails"], p: ["Mail-to-Ticket System", "Princeton Engage"] },
+  "Power Automate": { d: "Low-code workflows - 'when X happens, do Y'.", u: ["Case routing & auto-replies", "Scheduled daily flows", "Teams posts & HTML emails"], p: ["Mail-to-Ticket System", "Princeton Engage"] },
   "Copilot Studio": { d: "Microsoft's tool for building bots and agents.", u: ["Internal Teams bot answering milestone questions"], p: ["Princeton Engage"] },
-  "GitHub Actions": { d: "Automation that runs on every code push.", u: ["Auto-deploying this site to S3 + CloudFront"], p: ["This Site — CI/CD"] },
+  "GitHub Actions": { d: "Automation that runs on every code push.", u: ["Auto-deploying this site to Azure Static Web Apps on every push to main"], p: ["Cloud Portfolio & CI/CD"] },
   "Python": { d: "General-purpose programming language.", u: ["Scripting and small utilities"] },
   "Bash": { d: "Linux command-line shell.", u: ["Command-line work on Linux"] },
   "Virtual Machines": { d: "Cloud-hosted computers on demand.", u: ["AZ-104 hands-on labs"] },
@@ -300,11 +300,11 @@ const SKILLS = {
   "Scale sets": { d: "Identical VMs that grow or shrink with load.", u: ["AZ-104 hands-on labs"] },
   "App Service": { d: "Azure's managed web app hosting.", u: ["AZ-104 hands-on labs"] },
   "AZ-104 labs": { d: "Practice for the Azure Administrator certification.", u: ["VMs, availability, scale sets, App Service"] },
-  "S3": { d: "AWS object storage.", u: ["Hosting this site's files (private bucket)"], p: ["This Site — CI/CD"] },
-  "CloudFront": { d: "AWS's CDN.", u: ["Serving this site over HTTPS", "Origin Access Control"], p: ["This Site — CI/CD"] },
-  "IAM": { d: "Who (or what) can do what in AWS.", u: ["Least-privilege deploy user"], p: ["This Site — CI/CD"] },
-  "ACM": { d: "Free TLS certificates on AWS.", u: ["HTTPS for shakeer.space"], p: ["This Site — CI/CD"] },
-  "Route 53": { d: "AWS's DNS service.", u: ["DNS for this site"], p: ["This Site — CI/CD"] },
+  "Static Web Apps": { d: "Azure's hosting service for static sites.", u: ["Hosting this site in production (Free plan)", "HTTPS & custom domain for shakeer.space", "Deploys from GitHub Actions on every push to main"], p: ["Cloud Portfolio & CI/CD"] },
+  "Cloudflare DNS": { d: "Cloudflare's DNS and domain management.", u: ["DNS for the custom domain shakeer.space"], p: ["Cloud Portfolio & CI/CD"] },
+  "S3": { d: "AWS object storage.", u: ["Previously hosted this site's files (private bucket)"], p: ["Cloud Portfolio & CI/CD (before Azure migration)"] },
+  "CloudFront": { d: "AWS's CDN.", u: ["Previously served this site over HTTPS", "Origin Access Control"], p: ["Cloud Portfolio & CI/CD (before Azure migration)"] },
+  "IAM": { d: "Who (or what) can do what in AWS.", u: ["Least-privilege deploy user for the previous AWS hosting"], p: ["Cloud Portfolio & CI/CD (before Azure migration)"] },
 };
 (function(){
   const pop = document.createElement("div");
@@ -339,19 +339,22 @@ const SKILLS = {
 
 /* ═══ Plain-English tooltips for project tags ═══ */
 const GLOSSARY = {
-  "Exchange Online": "Microsoft's cloud email service — mailboxes, calendars and mail flow.",
+  "Exchange Online": "Microsoft's cloud email service - mailboxes, calendars and mail flow.",
   "SharePoint": "Microsoft's cloud platform for team sites, documents and lists.",
   "OneDrive": "Personal cloud file storage for each Microsoft 365 user.",
   "Teams": "Microsoft's chat, meetings and collaboration app.",
-  "Dynamics 365": "Microsoft's business apps — here, used for support case management.",
+  "Dynamics 365": "Microsoft's business apps - here, used for support case management.",
   "AvePoint Fly": "A third-party tool for migrating Microsoft 365 data between tenants.",
-  "DNS": "The internet's address book — maps names to servers, including mail servers.",
-  "Power Automate": "Microsoft's low-code workflow tool — 'when X happens, do Y'.",
+  "DNS": "The internet's address book - maps names to servers, including mail servers.",
+  "Power Automate": "Microsoft's low-code workflow tool - 'when X happens, do Y'.",
   "Copilot Studio": "Microsoft's tool for building chatbots and AI agents.",
-  "GitHub Actions": "Automation that runs on every code push — here, it deploys this site.",
-  "S3": "AWS object storage — this site's files live here.",
-  "CloudFront": "AWS's CDN — serves this site fast and over HTTPS worldwide.",
-  "IAM": "Identity & access management — who (or what) can do what.",
+  "GitHub Actions": "Automation that runs on every code push - here, it deploys this site to Azure Static Web Apps.",
+  "Azure Static Web Apps": "Azure's hosting service for static sites - this site runs here.",
+  "Cloudflare": "Manages DNS for this site's custom domain, shakeer.space.",
+  "CI/CD": "Continuous integration / deployment - every push to main goes live automatically.",
+  "S3": "AWS object storage - previously hosted this site's files.",
+  "CloudFront": "AWS's CDN - previously served this site before the move to Azure.",
+  "IAM": "Identity & access management - who (or what) can do what.",
 };
 document.querySelectorAll(".tags li").forEach(li => {
   const tip = GLOSSARY[li.textContent.trim()];
@@ -397,7 +400,7 @@ function renderPalette(){
   sel = Math.min(sel, Math.max(0, filtered.length - 1));
   palList.innerHTML = filtered.length
     ? filtered.map((a, i) => `<li class="${i === sel ? "sel" : ""}" data-i="${i}"><i class="${a.icon}"></i>${a.label}<small>${a.hint}</small></li>`).join("")
-    : `<li class="empty">No matches — try "resume" or "email"</li>`;
+    : `<li class="empty">No matches - try "resume" or "email"</li>`;
 }
 function openPalette(){ pal.hidden = false; palInput.value = ""; sel = 0; renderPalette(); palInput.focus(); document.body.style.overflow = "hidden"; }
 function closePalette(){ pal.hidden = true; document.body.style.overflow = ""; }
@@ -492,8 +495,8 @@ window.addEventListener("afterprint",  () => document.querySelectorAll("details"
 
 /* ═══ A note for the curious (DevTools) ═══ */
 console.log(
-  "%cHey, you opened DevTools!%c\nI'm Shakeer — M365 & Cloud Engineer. Hiring? " + EMAIL +
-  "\nThis site is plain HTML/CSS/JS on S3 + CloudFront, deployed by GitHub Actions." +
+  "%cHey, you opened DevTools!%c\nI'm Shakeer - M365 & Cloud Engineer. Hiring? " + EMAIL +
+  "\nThis site is plain HTML/CSS/JS on Azure Static Web Apps, deployed by GitHub Actions." +
   "\nFellow Naruto fan? Try 'dattebayo' or 'troublesome' in the terminal.",
   "font:600 14px Inter,sans-serif;color:#22d3ee", "font:12px Inter,sans-serif"
 );

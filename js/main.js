@@ -482,7 +482,7 @@ $("to-top").addEventListener("click", () => {
       document.head.appendChild(l);
     }
     const on = document.documentElement.classList.toggle("retro");
-    toast(on ? "v1 mode, a tribute to my first portfolio. Click the logo 3× to exit." : "Back to the future ✓");
+    toast(on ? "v1 mode, a tribute to my first portfolio. Click the logo 3× to exit." : "Back to the future");
   });
 })();
 

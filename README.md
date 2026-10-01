@@ -1,4 +1,4 @@
-# Shakeer Ahmad — Cloud DevOps Portfolio
+# Cloud DevOps Portfolio
 
 A personal portfolio website built with a terminal-inspired aesthetic and deployed to **Azure Static Web Apps** through an automated **GitHub Actions** CI/CD pipeline.
 
@@ -21,12 +21,12 @@ The project demonstrates practical application of cloud hosting, DNS configurati
 ### Cloud & Infrastructure
 
 - **Azure Static Web Apps** — production static site hosting (Free plan)
-- **Cloudflare** — DNS and custom domain management
-- **Spaceship** — domain registration
+- **Cloudflare** - DNS and custom domain management
+- **Spaceship** - domain registration
 
 ### CI/CD
 
-- **GitHub Actions** — automated deployment on every push to `main`
+- **GitHub Actions** - automated deployment on every push to `main`
 - GitHub repository connected directly to Azure Static Web Apps
 
 ---

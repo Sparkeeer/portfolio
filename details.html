@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Details | Shakeer Ahmad</title>
+  <meta name="description" content="Work experience and project write-ups from Shakeer Ahmad, Microsoft 365 & Cloud Engineer." />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=2" />
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png?v=2" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico?v=2" sizes="48x48" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png?v=2" />
+  <script>(function(){if(localStorage.getItem("theme")==="light")document.documentElement.classList.remove("dark");})();</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <style>
+    .dhead{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+    .back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-weight:510;font-size:.92rem;transition:color var(--ease)}
+    .back:hover{color:var(--c1)}
+    .dhead span{color:var(--muted);font-size:.92rem}
+    .dintro{padding:40px 0 0}
+    .dintro h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:12px}
+    .dintro p{color:var(--muted);font-size:1.1rem;max-width:34rem}
+    .dsec{padding:44px 0 0}
+    .dsec:last-of-type{padding-bottom:96px}
+    .dsec > .container > h2{margin-bottom:8px}
+    .entry{display:grid;grid-template-columns:minmax(0,14rem) 1fr;gap:12px 40px;padding:22px 0;border-top:1px solid var(--border)}
+    .entry-meta{color:var(--muted);font-size:.9rem}
+    .entry h3{font-size:1.3rem;margin-bottom:4px}
+    .entry .sub{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .entry p{color:var(--muted);margin-bottom:12px}
+    .entry .ticks li{font-size:1rem;line-height:1.6}
+    .entry .flow{margin:4px 0 14px}
+    .entry .tags{margin-top:14px}
+    .dsec .list{margin-top:28px;border-bottom:1px solid var(--border)}
+    @media (max-width:760px){.entry{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="container">
+  <header class="dhead"><a class="back" href="./index.html"><i class="ri-arrow-left-line"></i> Back to portfolio</a><span>Shakeer Ahmad</span></header>
+  <div class="dintro">
+    <h1>The longer version.</h1>
+    <p>What I do at work, and how each project came together.</p>
+  </div>
+</div>
+
+<section class="dsec" id="experience">
+  <div class="container">
+    <h2>Work experience</h2>
+    <div class="list">
+      <article class="entry">
+        <div class="entry-meta">Oct 2025 to now</div>
+        <div>
+          <h3>M365 Engineer</h3>
+          <p class="sub">Princeton IT Services, Inc, Gudivada, AP</p>
+          <ul class="ticks">
+            <li>Built an end-to-end <strong>mail-to-ticket system</strong> with Dynamics 365 Customer Service, Power Automate and ARC rules. It cut manual ticket creation by ~80% and first response from hours to under 10 minutes.</li>
+            <li>Administer <strong>Exchange Online</strong> for 50+ users: mailbox provisioning, shared mailboxes, Send-As permissions and quarantine management.</li>
+            <li>Executed <strong>3+ cross-tenant migrations</strong> across Exchange Online, OneDrive and SharePoint, including US-to-India tenant moves for compliance, with directory sync, DNS cutovers and zero data loss.</li>
+            <li>Manage <strong>identity &amp; access</strong> for 50+ users in Entra ID: RBAC roles, MFA enforcement, Conditional Access and quarterly access reviews.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-meta">2020 to 2024</div>
+        <div><h3>B.Tech, Information Technology</h3><p class="sub">R.V.R. &amp; J.C. College of Engineering</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dsec" id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="list">
+      <article class="entry">
+        <div class="entry-meta">Automation, flagship</div>
+        <div>
+          <h3>Mail-to-Ticket System</h3>
+          <p>Support emails become Dynamics 365 cases automatically: routed, tracked and acknowledged without anyone copy-pasting. About 80% less manual work, and first response in under 10 minutes.</p>
+          <ol class="flow"><li>Email arrives</li><li>ARC rule</li><li>Case created</li><li>Power Automate routes</li><li>User gets reply</li></ol>
+          <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li></ul>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-meta">Migration</div>
+        <div>
+          <h3>Cross-Tenant M365 Migrations</h3>
+          <p>Mailboxes, OneDrive and SharePoint moved between tenants, including US-to-India moves for compliance. 3+ tenants migrated, zero data loss.</p>
+          <ul class="ticks"><li>Staged mailbox migrations with pre-sync and a controlled cutover.</li><li>MX, SPF and DKIM updates during domain transfer.</li><li>Users, groups and licences recreated with matching permissions.</li><li>Delta sync plus post-migration validation.</li></ul>
+          <ul class="tags"><li>AvePoint Fly</li><li>Exchange Online</li><li>SharePoint</li><li>DNS</li></ul>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-meta">Migration</div>
+        <div>
+          <h3>Google Workspace to Microsoft 365</h3>
+          <p>Migrated 40 users' mail, calendar, contacts and files with no interruption to email delivery.</p>
+          <ul class="ticks"><li>Gmail, Contacts and Calendar moved into Exchange Online.</li><li>MX transition planned so mail kept flowing during cutover.</li><li>Drive files moved to OneDrive and SharePoint.</li></ul>
+          <ul class="tags"><li>Exchange Online</li><li>OneDrive</li><li>DNS</li></ul>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-meta">Automation</div>
+        <div>
+          <h3>Princeton Engage: Employee Engagement Bot</h3>
+          <p>Automated birthday and work-anniversary recognition with Teams posts, personalised HTML emails and a Copilot Studio bot.</p>
+          <ul class="ticks"><li>Scheduled Power Automate flows read a SharePoint list daily.</li><li>Teams announcements plus branded HTML emails.</li><li>Bot answers milestone questions without exposing birth years to employees.</li></ul>
+          <ul class="tags"><li>Copilot Studio</li><li>Power Automate</li><li>SharePoint</li><li>Teams</li></ul>
+        </div>
+      </article>
+      <article class="entry">
+        <div class="entry-meta">Cloud</div>
+        <div>
+          <h3>This site: CI/CD on AWS</h3>
+          <p>Static site on S3 and CloudFront with HTTPS via ACM. Every push to main deploys automatically through GitHub Actions.</p>
+          <ul class="ticks"><li>CloudFront with Origin Access Control in front of a private bucket.</li><li>Least-privilege IAM user, with credentials in GitHub Secrets.</li><li>Custom domain, www redirect and DNS configured end to end.</li></ul>
+          <ul class="tags"><li>S3</li><li>CloudFront</li><li>GitHub Actions</li><li>IAM</li></ul>
+          <p style="margin-top:14px"><a class="link" href="https://github.com/Sparkeeer/portfolio" target="_blank" rel="noopener">View on GitHub <i class="ri-arrow-right-up-line"></i></a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+</body>
+</html>

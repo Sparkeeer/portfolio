@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Drifted off · Shakeer Ahmad</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=2" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png?v=2" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico?v=2" sizes="48x48" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2" />
+  <script>
+    (function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark");})();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+  <style>
+    :root{--bg:#fbfbfc;--surface:#fff;--text:#16181d;--muted:#5b6170;--border:#e4e6eb;--accent:#0f6cbd;--accent-soft:#e8f1fb;
+      --leaf:#e8833a;--leaf-op:.35;--spiral:rgba(232,131,58,.05);--cloud:rgba(15,108,189,.07);
+      --font:'Inter','Inter Variable',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
+    .dark{--bg:#0e1015;--surface:#181c24;--text:#e7e9ee;--muted:#9aa1b0;--border:#262b36;--accent:#4ea1f3;--accent-soft:rgba(78,161,243,.12);
+      --leaf:#ffb070;--leaf-op:.45;--spiral:rgba(240,160,96,.045);--cloud:rgba(140,180,240,.06)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100vh;display:grid;place-items:center;padding:24px;font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;font-feature-settings:"cv01","ss03";overflow:hidden}
+
+    /* background — same as the main site */
+    .page-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+    .spiral{position:absolute;right:-160px;bottom:-180px;width:480px;height:480px;fill:none;stroke:var(--spiral);stroke-width:1.1;stroke-linecap:round;animation:spin 180s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .cloud{position:absolute;left:-220px;fill:none;stroke:var(--cloud);stroke-width:1;stroke-linejoin:round;animation:drift linear infinite}
+    .cloud path{vector-effect:non-scaling-stroke}
+    .c1{top:14vh;width:180px;animation-duration:140s;animation-delay:-30s}
+    .c2{top:62vh;width:120px;animation-duration:190s;animation-delay:-110s}
+    @keyframes drift{to{transform:translateX(calc(100vw + 440px))}}
+    .leaves i{position:absolute;top:-6vh;width:16px;height:16px;opacity:0;animation:fall linear infinite}
+    .leaves svg{width:100%;height:100%;display:block}
+    .leaves .lf{fill:var(--leaf)}
+    .leaves .vein{fill:none;stroke:color-mix(in srgb,var(--leaf) 55%,#000);stroke-width:1;stroke-linecap:round}
+    .leaves i:nth-child(1){left:12%;animation-duration:26s;animation-delay:-2s}
+    .leaves i:nth-child(2){left:34%;animation-duration:34s;animation-delay:-15s;width:12px;height:12px}
+    .leaves i:nth-child(3){left:62%;animation-duration:30s;animation-delay:-8s}
+    .leaves i:nth-child(4){left:85%;animation-duration:36s;animation-delay:-22s;width:13px;height:13px}
+    @keyframes fall{
+      0%{transform:translate3d(0,0,0) rotate(0);opacity:0}
+      8%{opacity:var(--leaf-op)}
+      25%{transform:translate3d(40px,28vh,0) rotate(90deg)}
+      50%{transform:translate3d(-20px,55vh,0) rotate(200deg)}
+      75%{transform:translate3d(35px,82vh,0) rotate(290deg)}
+      92%{opacity:var(--leaf-op)}
+      100%{transform:translate3d(0,112vh,0) rotate(380deg);opacity:0}
+    }
+
+    /* content */
+    main{width:min(520px,100%);text-align:center}
+    .code{display:inline-flex;align-items:center;gap:8px;font:600 .85rem var(--font);letter-spacing:.02em;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:999px}
+    .big-cloud{font-size:3.2rem;color:var(--accent);opacity:.85;margin:18px 0 6px;animation:bob 6s ease-in-out infinite}
+    @keyframes bob{50%{transform:translateY(-6px)}}
+    h1{font-size:clamp(1.7rem,5vw,2.4rem);font-weight:510;letter-spacing:-.03em;line-height:1.2;margin-bottom:10px}
+    p.sub{color:var(--muted);line-height:1.6;margin-bottom:6px}
+    p.aside{color:var(--muted);font-size:.88rem;opacity:.85}
+    .log{margin:24px auto;text-align:left;font:500 .8rem/1.8 var(--mono);background:#171510;border:1px solid #2c2921;border-radius:12px;overflow:hidden;color:#ddd7c8}
+    .log-bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#1d1b15;border-bottom:1px solid #2c2921;font-size:.72rem;color:#9a9383}
+    .log-bar i{width:9px;height:9px;border-radius:50%;background:#ff5f57}
+    .log-bar i:nth-child(2){background:#febc2e}.log-bar i:nth-child(3){background:#28c840}
+    .log-bar b{margin-left:6px;font-weight:500}
+    .log-body{padding:12px 16px;white-space:pre-wrap;overflow-wrap:anywhere;word-break:normal}
+    .p{color:#3fb950}.w{color:#d29922}.ok{color:#3fb950}.dim{color:#9a9383}
+    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--accent);transition:transform .2s ease,filter .2s ease}
+    .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    .btn-ghost{background:var(--surface);color:var(--text);border-color:var(--border)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent);filter:none}
+
+    @media (max-width:560px){.log{font-size:.72rem}.log-body{padding:10px 12px}.spiral{width:340px;height:340px;right:-120px;bottom:-120px}.c2{display:none}.leaves i:nth-child(n+3){display:none}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.leaves,.clouds{display:none}}
+  
+    .spiral,.clouds{display:none!important}
+    :root{--bg:#f5f1e8;--surface:#faf7f0;--text:#27241f;--muted:#6e675b;--border:#ddd5c3;--accent:#2f4a6d;--accent-soft:rgba(47,74,109,.09)}
+    .dark{--bg:#14130f;--surface:#1b1a14;--text:#e8e3d5;--muted:#9b9485;--border:#2c2a22;--accent:#8fa8c8;--accent-soft:rgba(143,168,200,.11)}
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true">
+    <svg class="spiral" viewBox="-40 -40 480 480"><path id="sp" /></svg>
+    <div class="clouds">
+      <svg class="cloud c1" viewBox="0 -24 124 70"><path d="M20 42h78a16 16 0 0 0 0-32 22 22 0 0 0-40-6A18 18 0 0 0 20 42z"/></svg>
+      <svg class="cloud c2" viewBox="0 -24 124 70"><path d="M20 42h78a16 16 0 0 0 0-32 22 22 0 0 0-40-6A18 18 0 0 0 20 42z"/></svg>
+    </div>
+    <div class="leaves"><i><svg viewBox="0 0 24 24"><path class="lf" d="M12 2C6 6 4 12 6 18c1.5 1.8 3.8 2.6 6 2.6s4.5-.8 6-2.6C20 12 18 6 12 2z"/><path class="vein" d="M12 5v17M12 10l-3-2M12 10l3-2M12 14l-3.5-2M12 14l3.5-2"/></svg></i><i><svg viewBox="0 0 24 24"><path class="lf" d="M12 2C6 6 4 12 6 18c1.5 1.8 3.8 2.6 6 2.6s4.5-.8 6-2.6C20 12 18 6 12 2z"/><path class="vein" d="M12 5v17M12 10l-3-2M12 10l3-2M12 14l-3.5-2M12 14l3.5-2"/></svg></i><i><svg viewBox="0 0 24 24"><path class="lf" d="M12 2C6 6 4 12 6 18c1.5 1.8 3.8 2.6 6 2.6s4.5-.8 6-2.6C20 12 18 6 12 2z"/><path class="vein" d="M12 5v17M12 10l-3-2M12 10l3-2M12 14l-3.5-2M12 14l3.5-2"/></svg></i><i><svg viewBox="0 0 24 24"><path class="lf" d="M12 2C6 6 4 12 6 18c1.5 1.8 3.8 2.6 6 2.6s4.5-.8 6-2.6C20 12 18 6 12 2z"/><path class="vein" d="M12 5v17M12 10l-3-2M12 10l3-2M12 14l-3.5-2M12 14l3.5-2"/></svg></i></div>
+  </div>
+
+  <main>
+    <span class="code">ERROR 404</span>
+    <div class="big-cloud" aria-hidden="true"><i class="ri-cloud-line"></i></div>
+    <h1>This page drifted off like a cloud.</h1>
+    <p class="sub">Probably lying on a rooftop somewhere, too troublesome to come back.</p>
+    <p class="aside">Don't worry — zero data loss. Everything else is right where it should be. </p>
+
+    <div class="log" aria-hidden="true">
+      <div class="log-bar"><i></i><i></i><i></i><b>shakeer@cloud: ~</b></div>
+      <div class="log-body"><span class="p">PS&gt;</span> Get-Page -Path "<span id="path">/unknown</span>"
+<span class="w">WARN</span>  Not found in source or target tenant
+<span class="dim">INFO</span>  Checked the clouds… it's not up there either 
+<span class="ok">OK</span>    Homepage healthy · redirect available</div>
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="/"><i class="ri-home-4-line"></i> Take me home</a>
+      <a class="btn btn-ghost" href="/#projects">See my work</a>
+    </div>
+  </main>
+
+  <script>
+    // draw the spiral
+    (function(){ var d = ""; for (var i = 0; i < 1400; i += 3) { var t = i / 1400 * 14 * Math.PI, r = 6 + t * 5.2;
+      d += (i ? " L" : "M") + (200 + r * Math.cos(t)).toFixed(1) + " " + (200 + r * Math.sin(t)).toFixed(1); }
+      document.getElementById("sp").setAttribute("d", d); })();
+    var p = location.pathname; document.getElementById("path").textContent = p.length > 40 ? p.slice(0, 37) + "…" : p;
+    document.addEventListener("visibilitychange", function(){ document.querySelector(".page-bg").style.display = document.hidden ? "none" : ""; });
+  </script>
+</body>
+</html>

@@ -1,56 +1,80 @@
-# Shakeer Ahmad — DevOps Portfolio
+# Shakeer Ahmad — Cloud DevOps Portfolio
 
-Personal portfolio site built from scratch and deployed on AWS.
-Live at: https://shakeer.space
+A personal portfolio website built with a terminal-inspired aesthetic, deployed to AWS S3 via an automated GitHub Actions pipeline. The project demonstrates practical application of cloud hosting, CI/CD automation, and IAM security principles.
+
+**Live site:** [shakeer.space](https://www.shakeer.space/)
 
 ---
 
-## Stack
+## Tech Stack
 
-- HTML, CSS, JavaScript
+**Frontend**
+- HTML5, CSS3 (custom grid system), JavaScript
+- Fonts: Press Start 2P (pixel aesthetic), Inter
+- Icons: RemixIcon, Devicon
+
+**Cloud & Infrastructure**
 - AWS S3 — static site hosting
-- AWS CloudFront — CDN and HTTPS
-- AWS ACM — SSL certificate
-- AWS IAM — least-privilege deployment user
-- GitHub Actions — CI/CD pipeline
+- IAM — least-privilege user access for deployment
+
+**CI/CD**
+- GitHub Actions — automated deployment on every push to `main`
 
 ---
 
-## How it works
+## How It Works
 
-Every push to `main` triggers the GitHub Actions workflow which:
+Every `git push` to the `main` branch triggers a GitHub Actions workflow that:
 
-1. Authenticates with AWS using repository secrets
-2. Syncs all files to the S3 bucket
-3. Creates a CloudFront invalidation to purge the cache
-
-Deploy time is under 60 seconds from push to live.
+1. Authenticates with AWS using encrypted repository secrets
+2. Syncs `index.html` and all static assets to the S3 bucket
+3. Updates the live site automatically — no manual deployment required
 
 ---
 
-## Project structure
+## Repository Structure
 
 ```
 portfolio/
 ├── .github/
-│   └── workflows/
-│       └── deploy.yml
-├── assets/
-├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
-└── index.html
+│   └── workflows/         # GitHub Actions CI/CD pipeline
+├── index.html             # Main site (single-page)
+├── favicon (1).png        # Site favicon
+├── logo-nobg.png          # Logo asset
+└── trail portfolio blue print.txt  # Planning notes
 ```
 
 ---
 
-## CI/CD Pipeline
+## Local Development
 
-```
-git push → GitHub Actions → S3 sync → CloudFront invalidation → Live
-```
+No build step required. Open `index.html` directly in a browser:
 
-Credentials are stored as GitHub repository secrets. The IAM user has scoped permissions — S3 write access and CloudFront invalidation only.
+```bash
+git clone https://github.com/Sparkeeer/portfolio.git
+cd portfolio
+open index.html
+```
 
 ---
+
+## Deployment
+
+Deployment is fully automated via GitHub Actions. To set it up in a fork:
+
+1. Create an S3 bucket with static website hosting enabled.
+2. Create an IAM user with `s3:PutObject` and `s3:DeleteObject` permissions scoped to that bucket.
+3. Add the following secrets to your GitHub repository:
+   - `AWS_ACCESS_KEY_ID`
+   - `AWS_SECRET_ACCESS_KEY`
+   - `AWS_REGION`
+   - `S3_BUCKET`
+4. Push to `main` — the workflow handles the rest.
+
+---
+
+## Contact
+
+- **GitHub:** [github.com/Sparkeeer](https://github.com/Sparkeeer)
+- **LinkedIn:** [linkedin.com/in/shakeerahmad05](https://linkedin.com/in/shakeerahmad05)
+- **Email:** ahmad.shakeer.md@gmail.com

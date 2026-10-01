@@ -1,75 +1,155 @@
 # Shakeer Ahmad — Cloud DevOps Portfolio
 
-A personal portfolio website built with a terminal-inspired aesthetic, deployed to AWS S3 via an automated GitHub Actions pipeline. The project demonstrates practical application of cloud hosting, CI/CD automation, and IAM security principles.
+A personal portfolio website built with a terminal-inspired aesthetic and deployed to **Azure Static Web Apps** through an automated **GitHub Actions** CI/CD pipeline.
 
-**Live site:** [shakeer.space](https://www.shakeer.space/)
+The project demonstrates practical application of cloud hosting, DNS configuration, CI/CD automation, and static web deployment.
+
+**Live site:** [shakeer.space](https://shakeer.space/)
 
 ---
 
 ## Tech Stack
 
-**Frontend**
-- HTML5, CSS3 (custom grid system), JavaScript
-- Fonts: Press Start 2P (pixel aesthetic), Inter
-- Icons: RemixIcon, Devicon
+### Frontend
 
-**Cloud & Infrastructure**
-- AWS S3 — static site hosting
-- IAM — least-privilege user access for deployment
+- HTML5
+- CSS3
+- JavaScript
+- **Fonts:** Press Start 2P, Inter
+- **Icons:** RemixIcon, Devicon
 
-**CI/CD**
-- GitHub Actions — automated deployment on every push to `main`
+### Cloud & Infrastructure
+
+- **Azure Static Web Apps** — production static site hosting (Free plan)
+- **Cloudflare** — DNS and custom domain management
+- **Spaceship** — domain registration
+
+### CI/CD
+
+- **GitHub Actions** — automated deployment on every push to `main`
+- GitHub repository connected directly to Azure Static Web Apps
 
 ---
 
 ## How It Works
 
-Every `git push` to the `main` branch triggers a GitHub Actions workflow that:
+Every push to the `main` branch triggers the GitHub Actions workflow.
 
-1. Authenticates with AWS using encrypted repository secrets
-2. Syncs `index.html` and all static assets to the S3 bucket
-3. Updates the live site automatically — no manual deployment required
+The deployment process:
+
+1. GitHub Actions checks out the latest commit.
+2. The workflow deploys the static website to Azure Static Web Apps.
+3. Azure publishes the updated site automatically.
+4. The production site is served through the custom domain `shakeer.space`.
+
+No manual file uploads or Azure deployment steps are required after the initial configuration.
+
+    Local changes
+          ↓
+    git push origin main
+          ↓
+    GitHub
+          ↓
+    GitHub Actions
+          ↓
+    Azure Static Web Apps
+          ↓
+    shakeer.space
 
 ---
 
 ## Repository Structure
 
-```
-portfolio/
-├── .github/
-│   └── workflows/         # GitHub Actions CI/CD pipeline
-├── index.html             # Main site (single-page)
-├── favicon (1).png        # Site favicon
-├── logo-nobg.png          # Logo asset
-└── trail portfolio blue print.txt  # Planning notes
-```
+    portfolio/
+    ├── .github/
+    │   └── workflows/
+    │       └── azure-static-web-apps-*.yml   # Azure CI/CD pipeline
+    ├── assets/                               # Images, icons, resume and site assets
+    ├── css/
+    │   └── styles.css                        # Site styling
+    ├── js/
+    │   └── main.js                           # Interactive functionality
+    ├── 404-page.html                          # Custom 404 page
+    ├── details.html                           # Extended portfolio details
+    ├── index.html                             # Main portfolio page
+    └── README.md                              # Project documentation
 
 ---
 
 ## Local Development
 
-No build step required. Open `index.html` directly in a browser:
+No build step is required.
 
-```bash
-git clone https://github.com/Sparkeeer/portfolio.git
-cd portfolio
-open index.html
-```
+Clone the repository:
+
+    git clone https://github.com/Sparkeeer/portfolio.git
+    cd portfolio
+
+Open `index.html` directly in a browser, or use a local development server such as **VS Code Live Server**.
 
 ---
 
 ## Deployment
 
-Deployment is fully automated via GitHub Actions. To set it up in a fork:
+Deployment is fully automated through **Azure Static Web Apps** and **GitHub Actions**.
 
-1. Create an S3 bucket with static website hosting enabled.
-2. Create an IAM user with `s3:PutObject` and `s3:DeleteObject` permissions scoped to that bucket.
-3. Add the following secrets to your GitHub repository:
-   - `AWS_ACCESS_KEY_ID`
-   - `AWS_SECRET_ACCESS_KEY`
-   - `AWS_REGION`
-   - `S3_BUCKET`
-4. Push to `main` — the workflow handles the rest.
+The repository is connected to an Azure Static Web App and configured to deploy from the `main` branch.
+
+To publish an update:
+
+    git add .
+    git commit -m "Update portfolio"
+    git push origin main
+
+The GitHub Actions workflow automatically deploys the new commit to Azure Static Web Apps.
+
+---
+
+## Custom Domain
+
+**Production domain:** [shakeer.space](https://shakeer.space/)
+
+DNS is managed through **Cloudflare**, while **Azure Static Web Apps** provides the application hosting and HTTPS for the custom domain.
+
+The domain is registered with **Spaceship**, while Cloudflare handles DNS management.
+
+---
+
+## Cloud Migration
+
+The portfolio was previously hosted on **AWS S3 and CloudFront** with GitHub Actions-based deployment.
+
+The hosting architecture was migrated to **Azure Static Web Apps**, replacing the previous AWS hosting and deployment setup.
+
+DNS management was also moved to **Cloudflare**, while the domain registration remained with **Spaceship**.
+
+### Previous Architecture
+
+    GitHub
+       ↓
+    GitHub Actions
+       ↓
+    AWS S3
+       ↓
+    CloudFront
+       ↓
+    shakeer.space
+
+### Current Architecture
+
+    GitHub
+       ↓
+    GitHub Actions
+       ↓
+    Azure Static Web Apps
+       ↓
+    shakeer.space
+
+    Cloudflare
+       ↓
+    DNS / Custom Domain
+       ↓
+    Azure Static Web Apps
 
 ---
 
@@ -77,4 +157,4 @@ Deployment is fully automated via GitHub Actions. To set it up in a fork:
 
 - **GitHub:** [github.com/Sparkeeer](https://github.com/Sparkeeer)
 - **LinkedIn:** [linkedin.com/in/shakeerahmad05](https://linkedin.com/in/shakeerahmad05)
-- **Email:** ahmad.shakeer.md@gmail.com
+- **Email:** [ahmad.shakeer.md@gmail.com](mailto:ahmad.shakeer.md@gmail.com)

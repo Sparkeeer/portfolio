@@ -169,18 +169,6 @@ h3{font-size:1.06rem;font-weight:600;letter-spacing:-.01em}
   animation:floor 6s linear infinite}
 @keyframes floor{to{background-position:0 56px}}
 
-.status-wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:24px}
-.status{cursor:pointer;display:inline-flex;align-items:center;gap:8px;font:500 .8rem var(--mono);letter-spacing:.02em;color:var(--muted);border:1px solid var(--border);background:var(--surface);backdrop-filter:blur(10px);padding:7px 14px;border-radius:999px;transition:all var(--ease)}
-.status i{font-size:1rem;transition:transform var(--ease)}
-.status[aria-expanded="true"] i{transform:rotate(180deg)}
-.status:hover{border-color:color-mix(in srgb,var(--ok) 50%,var(--border));color:var(--text)}
-.status-dot,.dot-ok{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok);animation:pulse 2.4s ease-out infinite;display:inline-block}
-@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}70%{box-shadow:0 0 0 7px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.status-pop{display:flex;flex-wrap:wrap;gap:6px;animation:slideIn .25s ease}
-.status-pop[hidden]{display:none}
-@keyframes slideIn{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
-.status-pop li{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font:500 .78rem var(--mono);border-radius:999px;background:var(--accent-soft);color:var(--c1);border:1px solid color-mix(in srgb,var(--c1) 30%,transparent)}
-
 .hero h1{font-size:clamp(2.3rem,5.8vw,4rem);font-weight:700;margin-bottom:20px}
 .hello{display:inline-block;color:var(--c1);text-shadow:0 0 24px color-mix(in srgb,var(--c1) 50%,transparent);cursor:help;transition:opacity .35s ease,transform .35s ease}
 .hello.swap{opacity:0;transform:translateY(-8px)}

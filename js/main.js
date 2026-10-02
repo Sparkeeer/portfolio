@@ -117,16 +117,6 @@ document.querySelectorAll(".scramble").forEach(el => setTimeout(() => decode(el,
   }, 2400);
 })();
 
-/* ═══ "Open to roles" - inline pills ═══ */
-(function(){
-  const btn = $("status-btn"), pop = $("status-pop");
-  btn.addEventListener("click", () => {
-    const open = pop.hidden;
-    pop.hidden = !open;
-    btn.setAttribute("aria-expanded", open);
-  });
-})();
-
 /* ═══ TENURE ═══ */
 (function(){
   const now = new Date();

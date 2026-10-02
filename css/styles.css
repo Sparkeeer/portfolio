@@ -752,3 +752,17 @@ h2 + .sec-note{margin-top:-12px}
 
 /* Spam trap: invisible to people, tempting to bots */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+
+/* ===== Bug fixes: tooltips and mobile Resume ===== */
+/* Tooltips are not laid out until hovered. Invisible ones near the right edge were widening
+   the page on phones, which pushed the header and terminal off screen. */
+[data-tip]::after{display:none}
+[data-tip]:hover::after,[data-tip]:focus-visible::after{display:block;animation:tipin .15s ease}
+@keyframes tipin{from{opacity:0}to{opacity:1}}
+/* The greeting sits at the page edge: anchor its tooltip to the left and open it below the word */
+.hello[data-tip]::after,.hello[data-tip]:hover::after{left:0;transform:none;top:calc(100% + 6px);bottom:auto;max-width:min(260px,calc(100vw - 48px))}
+@media (hover:none){[data-tip]::after,[data-tip]:hover::after,[data-tip]:focus-visible::after{display:none}}
+/* Resume lives in the nav on desktop; on small phones the button is hidden, so it joins the menu */
+.nav-resume{display:none}
+@media (max-width:560px){.nav-resume{display:block}.nav-resume a{font-weight:510;color:var(--text)}}

@@ -1,0 +1,8 @@
+{
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404-page.html",
+      "statusCode": 404
+    }
+  }
+}

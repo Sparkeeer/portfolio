@@ -760,6 +760,13 @@ h2 + .sec-note{margin-top:-12px}
 @media (max-width:700px){
   .container,.nav-inner{width:min(1280px,100% - 40px)}
 }
+.hello.native{
+  font-family:'Noto Sans Telugu','Noto Sans Devanagari','Noto Naskh Arabic',system-ui,sans-serif;
+  font-weight:500;
+  font-size:1.1em;
+  line-height:1;
+  vertical-align:-.04em}
+  
   .retro .hello.native{
     font-family:'Noto Sans Telugu','Noto Sans Devanagari','Noto Naskh Arabic',system-ui,sans-serif;
     font-weight:700;

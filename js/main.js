@@ -111,6 +111,7 @@ document.querySelectorAll(".scramble").forEach(el => setTimeout(() => decode(el,
     setTimeout(() => {
       i = (i + 1) % HELLOS.length;
       el.textContent = HELLOS[i][0];
+      el.classList.toggle("native", i !== 0);
       setTip(i);
       el.classList.remove("swap");
     }, 350);
@@ -469,10 +470,11 @@ $("to-top").addEventListener("click", () => {
     if (clicks < 3) return;
     clicks = 0;
     if (!$("retro-font")) {
-      const l = document.createElement("link");
-      l.id = "retro-font"; l.rel = "stylesheet";
-      l.href = "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
-    }
+  const l = document.createElement("link");
+  l.id = "retro-font"; l.rel = "stylesheet";
+  l.href = "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
+  document.head.appendChild(l);
+}
     const on = document.documentElement.classList.toggle("retro");
     toast(on ? "v1 mode, a tribute to my first portfolio. Click the logo 3× to exit." : "Back to the future");
   });

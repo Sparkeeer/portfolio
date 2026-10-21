@@ -754,3 +754,9 @@ h2 + .sec-note{margin-top:-12px}
 /* Resume lives in the nav on desktop; on small phones the button is hidden, so it joins the menu */
 .nav-resume{display:none}
 @media (max-width:560px){.nav-resume{display:block}.nav-resume a{font-weight:510;color:var(--text)}}
+/* Wider layout on large screens */
+.container,.nav-inner{width:min(1280px,100% - 64px)}
+.cli{max-width:880px}
+@media (max-width:700px){
+  .container,.nav-inner{width:min(1280px,100% - 40px)}
+}

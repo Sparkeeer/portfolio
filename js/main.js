@@ -54,7 +54,7 @@ updateProgress();
 function toggleTheme(){
   const dark = document.documentElement.classList.toggle("dark");
   localStorage.setItem("theme", dark ? "dark" : "light");
-  toast(`PS> Set-Theme -Mode ${dark ? "Dark" : "Light"}  `);
+  toast(`PS> Set-Theme -Mode ${dark ? "Dark" : "Light"}`);
   return dark;
 }
 $("theme-btn").addEventListener("click", toggleTheme);
@@ -120,7 +120,7 @@ document.querySelectorAll(".scramble").forEach(el => setTimeout(() => decode(el,
 /* ═══ TENURE ═══ */
 (function(){
   const now = new Date();
-  const months = (now.getFullYear() - JOB_START.getFullYear()) * 12 + (now.getMonth() - JOB_START.getMonth()) + 1;
+  const months = (now.getFullYear() - JOB_START.getFullYear()) * 12 + (now.getMonth() - JOB_START.getMonth());
   const y = Math.floor(months / 12), m = months % 12;
   $("tenure").textContent = [y ? `${y} yr` : "", m ? `${m} mo` : ""].filter(Boolean).join(" ") || "1 mo";
 })();
@@ -189,17 +189,17 @@ const COMMANDS = {
     "<b>Cloud</b>      Azure Static Web Apps · Azure (AZ-104 labs) · AWS S3 / CloudFront / IAM",
   ].join("\n")) },
   projects: { desc: "things I've built", run: () => { out([
-    "<span class=\"ok\"></span> Mail-to-Ticket System     <span class=\"dim\">~80% less manual work</span>",
+      "  Mail-to-Ticket System     <span class=\"dim\">~80% less manual work</span>",
     "  Cross-Tenant Migrations   <span class=\"dim\">3+ tenants, zero data loss</span>",
     "  Google Workspace → M365   <span class=\"dim\">40 users</span>",
-    "  Employee Engagement Bot      <span class=\"dim\">birthdays &amp; anniversaries</span>",
+    "  Employee Engagement Bot   <span class=\"dim\">birthdays &amp; anniversaries</span>",
     "  Cloud Portfolio &amp; CI/CD   <span class=\"dim\">Azure Static Web Apps + GitHub Actions</span>",
   ].join("\n")); setTimeout(() => go("#projects"), 900); } },
   certs: { desc: "certifications", run: () => out("<span class=\"ok\">✓</span> AZ-900  Azure Fundamentals\n<span class=\"dim\">…</span> AZ-104  Azure Administrator <span class=\"dim\">(in progress)</span>") },
   contact: { desc: "how to reach me", run: () => out(`<b>email</b>     <a href="mailto:${EMAIL}">${EMAIL}</a>\n<b>linkedin</b>  <a href="${LINKEDIN}" target="_blank" rel="noopener">${LINKEDIN.replace("https://", "")}</a>\n<b>github</b>    <a href="${GITHUB}" target="_blank" rel="noopener">${GITHUB.replace("https://", "")}</a>`) },
   resume: { desc: "open my resume", run: () => { out("Opening resume.pdf…"); window.open("./assets/resume.pdf", "_blank"); } },
   theme: { desc: "toggle dark / light", run: () => { const d = toggleTheme(); out(`<span class="ok">✓</span> Theme set to ${d ? "Dark" : "Light"}`); } },
-  "sudo hire shakeer": { desc: "you know you want to ", run: sudoHire },
+  "sudo hire shakeer": { desc: "you know you want to", run: sudoHire },
   clear: { desc: "clear the screen", run: () => { cliOut.innerHTML = ""; } },
   /* hidden extras */
   troublesome: { hidden: true, run: () => out('<span class="leaf">"What a drag…" - but I automated it anyway.</span>') },
@@ -263,7 +263,7 @@ $("cli").addEventListener("click", e => { if (!e.target.closest("button, a")) cl
 /* ═══ Skills: skill → real usage popovers (edit to match your real work) ═══ */
 const SKILLS = {
   "Exchange Online": { d: "Microsoft's cloud email service.", u: ["Mailbox provisioning", "Shared mailboxes & Send-As", "Quarantine management", "Mail flow during migrations"], p: ["Mail-to-Ticket System", "Cross-Tenant Migrations", "Google Workspace → M365"] },
-  "SharePoint Online": { d: "Team sites, documents and lists.", u: ["Tenant-to-tenant content moves", "Lists as a data source for flows"], p: ["Cross-Tenant Migrations", "Princeton Engage"] },
+  "SharePoint Online": { d: "Team sites, documents and lists.", u: ["Tenant-to-tenant content moves", "Lists as a data source for flows"], p: ["Cross-Tenant Migrations", "Employee Engagement Bot"] },
   "OneDrive": { d: "Personal cloud file storage for each user.", u: ["Moving user files between tenants", "Landing Google Drive data"], p: ["Cross-Tenant Migrations", "Google Workspace → M365"] },
   "Teams": { d: "Chat, meetings and collaboration.", u: ["Automated announcements", "Hosting a Copilot Studio bot"], p: ["Employee Engagement Bot"] },
   "M365 Admin Center": { d: "Main portal for users, licences and settings.", u: ["User & licence management", "Onboarding and offboarding"] },
@@ -280,7 +280,7 @@ const SKILLS = {
   "MX / SPF / DKIM": { d: "DNS records for mail routing and anti-spoofing.", u: ["Updating records during domain transfer", "Keeping mail flowing at cutover"], p: ["Cross-Tenant Migrations", "Google Workspace → M365"] },
   "DNS cutovers": { d: "Switching DNS so traffic or mail moves to the new system.", u: ["Migration cutovers", "Custom domain for this site via Cloudflare DNS"], p: ["Cross-Tenant Migrations", "Cloud Portfolio & CI/CD"] },
   "PowerShell": { d: "Microsoft's scripting shell for admin automation.", u: ["Bulk admin tasks in M365"] },
-  "Power Automate": { d: "Low-code workflows - 'when X happens, do Y'.", u: ["Case routing & auto-replies", "Scheduled daily flows", "Teams posts & HTML emails"], p: ["Mail-to-Ticket System", "Princeton Engage"] },
+  "Power Automate": { d: "Low-code workflows - 'when X happens, do Y'.", u: ["Case routing & auto-replies", "Scheduled daily flows", "Teams posts & HTML emails"], p: ["Mail-to-Ticket System", "Employee Engagement Bot"] },
   "Copilot Studio": { d: "Microsoft's tool for building bots and agents.", u: ["Internal Teams bot answering milestone questions"], p: ["Employee Engagement Bot"] },
   "GitHub Actions": { d: "Automation that runs on every code push.", u: ["Auto-deploying this site to Azure Static Web Apps on every push to main"], p: ["Cloud Portfolio & CI/CD"] },
   "Python": { d: "General-purpose programming language.", u: ["Scripting and small utilities"] },
@@ -290,7 +290,7 @@ const SKILLS = {
   "Scale sets": { d: "Identical VMs that grow or shrink with load.", u: ["AZ-104 hands-on labs"] },
   "App Service": { d: "Azure's managed web app hosting.", u: ["AZ-104 hands-on labs"] },
   "AZ-104 labs": { d: "Practice for the Azure Administrator certification.", u: ["VMs, availability, scale sets, App Service"] },
-  "Static Web Apps": { d: "Azure's hosting service for static sites.", u: ["Hosting this site in production (Free plan)", "HTTPS & custom domain for shakeer.space", "Deploys from GitHub Actions on every push to main"], p: ["Cloud Portfolio & CI/CD"] },
+  "Static Web Apps": { d: "Azure's hosting service for static sites.", u: ["Hosting this site in production", "HTTPS & custom domain for shakeer.space", "Deploys from GitHub Actions on every push to main"], p: ["Cloud Portfolio & CI/CD"] },
   "Cloudflare DNS": { d: "Cloudflare's DNS and domain management.", u: ["DNS for the custom domain shakeer.space"], p: ["Cloud Portfolio & CI/CD"] },
   "S3": { d: "AWS object storage.", u: ["Previously hosted this site's files (private bucket)"], p: ["Cloud Portfolio & CI/CD (before Azure migration)"] },
   "CloudFront": { d: "AWS's CDN.", u: ["Previously served this site over HTTPS", "Origin Access Control"], p: ["Cloud Portfolio & CI/CD (before Azure migration)"] },
@@ -472,7 +472,6 @@ $("to-top").addEventListener("click", () => {
       const l = document.createElement("link");
       l.id = "retro-font"; l.rel = "stylesheet";
       l.href = "https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap";
-      document.head.appendChild(l);
     }
     const on = document.documentElement.classList.toggle("retro");
     toast(on ? "v1 mode, a tribute to my first portfolio. Click the logo 3× to exit." : "Back to the future");

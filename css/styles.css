@@ -431,3 +431,15 @@ kbd{font-family:var(--mono);font-size:.7rem;border:1px solid var(--border);borde
   .chips li:not(:last-child)::after{content:" ·"}
   .tags{display:none}
 }
+/* Remove the browser autofill highlight in the contact form */
+.letter-line input:-webkit-autofill,
+.letter-line input:-webkit-autofill:hover,
+.letter-line input:-webkit-autofill:focus,
+.letter-line input:autofill{
+  -webkit-text-fill-color:var(--c1);
+  caret-color:var(--c1);
+  -webkit-box-shadow:0 0 0 1000px var(--bg) inset;
+  box-shadow:0 0 0 1000px var(--bg) inset;
+  transition:background-color 9999s ease-out 0s;
+  font:inherit;
+}

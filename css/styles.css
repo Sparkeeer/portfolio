@@ -5,7 +5,7 @@
 
 /* ── Tokens ─────────────────────────────── */
 :root{
-  /* Light = washi paper, sumi ink, ai (indigo) */
+  /* Light = washi paper, sumi ink, indigo */
   --bg:#f5f1e8; --bg-2:#eee8da; --surface:#faf7f0; --surface-solid:#faf7f0;
   --text:#27241f; --muted:#6e675b; --border:#ddd5c3; --border-hi:#2f4a6d;
   --c1:#2f4a6d; --c3:#e8833a; --accent-soft:rgba(47,74,109,.09);

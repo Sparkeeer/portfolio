@@ -1,4 +1,4 @@
-/* ═══ CONFIG - edit these ═══ */
+/* ═══ CONFIG - EMailJS ═══ */
 const EMAILJS_SERVICE  = "service_rt2f6h1";
 const EMAILJS_TEMPLATE = "template_fauo5dc";
 const EMAILJS_KEY      = "a4H-VSCPY1gaWM7x2";

@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shakeer Ahmad - Microsoft 365 & Cloud Engineer</title>
+  <title>Shakeer Ahmad - Microsoft 365 &amp; Cloud Engineer</title>
   <meta name="description" content="Shakeer Ahmad - Microsoft 365 & Cloud Engineer working across Exchange Online, Entra ID, Intune, cross-tenant migrations, and automation with PowerShell and Power Automate. AZ-900 certified." />
+  <link rel="canonical" href="https://shakeer.space/" />
   <meta name="theme-color" content="#14130f" />
+
+  <!-- Social cards -->
   <meta property="og:title" content="Shakeer Ahmad | Microsoft 365 & Cloud Engineer" />
   <meta property="og:description" content="M365 & Cloud Engineer. Entra ID, Exchange Online, Intune, cloud migrations and automation." />
-  <meta property="og:url" content="https://shakeer.space" />
+  <meta property="og:url" content="https://shakeer.space/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Shakeer Ahmad" />
   <meta property="og:image" content="https://shakeer.space/assets/og-image.png" />
@@ -19,39 +22,39 @@
   <meta name="twitter:title" content="Shakeer Ahmad | Microsoft 365 & Cloud Engineer" />
   <meta name="twitter:description" content="Entra ID, Exchange Online, Intune, cloud migrations and automation." />
   <meta name="twitter:image" content="https://shakeer.space/assets/og-image.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png?v=2" />
+
+  <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=2" />
   <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png?v=2" />
   <link rel="shortcut icon" href="./assets/favicon.ico?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png?v=2" />
   <link rel="manifest" href="./assets/site.webmanifest?v=2" />
+
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Shakeer Ahmad","jobTitle":"Microsoft 365 & Cloud Engineer","worksFor":{"@type":"Organization","name":"Princeton IT Services"},"knowsAbout":["Microsoft 365","Exchange Online","Entra ID","Intune","Azure","PowerShell","Power Automate","Cloud Migrations","Conditional Access"],"url":"https://shakeer.space"}
+    {"@context":"https://schema.org","@type":"Person","name":"Shakeer Ahmad","jobTitle":"Microsoft 365 & Cloud Engineer","worksFor":{"@type":"Organization","name":"Princeton IT Services"},"knowsAbout":["Microsoft 365","Exchange Online","Entra ID","Intune","Azure","PowerShell","Power Automate","Cloud Migrations","Conditional Access"],"url":"https://shakeer.space","sameAs":["https://linkedin.com/in/shakeerahmad05","https://github.com/Sparkeeer"]}
   </script>
-  <!-- Dark by default; respects a saved "light" choice -->
+
+  <!-- Dark by default; respects a saved "light" choice (runs before CSS to avoid a flash) -->
   <script>
     (function(){if(localStorage.getItem("theme")==="light")document.documentElement.classList.remove("dark");})();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+
+  <!-- Fonts & icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Telugu:wght@500&family=Noto+Sans+Devanagari:wght@500&family=Noto+Naskh+Arabic:wght@500&display=swap" rel="stylesheet" />  <link rel="stylesheet" href="./css/styles.css?v=4" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Telugu:wght@500&family=Noto+Sans+Devanagari:wght@500&family=Noto+Naskh+Arabic:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
+  <link rel="stylesheet" href="./css/styles.css?v=7" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div id="scroll-progress" aria-hidden="true"></div>
 
-<!-- Page-wide background -->
+<!-- Page background: falling leaves only -->
 <div class="page-bg" aria-hidden="true">
-  <div class="stars"></div>
-  <div class="aurora"></div>
-  <svg class="spiral" viewBox="-40 -40 480 480"><path id="spiral-path" /></svg>
-  <div class="clouds">
-    <svg class="cloud c1" viewBox="0 -24 124 70"><path d="M20 42h78a16 16 0 0 0 0-32 22 22 0 0 0-40-6A18 18 0 0 0 20 42z"/></svg>
-    <svg class="cloud c2" viewBox="0 -24 124 70"><path d="M20 42h78a16 16 0 0 0 0-32 22 22 0 0 0-40-6A18 18 0 0 0 20 42z"/></svg>
-  </div>
   <div class="leaves" id="leaves"></div>
 </div>
-<div class="spotlight" aria-hidden="true"></div>
 
 <!-- NAV -->
 <header class="nav" id="nav">
@@ -72,12 +75,12 @@
       </ul>
     </nav>
     <div class="nav-actions">
-      <button class="kbd-btn" id="palette-btn" aria-label="Open quick actions">
+      <button class="kbd-btn" id="palette-btn" type="button" aria-label="Open quick actions">
         <i class="ri-command-line"></i><span class="kbd-hint">Ctrl K</span>
       </button>
-      <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><i class="ri-contrast-2-line"></i></button>
+      <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle dark mode"><i class="ri-contrast-2-line"></i></button>
       <a href="./assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-sm hide-sm">Resume<i class="ri-arrow-right-up-line"></i></a>
-      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+      <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="ri-menu-line"></i></button>
     </div>
   </div>
 </header>
@@ -86,14 +89,12 @@
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-grid-floor" aria-hidden="true"></div>
   <div class="container">
     <h1>
       <span class="hello" id="hello">Hi</span>, I'm <span class="scramble" data-text="Shakeer.">Shakeer.</span><br />
       <span class="grad">Microsoft 365 &amp; Cloud Engineer.</span>
     </h1>
     <p class="lead">I keep identity, mail and migrations running in Microsoft 365, and automate whatever repeats. Getting deeper into Azure.</p>
-
     <div class="cta">
       <a href="#projects" class="btn">See my work <i class="ri-arrow-right-line"></i></a>
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
@@ -104,7 +105,7 @@
   <div class="container cli-wrap">
     <div class="cli" id="cli">
       <div class="cli-bar">
-        <span class="dots"><i></i><i></i><i></i></span>
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <b>shakeer@cloud: ~</b>
         <span class="cli-tip">try a command ↓</span>
       </div>
@@ -117,6 +118,7 @@
         <button type="button">whoami</button>
         <button type="button">skills</button>
         <button type="button">projects</button>
+        <button type="button">cases</button>
         <button type="button">certs</button>
         <button type="button">contact</button>
         <button type="button" class="hot">sudo hire shakeer</button>
@@ -125,7 +127,7 @@
   </div>
 
   <div class="container cloud-quote">
-    <i class="ri-cloud-line"></i>
+    <i class="ri-cloud-line" aria-hidden="true"></i>
     <p>Shikamaru just wanted to be a cloud.<br /><span>I became a cloud engineer instead. Close enough.</span></p>
   </div>
 </section>
@@ -153,27 +155,27 @@
     <p class="sec-note">Hover or tap a skill to see where I’ve used it.</p>
     <div class="skill-grid">
       <div class="card skill-card">
-        <h3><i class="ri-microsoft-line"></i>Microsoft 365</h3>
+        <h3>Microsoft 365</h3>
         <ul class="chips"><li>Exchange Online</li><li>SharePoint Online</li><li>OneDrive</li><li>Teams</li><li>M365 Admin Center</li><li>Dynamics 365 Customer Service</li></ul>
       </div>
       <div class="card skill-card">
-        <h3><i class="ri-shield-user-line"></i>Identity &amp; Security</h3>
+        <h3>Identity &amp; Security</h3>
         <ul class="chips"><li>Entra ID</li><li>Conditional Access</li><li>MFA</li><li>RBAC</li><li>Intune</li><li>Access reviews</li></ul>
       </div>
       <div class="card skill-card">
-        <h3><i class="ri-arrow-left-right-line"></i>Migrations &amp; DNS</h3>
+        <h3>Migrations &amp; DNS</h3>
         <ul class="chips"><li>Cross-tenant migration</li><li>Google Workspace → M365</li><li>AvePoint Fly</li><li>MX / SPF / DKIM</li><li>DNS cutovers</li><li>Cloudflare DNS</li></ul>
       </div>
       <div class="card skill-card">
-        <h3><i class="ri-flow-chart"></i>Automation</h3>
+        <h3>Automation</h3>
         <ul class="chips"><li>PowerShell</li><li>Power Automate</li><li>Copilot Studio</li><li>GitHub Actions</li><li>Python</li><li>Bash</li></ul>
       </div>
       <div class="card skill-card">
-        <h3><i class="ri-cloud-line"></i>Azure<small>studying for AZ-104</small></h3>
+        <h3>Azure<small>studying for AZ-104</small></h3>
         <ul class="chips"><li>Virtual Machines</li><li>Availability sets &amp; zones</li><li>Scale sets</li><li>App Service</li><li>Static Web Apps</li><li>AZ-104 labs</li></ul>
       </div>
       <div class="card skill-card">
-        <h3><i class="ri-server-line"></i>AWS<small>previously hosted this site</small></h3>
+        <h3>AWS<small>previously hosted this site</small></h3>
         <ul class="chips"><li>S3</li><li>CloudFront</li><li>IAM</li></ul>
       </div>
     </div>
@@ -211,93 +213,72 @@
   <div class="container">
     <h2 class="cloud-cursor">Things I've built &amp; delivered</h2>
     <p class="sec-note">Filter by type to narrow the list.</p>
-    <div class="filters" id="filters" aria-label="Filter projects">
-      <button type="button" class="on" data-f="all">All</button>
-      <button type="button" data-f="m365">M365</button>
-      <button type="button" data-f="automation">Automation</button>
-      <button type="button" data-f="migration">Migration</button>
-      <button type="button" data-f="cloud">Cloud</button>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects">
+      <button type="button" class="on" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="m365" aria-pressed="false">M365</button>
+      <button type="button" data-f="automation" aria-pressed="false">Automation</button>
+      <button type="button" data-f="migration" aria-pressed="false">Migration</button>
+      <button type="button" data-f="cloud" aria-pressed="false">Cloud</button>
     </div>
+
     <div class="project-grid" id="project-grid">
 
       <article data-cat="m365 automation" class="card project wide">
-        <div class="project-top"><span class="tag-type">Automation (flagship)</span><i class="ri-customer-service-2-line"></i></div>
+        <span class="tag-type">Automation (flagship)</span>
         <h3>Mail-to-Ticket System</h3>
-        <p>Support emails become Dynamics 365 cases automatically, routed and acknowledged.</p>
+        <p>A noisy shared support mailbox turned into a Dynamics 365 ticketing system: filtered, threaded, classified and routed automatically.</p>
         <ol class="flow" aria-label="How the flow works">
-          <li><i class="ri-mail-line"></i>Email arrives</li>
-          <li><i class="ri-git-branch-line"></i>ARC rule</li>
-          <li><i class="ri-file-list-3-line"></i>Case created</li>
-          <li><i class="ri-flashlight-line"></i>Power Automate routes</li>
-          <li><i class="ri-reply-line"></i>User gets reply</li>
+          <li>Email arrives</li>
+          <li>ARC rule filters</li>
+          <li>Case created or threaded</li>
+          <li>Classified</li>
+          <li>Power Automate routes</li>
         </ol>
-        <ul class="metrics"><li><strong>~80%</strong> less manual work</li><li><strong>&lt;10 min</strong> first response</li></ul>
-        <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li></ul>
+        <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li><li>Dataverse</li></ul>
+        <a class="link" href="./details.html#ticketing">Read the full build <i class="ri-arrow-right-up-line"></i></a>
       </article>
 
       <article data-cat="m365 migration" class="card project">
-        <div class="project-top"><span class="tag-type">Migration</span><i class="ri-arrow-left-right-line"></i></div>
+        <span class="tag-type">Migration</span>
         <h3>Cross-Tenant M365 Migrations</h3>
         <p>Mailboxes, OneDrive and SharePoint moved between tenants, including US to India, with no data loss.</p>
-        <ul class="metrics"><li><strong>3+</strong> tenants migrated</li><li><strong>0</strong> data loss</li></ul>
-        <details>
-          <summary>How it works</summary>
-          <ul class="ticks">
-            <li>Staged mailbox migrations with pre-sync and a controlled cutover.</li>
-            <li>MX, SPF and DKIM updates during domain transfer.</li>
-            <li>Users, groups and licences recreated with matching permissions.</li>
-            <li>Delta sync plus post-migration validation.</li>
-          </ul>
-        </details>
         <ul class="tags"><li>AvePoint Fly</li><li>Exchange Online</li><li>SharePoint</li><li>DNS</li></ul>
       </article>
 
       <article data-cat="m365 migration" class="card project">
-        <div class="project-top"><span class="tag-type">Migration</span><i class="ri-google-line"></i></div>
+        <span class="tag-type">Migration</span>
         <h3>Google Workspace → Microsoft 365</h3>
         <p>40 users' mail, calendar, contacts and files moved with no break in email delivery.</p>
-        <details>
-          <summary>Details</summary>
-          <ul class="ticks">
-            <li>Gmail, Contacts and Calendar moved into Exchange Online.</li>
-            <li>MX transition planned so mail kept flowing during cutover.</li>
-            <li>Drive files moved to OneDrive and SharePoint.</li>
-          </ul>
-        </details>
         <ul class="tags"><li>Exchange Online</li><li>OneDrive</li><li>DNS</li></ul>
       </article>
 
       <article data-cat="m365 automation" class="card project">
-        <div class="project-top"><span class="tag-type">Automation</span><i class="ri-cake-2-line"></i></div>
+        <span class="tag-type">Automation</span>
         <h3>Employee Engagement Bot</h3>
-        <p>Birthday and anniversary recognition through Teams posts, HTML emails and a Copilot Studio bot.</p>
-        <details>
-          <summary>Details</summary>
-          <ul class="ticks">
-            <li>Scheduled Power Automate flows read a SharePoint list daily.</li>
-            <li>Teams announcements plus branded HTML emails.</li>
-            <li>Bot answers milestone questions without exposing birth years to employees.</li>
-          </ul>
-        </details>
+        <p>Birthday and anniversary recognition through Teams posts, HTML emails and a Copilot Studio bot that keeps private information private.</p>
         <ul class="tags"><li>Copilot Studio</li><li>Power Automate</li><li>SharePoint</li><li>Teams</li></ul>
       </article>
 
       <article data-cat="cloud" class="card project">
-        <div class="project-top"><span class="tag-type">Cloud</span><i class="ri-rocket-line"></i></div>
+        <span class="tag-type">Cloud</span>
         <h3>Cloud Portfolio &amp; CI/CD</h3>
-        <p>Production static portfolio hosted on Azure Static Web Apps with GitHub Actions-based continuous deployment. Every push to the main branch automatically publishes the latest version.</p>
-        <details>
-          <summary>Details</summary>
-          <ul class="ticks">
-            <li>Azure Static Web Apps hosts the production static site.</li>
-            <li>GitHub Actions automatically deploys changes pushed to main.</li>
-            <li>Cloudflare manages DNS for the custom domain shakeer.space.</li>
-            <li>HTTPS/custom-domain support is configured through Azure Static Web Apps.</li>
-            <li>Previously hosted on AWS S3/CloudFront; migrated to Azure Static Web Apps.</li>
-          </ul>
-        </details>
+        <p>This site runs on Azure Static Web Apps. GitHub Actions publishes every push to main automatically.</p>
         <ul class="tags"><li>Azure Static Web Apps</li><li>GitHub Actions</li><li>Cloudflare</li><li>CI/CD</li></ul>
         <a class="link" href="https://github.com/Sparkeeer/portfolio" target="_blank" rel="noopener">View on GitHub <i class="ri-arrow-right-up-line"></i></a>
+      </article>
+
+      <article data-cat="cloud migration" class="card project wide">
+        <span class="tag-type">Infrastructure</span>
+        <h3>Biometric Access &amp; Cloud Attendance</h3>
+        <p>Face and fingerprint terminal for 20+ employees, moved from a local server to a cloud platform with shift-aware attendance and mobile check-in.</p>
+        <ol class="flow" aria-label="How the rollout worked">
+          <li>Terminal setup</li>
+          <li>Local server</li>
+          <li>Data migration</li>
+          <li>Cloud platform</li>
+          <li>Mobile and reports</li>
+        </ol>
+        <ul class="tags"><li>Hikvision</li><li>HikCentral</li><li>Hik-Connect</li><li>ISAPI</li></ul>
       </article>
 
     </div>
@@ -311,6 +292,7 @@
     <p class="sec-note">The longer write-ups live on their own page.</p>
     <a class="more-row" href="./details.html#experience"><span>Work experience</span><i class="ri-arrow-right-up-line"></i></a>
     <a class="more-row" href="./details.html#projects"><span>Projects, step by step</span><i class="ri-arrow-right-up-line"></i></a>
+    <a class="more-row" href="./details.html#cases"><span>Case studies</span><i class="ri-arrow-right-up-line"></i></a>
   </div>
 </section>
 
@@ -320,23 +302,15 @@
     <h2>Credentials</h2>
     <div class="cert-grid">
       <article class="card cert-card">
-        <div class="cert-top">
-          <i class="ri-verified-badge-line"></i>
-          <span class="pill ok">Earned</span>
-        </div>
+        <div class="cert-top"><span class="pill ok">Earned</span></div>
         <h3>Microsoft Certified: Azure Fundamentals</h3>
         <p class="cert-code">AZ-900 · Microsoft</p>
-        <p class="cert-desc">Cloud concepts, Azure architecture and services, security, governance and cost management.</p>
         <a class="link" href="https://learn.microsoft.com/api/credentials/share/en-us/ShakeerAhmadMohammed-5103/EC012880F1F6994B?sharingId=4C40979F9799946E" target="_blank" rel="noopener">Verify credential <i class="ri-arrow-right-up-line"></i></a>
       </article>
       <article class="card cert-card pending">
-        <div class="cert-top">
-          <i class="ri-time-line"></i>
-          <span class="pill warn">In progress</span>
-        </div>
+        <div class="cert-top"><span class="pill warn">In progress</span></div>
         <h3>Microsoft Certified: Azure Administrator Associate</h3>
         <p class="cert-code">AZ-104 · Microsoft</p>
-        <p class="cert-desc">Identity &amp; governance, storage, compute, virtual networking, monitoring and backup in Azure.</p>
         <p class="cert-note"><i class="ri-flask-line"></i> Preparing with hands-on labs</p>
       </article>
     </div>
@@ -394,10 +368,10 @@
   <div class="palette-box">
     <div class="palette-search">
       <i class="ri-search-line"></i>
-      <input id="palette-input" type="text" placeholder="Type a command or search…" autocomplete="off" />
+      <input id="palette-input" type="text" placeholder="Type a command or search…" autocomplete="off" aria-label="Search actions" />
       <kbd>Esc</kbd>
     </div>
-    <ul class="palette-list" id="palette-list"></ul>
+    <ul class="palette-list" id="palette-list" role="listbox"></ul>
   </div>
 </div>
 
@@ -408,6 +382,6 @@
 </div>
 
 <div class="toast" id="toast" role="status"></div>
-<script src="./js/main.js?v=4" defer></script>
+<script src="./js/main.js?v=7" defer></script>
 </body>
 </html>

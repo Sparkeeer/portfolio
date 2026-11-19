@@ -443,3 +443,28 @@ kbd{font-family:var(--mono);font-size:.7rem;border:1px solid var(--border);borde
   transition:background-color 9999s ease-out 0s;
   font:inherit;
 }
+
+/* ── Experience: simple timeline row ── */
+.exp{display:grid;grid-template-columns:minmax(0,11rem) 1fr;gap:16px 48px;padding:26px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.exp-when{position:relative;padding-left:20px;color:var(--muted);font-size:.9rem;line-height:1.6}
+.exp-dot{position:absolute;left:0;top:.45em;width:9px;height:9px;border-radius:50%;background:var(--c1);box-shadow:0 0 0 4px var(--accent-soft)}
+.exp-len{font-size:.82rem;opacity:.8}
+.exp-main h3{font-size:1.2rem;margin-bottom:8px}
+.exp-main h3 span{color:var(--muted);font-weight:400}
+.exp-lead{color:var(--muted);font-size:1rem;line-height:1.6;max-width:40rem;margin-bottom:16px}
+.exp-list{display:grid;gap:8px;margin-bottom:18px}
+.exp-list li{position:relative;padding-left:18px;font-size:.97rem;color:var(--muted);line-height:1.5}
+.exp-list li::before{content:"→";position:absolute;left:0;color:var(--c1)}
+.exp-list b{color:var(--text);font-weight:590}
+@media (max-width:760px){
+  .exp{grid-template-columns:1fr;gap:10px}
+}
+
+/* ── Details page: branded header + footer ── */
+.dbar{position:sticky;top:0;z-index:60;background:var(--bg);border-bottom:1px solid var(--border)}
+.dbar-inner{height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.dbar .brand{font-size:.98rem}
+.dbar .brand img{width:28px;height:28px}
+.dfoot{border-top:1px solid var(--border);padding:22px 0;margin-top:56px}
+.dfoot-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:560px){.dbar .brand span{display:none}}

@@ -79,22 +79,6 @@ function go(sel){
   document.querySelector(sel)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: sel === "#cli" ? "center" : "start" });
 }
 
-/* ═══ Text decode effect ═══ */
-const GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789<>/#$%&*";
-function decode(el, duration = 900){
-  const final = el.dataset.text || el.textContent;
-  if (reduceMotion) { el.textContent = final; return; }
-  const start = performance.now();
-  (function frame(now){
-    const p = Math.min(1, (now - start) / duration);
-    const shown = Math.floor(p * final.length);
-    el.textContent = final.split("").map((ch, i) =>
-      i < shown || ch === " " || ch === "." ? ch : GLYPHS[Math.floor(Math.random() * GLYPHS.length)]).join("");
-    if (p < 1) requestAnimationFrame(frame); else el.textContent = final;
-  })(start);
-}
-document.querySelectorAll(".scramble").forEach(el => setTimeout(() => decode(el, 1000), 250));
-
 /* ═══ MULTILINGUAL HELLO ═══ */
 (function(){
   const el = $("hello");

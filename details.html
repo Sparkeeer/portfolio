@@ -20,11 +20,17 @@
 </head>
 <body class="details-page">
 
+<header class="dbar">
+  <div class="container dbar-inner">
+    <a class="brand" href="./index.html" aria-label="Shakeer Ahmad, home">
+      <img src="./assets/logo.png?v=2" alt="" width="28" height="28" />
+      <span>Shakeer<b>.</b>Ahmad</span>
+    </a>
+    <a class="back" href="./index.html" data-back><i class="ri-arrow-left-line"></i> Back to portfolio</a>
+  </div>
+</header>
+
 <div class="container">
-  <header class="dhead">
-    <a class="back" href="./index.html"><i class="ri-arrow-left-line"></i> Back to portfolio</a>
-    <span>Shakeer Ahmad</span>
-  </header>
   <div class="dintro">
     <h1>The longer version.</h1>
     <p>What I do at work, how each project came together, and the real problems I've worked through.</p>
@@ -44,19 +50,50 @@
     <h2>Work experience</h2>
     <div class="list">
       <article class="entry">
-        <div class="entry-meta">Oct 2025 to now</div>
-        <div>
-          <h3>M365 Engineer</h3>
-          <p class="sub">Princeton IT Services, Inc., Gudivada, AP</p>
-          <ul class="ticks">
-            <li>Built an end-to-end <strong>mail-to-ticket system</strong> with Dynamics 365 Customer Service, Power Automate and ARC rules. It cut manual ticket creation by ~80% and first response from hours to under 10 minutes.</li>
-            <li>Administer <strong>Exchange Online</strong> for 50+ users: mailbox provisioning, shared mailboxes, Send-As permissions and quarantine management.</li>
-            <li>Executed <strong>3+ cross-tenant migrations</strong> across Exchange Online, OneDrive and SharePoint, including US-to-India tenant moves for compliance, with directory sync, DNS cutovers and zero data loss.</li>
-            <li>Manage <strong>identity &amp; access</strong> for 50+ users in Entra ID: RBAC roles, MFA enforcement, Conditional Access and quarterly access reviews.</li>
-            <li>Handle <strong>escalations and advisory work</strong> across multiple Microsoft 365 tenants. <a class="link" href="#cases">See case studies <i class="ri-arrow-down-line"></i></a></li>
-          </ul>
-        </div>
-      </article>
+  <div class="entry-meta">Oct 2025 to now</div>
+  <div>
+    <h3>M365 Engineer</h3>
+    <p class="sub">Princeton IT Services, Inc., Gudivada, Andhra Pradesh</p>
+    <p>I look after Microsoft 365 for several client organisations: their accounts and sign-ins, their email, moving them between systems, and the support desk that handles their requests. I also build the automation behind that desk.</p>
+
+    <h4 class="sub-h">Support desk and ticketing</h4>
+    <ul class="ticks">
+      <li>Built the <strong>mail-to-ticket system</strong> in Dynamics 365 Customer Service. The support mailbox now creates, threads and routes cases by itself, cutting manual ticket creation by ~80% and getting first replies out in under 10 minutes. <a class="link" href="#ticketing">How it works <i class="ri-arrow-down-line"></i></a></li>
+      <li>Designed how cases are sorted (work type, category, who we're waiting on, how many people are affected), so the queue shows what needs attention first.</li>
+      <li>Work requests end to end: diagnose, fix or escalate, update the customer, and close.</li>
+    </ul>
+
+    <h4 class="sub-h">Email (Exchange Online)</h4>
+    <ul class="ticks">
+      <li>Run Exchange Online for 50+ users: new mailboxes, shared mailboxes, Send-As and delegate permissions, and quarantine.</li>
+      <li>Investigate mail that goes missing or arrives late, using message trace, inbox and transport rules, and the third-party mail security filters that sit in front of Exchange.</li>
+      <li>Escalate tenant-level problems to Microsoft with clear evidence and business impact. <a class="link" href="#cases">Case studies <i class="ri-arrow-down-line"></i></a></li>
+    </ul>
+
+    <h4 class="sub-h">Accounts and security (Entra ID)</h4>
+    <ul class="ticks">
+      <li>Handle joiners and leavers: create accounts, assign licences and groups, and remove access cleanly when someone leaves.</li>
+      <li>Manage admin roles on least privilege, enforce MFA, and maintain Conditional Access policies.</li>
+      <li>Run quarterly access reviews so old access doesn't pile up.</li>
+    </ul>
+
+    <h4 class="sub-h">Migrations</h4>
+    <ul class="ticks">
+      <li>Completed 3+ tenant-to-tenant migrations covering mail, OneDrive and SharePoint, including US-to-India moves for compliance, with zero data loss.</li>
+      <li>Moved a 40-user company from Google Workspace to Microsoft 365 without interrupting email.</li>
+      <li>Plan the cutover: pre-sync, DNS changes (MX, SPF, DKIM), final delta sync and checks after the move.</li>
+      <li>Advise on bigger changes, such as bringing several tenants under one brand, including what each option costs in licensing.</li>
+    </ul>
+
+    <h4 class="sub-h">Automation</h4>
+    <ul class="ticks">
+      <li>Built the <strong>Employee Engagement Bot</strong> in Copilot Studio and Power Automate for automatic birthday and anniversary recognition, designed so it never reveals private details.</li>
+      <li>Use PowerShell for bulk admin work and quick checks across tenants.</li>
+    </ul>
+
+    <ul class="tags"><li>Exchange Online</li><li>Entra ID</li><li>Dynamics 365</li><li>Power Automate</li><li>Copilot Studio</li><li>AvePoint Fly</li><li>PowerShell</li></ul>
+  </div>
+</article>
     </div>
   </div>
 </section>
@@ -71,7 +108,7 @@
         <div class="entry-meta">Automation, flagship</div>
         <div>
           <h3>Mail-to-Ticket System</h3>
-          <p>The shared support mailbox was a general inbox. Real requests sat next to monitoring alerts, quarantine digests, vendor threads, project mail and marketing. I turned it into a ticketing system in Dynamics 365 Customer Service, so every real request becomes a tracked, classified and routed case. About 80% less manual ticket work, and first response in under 10 minutes.</p>
+          <p>The shared support mailbox was a general inbox. I turned it into a ticketing system in Dynamics 365 Customer Service, so every real request becomes a tracked, classified and routed case. About 80% less manual ticket work, and first response in under 10 minutes.</p>
           <ol class="flow"><li>Email arrives</li><li>ARC rule filters</li><li>Case created or threaded</li><li>Classified</li><li>Power Automate routes</li><li>Agent works the case</li></ol>
 
           <h4 class="sub-h">1. Mail intake</h4>
@@ -125,35 +162,86 @@
         </div>
       </article>
 
-      <article class="entry">
-        <div class="entry-meta">Migration</div>
-        <div>
-          <h3>Cross-Tenant M365 Migrations</h3>
-          <p>Mailboxes, OneDrive and SharePoint moved between tenants, including US-to-India moves for compliance. 3+ tenants migrated, zero data loss.</p>
-          <ul class="ticks">
-            <li>Staged mailbox migrations with pre-sync and a controlled cutover.</li>
-            <li>MX, SPF and DKIM updates during domain transfer.</li>
-            <li>Users, groups and licences recreated with matching permissions.</li>
-            <li>Delta sync plus post-migration validation.</li>
-          </ul>
-          <ul class="tags"><li>AvePoint Fly</li><li>Exchange Online</li><li>SharePoint</li><li>DNS</li></ul>
-        </div>
-      </article>
+      <article class="entry" id="migrations">
+  <div class="entry-meta">Migration</div>
+  <div>
+    <h3>Cross-Tenant M365 Migrations</h3>
+    <p>Moved organisation's mail, OneDrive and SharePoint from one Microsoft 365 tenant to another, including US-to-India moves for compliance. 3+ tenants migrated with zero data loss, using AvePoint Fly and a repeatable runbook.</p>
+    <ol class="flow"><li>Assess</li><li>Prepare target</li><li>Pre-sync</li><li>Cutover</li><li>Delta sync</li><li>Validate</li></ol>
 
-      <article class="entry">
-        <div class="entry-meta">Migration</div>
-        <div>
-          <h3>Google Workspace to Microsoft 365</h3>
-          <p>Migrated 40 users' mail, calendar, contacts and files with no interruption to email delivery.</p>
-          <ul class="ticks">
-            <li>Gmail, Contacts and Calendar moved into Exchange Online.</li>
-            <li>MX transition planned so mail kept flowing during cutover.</li>
-            <li>Drive files moved to OneDrive and SharePoint.</li>
-          </ul>
-          <ul class="tags"><li>Exchange Online</li><li>OneDrive</li><li>DNS</li></ul>
-        </div>
-      </article>
+    <h4 class="sub-h">1. Assessment and scope</h4>
+    <ul class="ticks">
+      <li>Listed what had to move: mailboxes, OneDrive, SharePoint sites and libraries, Teams chat and any shared mailboxes.</li>
+      <li>Separated Teams <em>teams</em> (channels and files) from private chats, since migration tools handle and license them differently.</li>
+      <li>Confirmed data sizes and the cutover date with the client before work started.</li>
+    </ul>
 
+    <h4 class="sub-h">2. Preparing the target tenant</h4>
+    <ul class="ticks">
+      <li>Migration tools move content, not identities, so I created every user in the target tenant first and assigned licences.</li>
+      <li>Built a one-to-one mapping from each source account to its new target account (for example, a user at the old domain to the same user at the new one).</li>
+      <li>Recreated groups and shared mailboxes with matching permissions.</li>
+    </ul>
+
+    <h4 class="sub-h">3. Pre-sync and cutover</h4>
+    <ul class="ticks">
+      <li>Ran a staged pre-sync with AvePoint Fly while users kept working in the old tenant, so most data was moved before cutover day.</li>
+      <li>On cutover, moved the domain and updated MX, SPF, Autodiscover and DKIM so new mail landed in the target tenant.</li>
+      <li>Ran a final delta sync to catch anything that arrived during the switch.</li>
+    </ul>
+
+    <h4 class="sub-h">4. Validation and handover</h4>
+    <ul class="ticks">
+      <li>Checked item counts, mailbox permissions and file access, and sent test mail in both directions.</li>
+      <li>Watched mail flow with message trace for the first days after cutover.</li>
+      <li>Kept the source tenant active as a fallback until everything was confirmed.</li>
+    </ul>
+
+    <h4 class="sub-h">5. Documentation</h4>
+    <ul class="ticks">
+      <li>Wrote an internal SOP and step-by-step runbook for AvePoint cross-tenant migrations, plus a pre- and post-migration checklist, so each new migration follows the same steps.</li>
+    </ul>
+
+    <ul class="tags"><li>AvePoint Fly</li><li>Exchange Online</li><li>OneDrive</li><li>SharePoint</li><li>DNS</li></ul>
+  </div>
+</article>
+
+<article class="entry">
+  <div class="entry-meta">Migration, live cutover</div>
+  <div>
+    <h3>Google Workspace → Microsoft 365</h3>
+    <p>Migrated a 40-user company's mail, calendar, contacts and Drive files from Google Workspace to Microsoft 365, and ran the cutover on a live call with the client so email delivery never stopped.</p>
+    <ol class="flow"><li>Migrate data</li><li>Final delta sync</li><li>DNS cutover</li><li>Fix conflicts</li><li>Monitor</li><li>Retire Google</li></ol>
+
+    <h4 class="sub-h">1. Moving the data</h4>
+    <ul class="ticks">
+      <li>Moved Gmail, Calendar and Contacts into Exchange Online, and Drive files into OneDrive and SharePoint.</li>
+      <li>Ran delta syncs right up to cutover so nothing sent in the meantime was missed.</li>
+    </ul>
+
+    <h4 class="sub-h">2. DNS cutover</h4>
+    <ul class="ticks">
+      <li>Used the Microsoft 365 domain setup with the registrar's automatic DNS option to add MX, Autodiscover, SPF and DKIM records.</li>
+      <li>Told the client's harmless leftover records apart from the ones that actually break mail. Only MX and SPF had to be replaced; the other old records were safe to leave.</li>
+    </ul>
+
+    <h4 class="sub-h">3. Fixing a blocked cutover</h4>
+    <ul class="ticks">
+      <li>The domain health check flagged errors because five old Google MX records were still active next to Microsoft's, which would have split incoming mail between two providers.</li>
+      <li>The registrar refused to delete them. I traced the lock to a mail service still linked to the domain, then cleared it with the domain owner during the call.</li>
+      <li>Merged SPF into a single Microsoft record, since two SPF records make outgoing mail fail checks.</li>
+    </ul>
+
+    <h4 class="sub-h">4. After cutover</h4>
+    <ul class="ticks">
+      <li>Ran a final delta sync a few hours later to pick up mail that reached Gmail while DNS changes spread.</li>
+      <li>Kept Google Workspace running for about two weeks as a safety net, then retired it once mail flow was stable.</li>
+      <li>Handled follow-up requests such as changing a user's primary address while keeping the old one as an alias.</li>
+    </ul>
+
+    <ul class="tags"><li>Exchange Online</li><li>OneDrive</li><li>DNS</li><li>MX / SPF / DKIM</li></ul>
+  </div>
+</article>
       <article class="entry">
         <div class="entry-meta">Automation</div>
         <div>
@@ -177,15 +265,11 @@
           <p>Deployed a face and fingerprint terminal for an office of 20+ employees, then moved the whole setup from a locally hosted server to a cloud platform, so management no longer depends on one workstation staying online.</p>
           <ol class="flow"><li>Terminal setup</li><li>Local server</li><li>Data migration</li><li>Cloud platform</li><li>Mobile and reports</li></ol>
           <ul class="ticks">
-            <li>Configured the terminal's network, time and biometric enrolment, with anti-spoofing on. Face <em>or</em> fingerprint is accepted, so nobody has to use both.</li>
             <li>Built daytime, overnight and cross-midnight attendance schedules with different weekly offs per group. First-in and last-out logic stops stray mid-shift detections from distorting worked hours.</li>
-            <li>Queried the device directly over ISAPI with Digest authentication to check records, credential counts and group mappings. Testing showed people and permissions sync but department structures do not, so no risky changes went to production.</li>
             <li>Fixed an incident where the terminal was online but events stopped reaching the server. The cause was a stale event channel held by the wrong client. A controlled restart restored live events, and the missed history was recovered from the device with no reset and no re-enrolment.</li>
             <li>Migrated employees, departments and credentials to the cloud platform by reshaping the export into its import format, matching on employee ID to avoid duplicates.</li>
             <li>Proved the cloud path by stopping the local services and confirming new events still arrived automatically.</li>
-            <li>Corrected a 10.5-hour timestamp offset by standardising on IST and disabling daylight saving on the device.</li>
-            <li>Enabled mobile check-in with photo verification for approved work-from-home staff, separated administrator, manager and employee roles, and turned off automatic overtime to prevent false records from repeated detections.</li>
-          </ul>
+            </ul>
           <ul class="tags"><li>Hikvision</li><li>HikCentral</li><li>Hik-Connect</li><li>ISAPI</li><li>PowerShell</li></ul>
         </div>
       </article>
@@ -247,24 +331,31 @@
         </div>
       </article>
 
-      <article class="entry">
-        <div class="entry-meta">Migration, live cutover</div>
-        <div>
-          <h3>Mail cutover with locked DNS records</h3>
-          <p class="case-line"><b>Situation</b>During a live Google Workspace to Microsoft 365 cutover, the old Google MX records couldn't be deleted at the registrar, leaving mail split between two providers.</p>
-          <ul class="ticks">
-            <li>Told apart harmless leftover records and the ones that break mail (MX, SPF).</li>
-            <li>Traced the lock to a mail service still linked to the domain, and worked with the domain owner during the call to clear it.</li>
-            <li>Ran a final delta sync after cutover and kept the source tenant alive as a fallback.</li>
-          </ul>
-          <ul class="tags"><li>DNS</li><li>MX / SPF</li><li>Cutover</li></ul>
-        </div>
-      </article>
-
     </div>
   </div>
 </section>
 
 </main>
+<footer class="dfoot">
+  <div class="container dfoot-inner">
+    <a class="back" href="./index.html" data-back><i class="ri-arrow-left-line"></i> Back to portfolio</a>
+    <a class="back" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top <i class="ri-arrow-up-line"></i></a>
+  </div>
+</footer>
+
+<script>
+  /* Back button: return to the exact spot on the homepage if the visitor came from it,
+     otherwise (direct link, Google, LinkedIn) just open the homepage. */
+  document.querySelectorAll("[data-back]").forEach(a => a.addEventListener("click", e => {
+    try {
+      const ref = document.referrer && new URL(document.referrer);
+      if (ref && ref.origin === location.origin && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    } catch {}
+  }));
+</script>
+
 </body>
 </html>

@@ -3,23 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Details | Shakeer Ahmad</title>
-  <meta name="description" content="Work experience, project write-ups and case studies from Shakeer Ahmad, Microsoft 365 & Cloud Engineer." />
-  <link rel="canonical" href="https://shakeer.space/details.html" />
+  <title>Projects &amp; Case Studies | Shakeer Ahmad</title>
+  <meta name="description" content="How Shakeer Ahmad built a Dynamics 365 mail-to-ticket system, ran Microsoft 365 tenant migrations, a Copilot Studio engagement bot, and a biometric attendance cloud migration." />
+  <link rel="canonical" href="https://www.shakeer.space/details.html" />
   <meta name="theme-color" content="#14130f" />
+
+  <!-- Social cards -->
+  <meta property="og:title" content="Projects & Case Studies | Shakeer Ahmad" />
+  <meta property="og:description" content="Mail-to-ticket build, tenant migrations, automation and case studies." />
+  <meta property="og:url" content="https://www.shakeer.space/details.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shakeer Ahmad" />
+  <meta property="og:image" content="https://www.shakeer.space/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Icons -->
   <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=2" />
   <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png?v=2" />
   <link rel="shortcut icon" href="./assets/favicon.ico?v=2" />
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png?v=2" />
+
   <script>(function(){if(localStorage.getItem("theme")==="light")document.documentElement.classList.remove("dark");})();</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" />
-  <link rel="stylesheet" href="./css/styles.css?v=7" />
+  <link rel="stylesheet" href="./css/styles.css?v=8" />
 </head>
-<body class="details-page">
+<body class="details-page" id="top">
 
+<!-- Branded header -->
 <header class="dbar">
   <div class="container dbar-inner">
     <a class="brand" href="./index.html" aria-label="Shakeer Ahmad, home">
@@ -39,6 +53,7 @@
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#cases">Case studies</a>
+    <button type="button" class="dnav-btn" id="toggle-all">Expand all</button>
   </nav>
 </div>
 
@@ -50,50 +65,49 @@
     <h2>Work experience</h2>
     <div class="list">
       <article class="entry">
-  <div class="entry-meta">Oct 2025 to now</div>
-  <div>
-    <h3>M365 Engineer</h3>
-    <p class="sub">Princeton IT Services, Inc., Gudivada, Andhra Pradesh</p>
-    <p>I look after Microsoft 365 for several client organisations: their accounts and sign-ins, their email, moving them between systems, and the support desk that handles their requests. I also build the automation behind that desk.</p>
+        <div class="entry-meta">Oct 2025 to now</div>
+        <div>
+          <h3>M365 Engineer</h3>
+          <p class="sub">Princeton IT Services, Inc., Gudivada, Andhra Pradesh</p>
+          <p>I look after Microsoft 365 for several client organisations: their accounts and sign-ins, their email, moving them between systems, and the support desk that handles their requests. I also build the automation behind that desk.</p>
 
-    <h4 class="sub-h">Support desk and ticketing</h4>
-    <ul class="ticks">
-      <li>Built the <strong>mail-to-ticket system</strong> in Dynamics 365 Customer Service. The support mailbox now creates, threads and routes cases by itself, cutting manual ticket creation by ~80% and getting first replies out in under 10 minutes. <a class="link" href="#ticketing">How it works <i class="ri-arrow-down-line"></i></a></li>
-      <li>Designed how cases are sorted (work type, category, who we're waiting on, how many people are affected), so the queue shows what needs attention first.</li>
-      <li>Work requests end to end: diagnose, fix or escalate, update the customer, and close.</li>
-    </ul>
+          <h4 class="sub-h">Support desk and ticketing</h4>
+          <ul class="ticks">
+            <li>Built the <strong>mail-to-ticket system</strong> in Dynamics 365 Customer Service. The support mailbox now creates, threads and routes cases by itself, cutting manual ticket creation by ~80% and getting first replies out in under 10 minutes. <a class="link" href="#ticketing">How it works <i class="ri-arrow-down-line"></i></a></li>
+            <li>Designed how cases are sorted (work type, category, who we're waiting on, how many people are affected), so the queue shows what needs attention first.</li>
+            <li>Work requests end to end: diagnose, fix or escalate, update the customer, and close.</li>
+          </ul>
 
-    <h4 class="sub-h">Email (Exchange Online)</h4>
-    <ul class="ticks">
-      <li>Run Exchange Online for 50+ users: new mailboxes, shared mailboxes, Send-As and delegate permissions, and quarantine.</li>
-      <li>Investigate mail that goes missing or arrives late, using message trace, inbox and transport rules, and the third-party mail security filters that sit in front of Exchange.</li>
-      <li>Escalate tenant-level problems to Microsoft with clear evidence and business impact. <a class="link" href="#cases">Case studies <i class="ri-arrow-down-line"></i></a></li>
-    </ul>
+          <h4 class="sub-h">Email (Exchange Online)</h4>
+          <ul class="ticks">
+            <li>Run Exchange Online for 50+ users: new mailboxes, shared mailboxes, Send-As and delegate permissions, and quarantine.</li>
+            <li>Investigate mail that goes missing or arrives late, using message trace, inbox and transport rules, and the third-party mail security filters that sit in front of Exchange.</li>
+            <li>Escalate tenant-level problems to Microsoft with clear evidence and business impact. <a class="link" href="#cases">Case studies <i class="ri-arrow-down-line"></i></a></li>
+          </ul>
 
-    <h4 class="sub-h">Accounts and security (Entra ID)</h4>
-    <ul class="ticks">
-      <li>Handle joiners and leavers: create accounts, assign licences and groups, and remove access cleanly when someone leaves.</li>
-      <li>Manage admin roles on least privilege, enforce MFA, and maintain Conditional Access policies.</li>
-      <li>Run quarterly access reviews so old access doesn't pile up.</li>
-    </ul>
+          <h4 class="sub-h">Accounts and security (Entra ID)</h4>
+          <ul class="ticks">
+            <li>Handle joiners and leavers: create accounts, assign licences and groups, and remove access cleanly when someone leaves.</li>
+            <li>Manage admin roles on least privilege, enforce MFA, and maintain Conditional Access policies.</li>
+            <li>Run quarterly access reviews so old access doesn't pile up.</li>
+          </ul>
 
-    <h4 class="sub-h">Migrations</h4>
-    <ul class="ticks">
-      <li>Completed 3+ tenant-to-tenant migrations covering mail, OneDrive and SharePoint, including US-to-India moves for compliance, with zero data loss.</li>
-      <li>Moved a 40-user company from Google Workspace to Microsoft 365 without interrupting email.</li>
-      <li>Plan the cutover: pre-sync, DNS changes (MX, SPF, DKIM), final delta sync and checks after the move.</li>
-      <li>Advise on bigger changes, such as bringing several tenants under one brand, including what each option costs in licensing.</li>
-    </ul>
+          <h4 class="sub-h">Migrations</h4>
+          <ul class="ticks">
+            <li>Completed 3+ tenant-to-tenant migrations covering mail, OneDrive and SharePoint, including US-to-India moves for compliance, with zero data loss. <a class="link" href="#migrations">How I run them <i class="ri-arrow-down-line"></i></a></li>
+            <li>Moved a 40-user company from Google Workspace to Microsoft 365 without interrupting email.</li>
+            <li>Advise on bigger changes, such as bringing several tenants under one brand, including what each option costs in licensing.</li>
+          </ul>
 
-    <h4 class="sub-h">Automation</h4>
-    <ul class="ticks">
-      <li>Built the <strong>Employee Engagement Bot</strong> in Copilot Studio and Power Automate for automatic birthday and anniversary recognition, designed so it never reveals private details.</li>
-      <li>Use PowerShell for bulk admin work and quick checks across tenants.</li>
-    </ul>
+          <h4 class="sub-h">Automation</h4>
+          <ul class="ticks">
+            <li>Built the <strong>Employee Engagement Bot</strong> in Copilot Studio and Power Automate for automatic birthday and anniversary recognition, designed so it never reveals private details.</li>
+            <li>Use PowerShell for bulk admin work and quick checks across tenants.</li>
+          </ul>
 
-    <ul class="tags"><li>Exchange Online</li><li>Entra ID</li><li>Dynamics 365</li><li>Power Automate</li><li>Copilot Studio</li><li>AvePoint Fly</li><li>PowerShell</li></ul>
-  </div>
-</article>
+          <ul class="tags"><li>Exchange Online</li><li>Entra ID</li><li>Dynamics 365</li><li>Power Automate</li><li>Copilot Studio</li><li>AvePoint Fly</li><li>PowerShell</li></ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -104,173 +118,235 @@
     <h2>Projects</h2>
     <div class="list">
 
+      <!-- Mail-to-Ticket -->
       <article class="entry" id="ticketing">
-  <div class="entry-meta">Automation, flagship</div>
-  <div>
-    <h3>Mail-to-Ticket System</h3>
-    <p class="outcome">Turned a noisy shared support mailbox into a Dynamics 365 ticketing system, so every real request becomes a tracked, routed case.</p>
+        <div class="entry-meta">Automation, flagship</div>
+        <div>
+          <h3>Mail-to-Ticket System</h3>
+          <p class="outcome">Turned a noisy shared support mailbox into a Dynamics 365 ticketing system, so every real request becomes a tracked, routed case.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>Real requests buried under alerts, digests and vendor mail</dd></div>
+            <div><dt>What I did</dt><dd>Filtering, threading, classification and routing in Dynamics 365</dd></div>
+            <div><dt>Result</dt><dd>~80% less manual work, first reply under 10 min</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How I built it</summary>
+            <div class="deep-body">
+              <ol class="flow"><li>Email arrives</li><li>ARC rule filters</li><li>Case created or threaded</li><li>Classified</li><li>Power Automate routes</li></ol>
 
-    <dl class="facts">
-      <div><dt>Problem</dt><dd>Real requests buried under alerts, digests and vendor mail</dd></div>
-      <div><dt>What I did</dt><dd>Filtering, threading, classification and routing in Dynamics 365</dd></div>
-      <div><dt>Result</dt><dd>~80% less manual work, first reply under 10 min</dd></div>
-    </dl>
+              <h4 class="sub-h">Mail intake and filtering</h4>
+              <ul class="ticks">
+                <li>Connected the support mailbox to a Dynamics queue with server-side sync, and set an ARC rule to create a case whenever the support address is in To or Cc.</li>
+                <li>Replaced broad keyword filters with precise ones, so monitoring alerts, quarantine digests and marketing mail are skipped while real requests get through.</li>
+              </ul>
 
-    <details class="deep">
-      <summary>How I built it</summary>
-      <div class="deep-body">
-        <ol class="flow"><li>Email arrives</li><li>ARC rule filters</li><li>Case created or threaded</li><li>Classified</li><li>Power Automate routes</li></ol>
+              <h4 class="sub-h">Threading and classification</h4>
+              <ul class="ticks">
+                <li>Email correlation and tracking tokens attach replies to the existing case, with no duplicates.</li>
+                <li>A custom solution on the Case table with Work Type, Category, Waiting On, Impact Scope, plus vendor and monitoring fields.</li>
+              </ul>
 
-        <h4 class="sub-h">Mail intake and filtering</h4>
-        <ul class="ticks">
-          <li>Connected the support mailbox to a Dynamics queue with server-side sync, and set an ARC rule to create a case whenever the support address is in To or Cc.</li>
-          <li>Replaced broad keyword filters with precise ones, so monitoring alerts, quarantine digests and marketing mail are skipped while real requests get through.</li>
-        </ul>
+              <h4 class="sub-h">Routing and agent experience</h4>
+              <ul class="ticks">
+                <li>Three review queues, Power Automate routing by Work Type, and a flow that keeps Status in sync with Waiting On.</li>
+                <li>Business rules require the right fields per case type. Redesigned the form and views, and turned on Copilot summaries.</li>
+                <li>Turned on auditing and fixed internal staff being recorded as customers.</li>
+              </ul>
+            </div>
+          </details>
+          <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li><li>Dataverse</li></ul>
+        </div>
+      </article>
 
-        <h4 class="sub-h">Threading and classification</h4>
-        <ul class="ticks">
-          <li>Email correlation and tracking tokens attach replies to the existing case, with no duplicates.</li>
-          <li>A custom solution on the Case table with Work Type, Category, Waiting On, Impact Scope, plus vendor and monitoring fields.</li>
-        </ul>
-
-        <h4 class="sub-h">Routing and agent experience</h4>
-        <ul class="ticks">
-          <li>Three review queues, Power Automate routing by Work Type, and a flow that keeps Status in sync with Waiting On.</li>
-          <li>Business rules require the right fields per case type. Redesigned the form and views, and turned on Copilot summaries.</li>
-          <li>Turned on auditing and fixed internal staff being recorded as customers.</li>
-        </ul>
-      </div>
-    </details>
-
-    <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li><li>Dataverse</li></ul>
-  </div>
-</article>
-
+      <!-- Cross-tenant migrations -->
       <article class="entry" id="migrations">
-  <div class="entry-meta">Migration</div>
-  <div>
-    <h3>Cross-Tenant M365 Migrations</h3>
-    <p>Moved organisation's mail, OneDrive and SharePoint from one Microsoft 365 tenant to another, including US-to-India moves for compliance. 3+ tenants migrated with zero data loss, using AvePoint Fly and a repeatable runbook.</p>
-    <ol class="flow"><li>Assess</li><li>Prepare target</li><li>Pre-sync</li><li>Cutover</li><li>Delta sync</li><li>Validate</li></ol>
+        <div class="entry-meta">Migration</div>
+        <div>
+          <h3>Cross-Tenant M365 Migrations</h3>
+          <p class="outcome">Moved organisations' mail, OneDrive and SharePoint from one Microsoft 365 tenant to another, including US-to-India moves for compliance.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>Organisations needed to move to a new tenant, some for compliance</dd></div>
+            <div><dt>What I did</dt><dd>Pre-sync, DNS cutover, delta sync and checks with AvePoint Fly</dd></div>
+            <div><dt>Result</dt><dd>3+ tenants migrated, zero data loss</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How I ran it</summary>
+            <div class="deep-body">
+              <ol class="flow"><li>Assess</li><li>Prepare target</li><li>Pre-sync</li><li>Cutover</li><li>Delta sync</li><li>Validate</li></ol>
 
-    <h4 class="sub-h">1. Assessment and scope</h4>
-    <ul class="ticks">
-      <li>Listed what had to move: mailboxes, OneDrive, SharePoint sites and libraries, Teams chat and any shared mailboxes.</li>
-      <li>Separated Teams <em>teams</em> (channels and files) from private chats, since migration tools handle and license them differently.</li>
-      <li>Confirmed data sizes and the cutover date with the client before work started.</li>
-    </ul>
+              <h4 class="sub-h">1. Assessment and scope</h4>
+              <ul class="ticks">
+                <li>Listed what had to move: mailboxes, OneDrive, SharePoint sites and libraries, Teams chat and any shared mailboxes.</li>
+                <li>Separated Teams <em>teams</em> (channels and files) from private chats, since migration tools handle and license them differently.</li>
+                <li>Confirmed data sizes and the cutover date with the client before work started.</li>
+              </ul>
 
-    <h4 class="sub-h">2. Preparing the target tenant</h4>
-    <ul class="ticks">
-      <li>Migration tools move content, not identities, so I created every user in the target tenant first and assigned licences.</li>
-      <li>Built a one-to-one mapping from each source account to its new target account (for example, a user at the old domain to the same user at the new one).</li>
-      <li>Recreated groups and shared mailboxes with matching permissions.</li>
-    </ul>
+              <h4 class="sub-h">2. Preparing the target tenant</h4>
+              <ul class="ticks">
+                <li>Migration tools move content, not identities, so I created every user in the target tenant first and assigned licences.</li>
+                <li>Built a one-to-one mapping from each source account to its new target account.</li>
+                <li>Recreated groups and shared mailboxes with matching permissions.</li>
+              </ul>
 
-    <h4 class="sub-h">3. Pre-sync and cutover</h4>
-    <ul class="ticks">
-      <li>Ran a staged pre-sync with AvePoint Fly while users kept working in the old tenant, so most data was moved before cutover day.</li>
-      <li>On cutover, moved the domain and updated MX, SPF, Autodiscover and DKIM so new mail landed in the target tenant.</li>
-      <li>Ran a final delta sync to catch anything that arrived during the switch.</li>
-    </ul>
+              <h4 class="sub-h">3. Pre-sync and cutover</h4>
+              <ul class="ticks">
+                <li>Ran a staged pre-sync with AvePoint Fly while users kept working in the old tenant, so most data was moved before cutover day.</li>
+                <li>On cutover, moved the domain and updated MX, SPF, Autodiscover and DKIM so new mail landed in the target tenant.</li>
+                <li>Ran a final delta sync to catch anything that arrived during the switch.</li>
+              </ul>
 
-    <h4 class="sub-h">4. Validation and handover</h4>
-    <ul class="ticks">
-      <li>Checked item counts, mailbox permissions and file access, and sent test mail in both directions.</li>
-      <li>Watched mail flow with message trace for the first days after cutover.</li>
-      <li>Kept the source tenant active as a fallback until everything was confirmed.</li>
-    </ul>
+              <h4 class="sub-h">4. Validation and handover</h4>
+              <ul class="ticks">
+                <li>Checked item counts, mailbox permissions and file access, and sent test mail in both directions.</li>
+                <li>Watched mail flow with message trace for the first days after cutover.</li>
+                <li>Kept the source tenant active as a fallback until everything was confirmed.</li>
+              </ul>
 
-    <h4 class="sub-h">5. Documentation</h4>
-    <ul class="ticks">
-      <li>Wrote an internal SOP and step-by-step runbook for AvePoint cross-tenant migrations, plus a pre- and post-migration checklist, so each new migration follows the same steps.</li>
-    </ul>
+              <h4 class="sub-h">5. Documentation</h4>
+              <ul class="ticks">
+                <li>Wrote an internal SOP and step-by-step runbook for AvePoint cross-tenant migrations, plus a pre- and post-migration checklist, so each new migration follows the same steps.</li>
+              </ul>
+            </div>
+          </details>
+          <ul class="tags"><li>AvePoint Fly</li><li>Exchange Online</li><li>OneDrive</li><li>SharePoint</li><li>DNS</li></ul>
+        </div>
+      </article>
 
-    <ul class="tags"><li>AvePoint Fly</li><li>Exchange Online</li><li>OneDrive</li><li>SharePoint</li><li>DNS</li></ul>
-  </div>
-</article>
+      <!-- Google Workspace to M365 -->
+      <article class="entry" id="google-m365">
+        <div class="entry-meta">Migration, live cutover</div>
+        <div>
+          <h3>Google Workspace → Microsoft 365</h3>
+          <p class="outcome">Migrated a 40-user company's mail, calendar, contacts and Drive files to Microsoft 365, and ran the cutover on a live call with the client.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>40 users moving off Google while the business kept running</dd></div>
+            <div><dt>What I did</dt><dd>Data migration plus a live DNS cutover with the client</dd></div>
+            <div><dt>Result</dt><dd>No break in email delivery</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How I ran it</summary>
+            <div class="deep-body">
+              <ol class="flow"><li>Migrate data</li><li>Final delta sync</li><li>DNS cutover</li><li>Fix conflicts</li><li>Monitor</li><li>Retire Google</li></ol>
 
-<article class="entry">
-  <div class="entry-meta">Migration, live cutover</div>
-  <div>
-    <h3>Google Workspace → Microsoft 365</h3>
-    <p>Migrated a 40-user company's mail, calendar, contacts and Drive files from Google Workspace to Microsoft 365, and ran the cutover on a live call with the client so email delivery never stopped.</p>
-    <ol class="flow"><li>Migrate data</li><li>Final delta sync</li><li>DNS cutover</li><li>Fix conflicts</li><li>Monitor</li><li>Retire Google</li></ol>
+              <h4 class="sub-h">1. Moving the data</h4>
+              <ul class="ticks">
+                <li>Moved Gmail, Calendar and Contacts into Exchange Online, and Drive files into OneDrive and SharePoint.</li>
+                <li>Ran delta syncs right up to cutover so nothing sent in the meantime was missed.</li>
+              </ul>
 
-    <h4 class="sub-h">1. Moving the data</h4>
-    <ul class="ticks">
-      <li>Moved Gmail, Calendar and Contacts into Exchange Online, and Drive files into OneDrive and SharePoint.</li>
-      <li>Ran delta syncs right up to cutover so nothing sent in the meantime was missed.</li>
-    </ul>
+              <h4 class="sub-h">2. DNS cutover</h4>
+              <ul class="ticks">
+                <li>Used the Microsoft 365 domain setup with the registrar's automatic DNS option to add MX, Autodiscover, SPF and DKIM records.</li>
+                <li>Separated harmless leftover records from the ones that actually break mail. Only MX and SPF had to be replaced.</li>
+              </ul>
 
-    <h4 class="sub-h">2. DNS cutover</h4>
-    <ul class="ticks">
-      <li>Used the Microsoft 365 domain setup with the registrar's automatic DNS option to add MX, Autodiscover, SPF and DKIM records.</li>
-      <li>Told the client's harmless leftover records apart from the ones that actually break mail. Only MX and SPF had to be replaced; the other old records were safe to leave.</li>
-    </ul>
+              <h4 class="sub-h">3. Fixing a blocked cutover</h4>
+              <ul class="ticks">
+                <li>The domain health check flagged five old Google MX records still active next to Microsoft's, which would have split incoming mail between two providers.</li>
+                <li>The registrar refused to delete them. I traced the lock to a mail service still linked to the domain, then cleared it with the domain owner during the call.</li>
+                <li>Merged SPF into a single Microsoft record, since two SPF records make outgoing mail fail checks.</li>
+              </ul>
 
-    <h4 class="sub-h">3. Fixing a blocked cutover</h4>
-    <ul class="ticks">
-      <li>The domain health check flagged errors because five old Google MX records were still active next to Microsoft's, which would have split incoming mail between two providers.</li>
-      <li>The registrar refused to delete them. I traced the lock to a mail service still linked to the domain, then cleared it with the domain owner during the call.</li>
-      <li>Merged SPF into a single Microsoft record, since two SPF records make outgoing mail fail checks.</li>
-    </ul>
+              <h4 class="sub-h">4. After cutover</h4>
+              <ul class="ticks">
+                <li>Ran a final delta sync a few hours later to pick up mail that reached Gmail while DNS changes spread.</li>
+                <li>Kept Google Workspace running for about two weeks as a safety net, then retired it once mail flow was stable.</li>
+                <li>Handled follow-up requests such as changing a user's primary address while keeping the old one as an alias.</li>
+              </ul>
+            </div>
+          </details>
+          <ul class="tags"><li>Exchange Online</li><li>OneDrive</li><li>DNS</li><li>MX / SPF / DKIM</li></ul>
+        </div>
+      </article>
 
-    <h4 class="sub-h">4. After cutover</h4>
-    <ul class="ticks">
-      <li>Ran a final delta sync a few hours later to pick up mail that reached Gmail while DNS changes spread.</li>
-      <li>Kept Google Workspace running for about two weeks as a safety net, then retired it once mail flow was stable.</li>
-      <li>Handled follow-up requests such as changing a user's primary address while keeping the old one as an alias.</li>
-    </ul>
-
-    <ul class="tags"><li>Exchange Online</li><li>OneDrive</li><li>DNS</li><li>MX / SPF / DKIM</li></ul>
-  </div>
-</article>
-      <article class="entry">
+      <!-- Employee Engagement Bot -->
+      <article class="entry" id="engagement-bot">
         <div class="entry-meta">Automation</div>
         <div>
           <h3>Employee Engagement Bot</h3>
-          <p>Automated birthday and work-anniversary recognition: Teams posts, branded HTML emails, and a Copilot Studio bot in Teams that employees can ask about upcoming celebrations.</p>
-          <ul class="ticks">
-            <li>An Employee Directory in a SharePoint list, bulk-loaded from Excel.</li>
-            <li>Scheduled Power Automate flows check the list every day, post in Teams and send a branded HTML email. I later redesigned the email to look more modern.</li>
-            <li>Published the bot to the Teams app catalog for the whole company and fixed access problems for individual users.</li>
-            <li><strong>Privacy fix:</strong> with SharePoint as a knowledge source, each user needed access to the list itself, which would have exposed private employee information. It also showed source links in answers. I replaced it with a Power Automate tool flow that reads the list on its own connection and returns only the fields the bot needs.</li>
-            <li>Wrote clear agent instructions: a "fetching details" status message, no links or private details, no guessing, and other topics sent to IT Support.</li>
-          </ul>
+          <p class="outcome">Automated birthday and work-anniversary recognition with Teams posts, branded HTML emails, and a Copilot Studio bot employees can ask about upcoming celebrations.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>Celebrations tracked by hand, and private data at risk in the bot</dd></div>
+            <div><dt>What I did</dt><dd>Scheduled flows plus a Copilot Studio bot backed by a tool flow</dd></div>
+            <div><dt>Result</dt><dd>Fully automated, with private details never exposed</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How I built it</summary>
+            <div class="deep-body">
+              <h4 class="sub-h">Data and daily automation</h4>
+              <ul class="ticks">
+                <li>An Employee Directory in a SharePoint list, bulk-loaded from Excel.</li>
+                <li>Scheduled Power Automate flows check the list every day, post in Teams and send a branded HTML email. I later redesigned the email to look more modern.</li>
+              </ul>
+
+              <h4 class="sub-h">The bot</h4>
+              <ul class="ticks">
+                <li>Published the bot to the Teams app catalog for the whole company and fixed access problems for individual users.</li>
+                <li>Wrote clear agent instructions: a "fetching details" status message, no links or private details, no guessing, and other topics sent to IT Support.</li>
+              </ul>
+
+              <h4 class="sub-h">Privacy fix</h4>
+              <ul class="ticks">
+                <li>With SharePoint as a knowledge source, each user needed access to the list itself, which would have exposed private employee information. It also showed source links in answers.</li>
+                <li>Replaced it with a Power Automate tool flow that reads the list on its own connection and returns only the fields the bot needs.</li>
+              </ul>
+            </div>
+          </details>
           <ul class="tags"><li>Copilot Studio</li><li>Power Automate</li><li>SharePoint</li><li>Teams</li></ul>
         </div>
       </article>
 
-      <article class="entry">
+      <!-- Biometric attendance -->
+      <article class="entry" id="attendance">
         <div class="entry-meta">Infrastructure, migration</div>
         <div>
           <h3>Biometric Access &amp; Cloud Attendance</h3>
-          <p>Deployed a face and fingerprint terminal for an office of 20+ employees, then moved the whole setup from a locally hosted server to a cloud platform, so management no longer depends on one workstation staying online.</p>
-          <ol class="flow"><li>Terminal setup</li><li>Local server</li><li>Data migration</li><li>Cloud platform</li><li>Mobile and reports</li></ol>
-          <ul class="ticks">
-            <li>Built daytime, overnight and cross-midnight attendance schedules with different weekly offs per group. First-in and last-out logic stops stray mid-shift detections from distorting worked hours.</li>
-            <li>Fixed an incident where the terminal was online but events stopped reaching the server. The cause was a stale event channel held by the wrong client. A controlled restart restored live events, and the missed history was recovered from the device with no reset and no re-enrolment.</li>
-            <li>Migrated employees, departments and credentials to the cloud platform by reshaping the export into its import format, matching on employee ID to avoid duplicates.</li>
-            <li>Proved the cloud path by stopping the local services and confirming new events still arrived automatically.</li>
-            </ul>
+          <p class="outcome">Deployed a face and fingerprint terminal for 20+ employees, then moved the whole setup from a local server to a cloud platform.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>Attendance depended on one local workstation staying online</dd></div>
+            <div><dt>What I did</dt><dd>Terminal setup, shift schedules and migration to the cloud</dd></div>
+            <div><dt>Result</dt><dd>Managers can reach attendance data from anywhere</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How I built it</summary>
+            <div class="deep-body">
+              <ol class="flow"><li>Terminal setup</li><li>Local server</li><li>Data migration</li><li>Cloud platform</li><li>Mobile and reports</li></ol>
+              <ul class="ticks">
+                <li>Built daytime, overnight and cross-midnight attendance schedules with different weekly offs per group. First-in and last-out logic stops stray mid-shift detections from distorting worked hours.</li>
+                <li>Fixed an incident where the terminal was online but events stopped reaching the server. The cause was a stale event channel held by the wrong client. A controlled restart restored live events, and the missed history was recovered from the device with no reset and no re-enrolment.</li>
+                <li>Migrated employees, departments and credentials to the cloud platform by reshaping the export into its import format, matching on employee ID to avoid duplicates.</li>
+                <li>Proved the cloud path by stopping the local services and confirming new events still arrived automatically.</li>
+              </ul>
+            </div>
+          </details>
           <ul class="tags"><li>Hikvision</li><li>HikCentral</li><li>Hik-Connect</li><li>ISAPI</li><li>PowerShell</li></ul>
         </div>
       </article>
 
-      <article class="entry">
+      <!-- Portfolio CI/CD -->
+      <article class="entry" id="portfolio">
         <div class="entry-meta">Cloud</div>
         <div>
           <h3>Cloud Portfolio &amp; CI/CD</h3>
-          <p>Production static portfolio hosted on Azure Static Web Apps with GitHub Actions-based continuous deployment. Every push to the main branch automatically publishes the latest version.</p>
-          <ol class="flow"><li>GitHub repository</li><li>GitHub Actions</li><li>Azure Static Web Apps</li><li>shakeer.space</li></ol>
-          <ul class="ticks">
-            <li>Azure Static Web Apps hosts the production static site.</li>
-            <li>GitHub Actions automatically deploys changes pushed to main.</li>
-            <li>Cloudflare manages DNS for the custom domain shakeer.space.</li>
-            <li>HTTPS and the custom domain are configured through Azure Static Web Apps.</li>
-            <li>Previously hosted on AWS S3/CloudFront; migrated to Azure Static Web Apps.</li>
-          </ul>
+          <p class="outcome">This site runs on Azure Static Web Apps, and every push to the main branch goes live automatically through GitHub Actions.</p>
+          <dl class="facts">
+            <div><dt>Problem</dt><dd>Hosting on AWS that I wanted to move onto Azure</dd></div>
+            <div><dt>What I did</dt><dd>Migrated to Azure Static Web Apps with GitHub Actions</dd></div>
+            <div><dt>Result</dt><dd>Every push to main deploys automatically</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How it works</summary>
+            <div class="deep-body">
+              <ol class="flow"><li>GitHub repository</li><li>GitHub Actions</li><li>Azure Static Web Apps</li><li>shakeer.space</li></ol>
+              <ul class="ticks">
+                <li>Azure Static Web Apps hosts the production static site.</li>
+                <li>GitHub Actions automatically deploys changes pushed to main.</li>
+                <li>Cloudflare manages DNS for the custom domain shakeer.space.</li>
+                <li>HTTPS and the custom domain are configured through Azure Static Web Apps.</li>
+                <li>Previously hosted on AWS S3/CloudFront; migrated to Azure Static Web Apps.</li>
+              </ul>
+            </div>
+          </details>
           <ul class="tags"><li>Azure Static Web Apps</li><li>GitHub Actions</li><li>Cloudflare</li><li>CI/CD</li></ul>
           <p class="entry-link"><a class="link" href="https://github.com/Sparkeeer/portfolio" target="_blank" rel="noopener">View on GitHub <i class="ri-arrow-right-up-line"></i></a></p>
         </div>
@@ -287,30 +363,50 @@
     <p class="dsec-note">Real problems from day-to-day work. Each one shows the situation and what I did. Names are left out.</p>
     <div class="list">
 
-      <article class="entry">
+      <article class="entry" id="mail-block">
         <div class="entry-meta">Outage, escalation</div>
         <div>
           <h3>Tenant blocked from sending mail</h3>
-          <p class="case-line"><b>Situation</b>A Microsoft outbound block (550 5.7.705) stopped every external email from a tenant for more than six days.</p>
-          <ul class="ticks">
-            <li>Ruled out DNS and connector causes and reviewed the domain's mail-flow risk report.</li>
-            <li>When the Microsoft case stalled, escalated with business-impact evidence to the engineer, technical lead and manager.</li>
-            <li>Drafted a business-continuity plan for critical communication while the block was in place.</li>
-          </ul>
+          <p class="outcome">A Microsoft outbound block (550 5.7.705) stopped every external email from a tenant for more than six days.</p>
+          <dl class="facts">
+            <div><dt>Situation</dt><dd>All outbound mail failing, Microsoft case stalled</dd></div>
+            <div><dt>What I did</dt><dd>Ruled out causes and escalated with evidence</dd></div>
+            <div><dt>Status</dt><dd>Escalated with evidence, continuity plan in place</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>What I did</summary>
+            <div class="deep-body">
+              <ul class="ticks">
+                <li>Ruled out DNS and connector causes and reviewed the domain's mail-flow risk report.</li>
+                <li>When the Microsoft case stalled, escalated with business-impact evidence to the engineer, technical lead and manager.</li>
+                <li>Drafted a business-continuity plan for critical communication while the block was in place.</li>
+              </ul>
+            </div>
+          </details>
           <ul class="tags"><li>Exchange Online</li><li>Incident management</li><li>Escalation</li></ul>
         </div>
       </article>
 
-      <article class="entry">
+      <article class="entry" id="seven-tenants">
         <div class="entry-meta">Architecture, advisory</div>
         <div>
           <h3>Consolidating seven tenants under one brand</h3>
-          <p class="case-line"><b>Situation</b>An organisation with seven Microsoft 365 tenants wanted everything under one company name.</p>
-          <ul class="ticks">
-            <li>Laid out the two real options: a Multitenant Organization (shared communication, tenants stay separate) or a full tenant-to-tenant migration (one tenant, one identity).</li>
-            <li>Found the licensing gap early: MTO cross-tenant sync needs Entra ID P1, and the tenants were on Business Basic.</li>
-            <li>Recommended a pilot group first, with MTO as a coexistence stage if they later migrate.</li>
-          </ul>
+          <p class="outcome">An organisation with seven Microsoft 365 tenants wanted everything under one company name.</p>
+          <dl class="facts">
+            <div><dt>Situation</dt><dd>Seven tenants, one company name</dd></div>
+            <div><dt>What I did</dt><dd>Compared MTO with a full migration and found the licensing gap</dd></div>
+            <div><dt>Recommendation</dt><dd>Start with a pilot group</dd></div>
+          </dl>
+          <details class="deep">
+            <summary>How I approached it</summary>
+            <div class="deep-body">
+              <ul class="ticks">
+                <li>Laid out the two real options: a Multitenant Organization (shared communication, tenants stay separate) or a full tenant-to-tenant migration (one tenant, one identity).</li>
+                <li>Found the licensing gap early: MTO cross-tenant sync needs Entra ID P1, and the tenants were on Business Basic.</li>
+                <li>Recommended a pilot group first, with MTO as a coexistence stage if they later migrate.</li>
+              </ul>
+            </div>
+          </details>
           <ul class="tags"><li>Entra ID</li><li>Multitenant Organization</li><li>Licensing</li></ul>
         </div>
       </article>
@@ -319,11 +415,21 @@
   </div>
 </section>
 
+<!-- ═══ CALL TO ACTION ═══ -->
+<section class="dsec">
+  <div class="container">
+    <h2>Want to talk through any of this?</h2>
+    <p class="dsec-note">Happy to go deeper on any project, or how I'd approach a problem on your team.</p>
+    <p style="margin-top:20px"><a class="btn" href="./index.html#contact">Get in touch <i class="ri-arrow-right-line"></i></a></p>
+  </div>
+</section>
+
 </main>
+
 <footer class="dfoot">
   <div class="container dfoot-inner">
     <a class="back" href="./index.html" data-back><i class="ri-arrow-left-line"></i> Back to portfolio</a>
-    <a class="back" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top <i class="ri-arrow-up-line"></i></a>
+    <a class="back" href="#top" id="to-top-link">Back to top <i class="ri-arrow-up-line"></i></a>
   </div>
 </footer>
 
@@ -339,6 +445,50 @@
       }
     } catch {}
   }));
+
+  /* Back to top */
+  document.getElementById("to-top-link").addEventListener("click", e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  /* Open the panel when a link points at a project (e.g. #ticketing) */
+  function openFromHash(){
+    try {
+      const el = location.hash && document.querySelector(location.hash);
+      if (el && el.matches(".entry")) el.querySelector("details.deep")?.setAttribute("open", "");
+    } catch {}
+  }
+  openFromHash();
+  addEventListener("hashchange", openFromHash);
+
+  /* Expand / collapse all */
+  const tAll = document.getElementById("toggle-all");
+  tAll.addEventListener("click", () => {
+    const all = [...document.querySelectorAll("details.deep")];
+    const open = !all.every(d => d.open);
+    all.forEach(d => d.open = open);
+    tAll.textContent = open ? "Collapse all" : "Expand all";
+  });
+
+  /* Copy-link button next to each project title */
+  document.querySelectorAll(".entry[id] h3").forEach(h => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "copy-link";
+    b.setAttribute("aria-label", "Copy link to this project");
+    b.innerHTML = '<i class="ri-link"></i>';
+    b.addEventListener("click", () => {
+      const url = location.origin + location.pathname + "#" + h.closest(".entry").id;
+      navigator.clipboard?.writeText(url).then(() => {
+        b.innerHTML = '<i class="ri-check-line"></i>';
+        setTimeout(() => b.innerHTML = '<i class="ri-link"></i>', 1500);
+      });
+    });
+    h.append(b);
+  });
+
+  /* Footer year-free; theme follows the choice saved on the homepage */
 </script>
 
 </body>

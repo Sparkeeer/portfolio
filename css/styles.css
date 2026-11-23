@@ -468,3 +468,27 @@ kbd{font-family:var(--mono);font-size:.7rem;border:1px solid var(--border);borde
 .dfoot{border-top:1px solid var(--border);padding:22px 0;margin-top:56px}
 .dfoot-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:560px){.dbar .brand span{display:none}}
+
+/* ── Details page: summary first, depth on click ── */
+.entry .outcome{color:var(--text);font-size:1.05rem;line-height:1.55;margin-bottom:16px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 28px;padding:14px 0;margin-bottom:6px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.facts dt{font-size:.78rem;font-weight:590;color:var(--c1);margin-bottom:4px}
+.facts dd{font-size:.93rem;color:var(--muted);line-height:1.5}
+.deep{margin-top:4px}
+.deep > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:10px 0;font-weight:510;font-size:.95rem;color:var(--c1)}
+.deep > summary::-webkit-details-marker{display:none}
+.deep > summary::before{content:"+";display:grid;place-items:center;width:20px;height:20px;border:1px solid currentColor;border-radius:50%;font-size:.85rem;line-height:1;transition:transform var(--ease)}
+.deep[open] > summary::before{content:"−"}
+.deep > summary:hover{text-decoration:underline;text-underline-offset:3px}
+.deep-body{padding:6px 0 4px 18px;border-left:1px solid var(--border);margin-left:9px}
+.deep-body .sub-h:first-child{margin-top:6px}
+@media (max-width:700px){.facts{grid-template-columns:1fr}}
+@media print{.deep-body{display:block!important}}
+
+.dnav-btn{margin-left:auto;background:none;border:0;color:var(--c1);font:inherit;font-weight:510;font-size:.95rem;cursor:pointer}
+.dnav-btn:hover{text-decoration:underline;text-underline-offset:3px}
+.copy-link{margin-left:8px;background:none;border:0;color:var(--muted);cursor:pointer;font-size:.9rem;vertical-align:middle;opacity:0;transition:opacity var(--ease)}
+.entry h3:hover .copy-link,.copy-link:focus-visible{opacity:1}
+@media (hover:none){.copy-link{opacity:.6}}
+/* Comfortable reading width */
+.entry > div:last-child{max-width:72ch}

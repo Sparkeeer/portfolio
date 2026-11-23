@@ -483,3 +483,36 @@ console.log(
   "\nFellow Naruto fan? Try 'dattebayo' or 'troublesome' in the terminal.",
   "font:600 14px Inter,sans-serif;color:#8fa8c8", "font:12px Inter,sans-serif"
 );
+
+/* Open the panel when the link points at a project (e.g. #ticketing) */
+function openFromHash(){
+  const el = location.hash && document.querySelector(location.hash);
+  if (el && el.matches(".entry")) el.querySelector("details.deep")?.setAttribute("open", "");
+}
+openFromHash();
+addEventListener("hashchange", openFromHash);
+
+/* Expand / collapse all */
+const tAll = document.getElementById("toggle-all");
+tAll?.addEventListener("click", () => {
+  const all = [...document.querySelectorAll("details.deep")];
+  const open = !all.every(d => d.open);
+  all.forEach(d => d.open = open);
+  tAll.textContent = open ? "Collapse all" : "Expand all";
+});
+
+/* Copy-link button next to each project title */
+document.querySelectorAll(".entry[id] h3").forEach(h => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "copy-link";
+  b.setAttribute("aria-label", "Copy link to this project");
+  b.innerHTML = '<i class="ri-link"></i>';
+  b.addEventListener("click", () => {
+    const url = location.origin + location.pathname + "#" + h.closest(".entry").id;
+    navigator.clipboard?.writeText(url).then(() => {
+      b.innerHTML = '<i class="ri-check-line"></i>';
+      setTimeout(() => b.innerHTML = '<i class="ri-link"></i>', 1500);
+    });
+  });
+  h.append(b);
+});

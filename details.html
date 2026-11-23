@@ -105,62 +105,46 @@
     <div class="list">
 
       <article class="entry" id="ticketing">
-        <div class="entry-meta">Automation, flagship</div>
-        <div>
-          <h3>Mail-to-Ticket System</h3>
-          <p>The shared support mailbox was a general inbox. I turned it into a ticketing system in Dynamics 365 Customer Service, so every real request becomes a tracked, classified and routed case. About 80% less manual ticket work, and first response in under 10 minutes.</p>
-          <ol class="flow"><li>Email arrives</li><li>ARC rule filters</li><li>Case created or threaded</li><li>Classified</li><li>Power Automate routes</li><li>Agent works the case</li></ol>
+  <div class="entry-meta">Automation, flagship</div>
+  <div>
+    <h3>Mail-to-Ticket System</h3>
+    <p class="outcome">Turned a noisy shared support mailbox into a Dynamics 365 ticketing system, so every real request becomes a tracked, routed case.</p>
 
-          <h4 class="sub-h">1. Mail intake</h4>
-          <ul class="ticks">
-            <li>Connected the shared support mailbox to a Dynamics queue with server-side synchronization for incoming and outgoing mail.</li>
-            <li>Set up an Automatic Record Creation (ARC) rule so a case is created whenever the support address is in To or Cc.</li>
-            <li>Kept the original mail in the mailbox, so nothing is lost if a rule changes.</li>
-          </ul>
+    <dl class="facts">
+      <div><dt>Problem</dt><dd>Real requests buried under alerts, digests and vendor mail</dd></div>
+      <div><dt>What I did</dt><dd>Filtering, threading, classification and routing in Dynamics 365</dd></div>
+      <div><dt>Result</dt><dd>~80% less manual work, first reply under 10 min</dd></div>
+    </dl>
 
-          <h4 class="sub-h">2. Noise filtering</h4>
-          <ul class="ticks">
-            <li>Studied what actually lands in the mailbox, then replaced broad keyword filters with precise ones. "alert" and "noreply" were blocking real requests.</li>
-            <li>The rule now skips monitoring-tool alerts, quarantine digests, webinars and unsubscribe/marketing mail before any case is created.</li>
-            <li>Tested with mail that should and shouldn't become cases, and checked each result in the ARC Activity Monitor.</li>
-          </ul>
+    <details class="deep">
+      <summary>How I built it</summary>
+      <div class="deep-body">
+        <ol class="flow"><li>Email arrives</li><li>ARC rule filters</li><li>Case created or threaded</li><li>Classified</li><li>Power Automate routes</li></ol>
 
-          <h4 class="sub-h">3. Threading and no duplicates</h4>
-          <ul class="ticks">
-            <li>Turned on email correlation, tracking tokens and smart matching, so replies attach to the existing case instead of opening a new one.</li>
-            <li>Stopped duplicate timeline entries caused by mail being tracked twice between internal users.</li>
-          </ul>
+        <h4 class="sub-h">Mail intake and filtering</h4>
+        <ul class="ticks">
+          <li>Connected the support mailbox to a Dynamics queue with server-side sync, and set an ARC rule to create a case whenever the support address is in To or Cc.</li>
+          <li>Replaced broad keyword filters with precise ones, so monitoring alerts, quarantine digests and marketing mail are skipped while real requests get through.</li>
+        </ul>
 
-          <h4 class="sub-h">4. Classification model</h4>
-          <ul class="ticks">
-            <li>Built all changes in a dedicated solution on the standard Case table, so they can be moved between environments.</li>
-            <li>Work Type (Incident, Service Request, Monitoring Alert, Project Work, Vendor Escalation, Security Event, Administrative/FYI, Manual Review), plus Category, Source Type, Waiting On and Impact Scope.</li>
-            <li>Vendor Ticket ID and Related Project fields, plus monitoring fields: alert device, alert state, first/last detected, recovery received.</li>
-          </ul>
+        <h4 class="sub-h">Threading and classification</h4>
+        <ul class="ticks">
+          <li>Email correlation and tracking tokens attach replies to the existing case, with no duplicates.</li>
+          <li>A custom solution on the Case table with Work Type, Category, Waiting On, Impact Scope, plus vendor and monitoring fields.</li>
+        </ul>
 
-          <h4 class="sub-h">5. Routing and rules</h4>
-          <ul class="ticks">
-            <li>Three review queues (Manual Review, Monitoring Review, Project &amp; Vendor Review) behind a routing ruleset.</li>
-            <li>A Power Automate flow that routes each case by Work Type, and another that keeps Status Reason in sync with Waiting On. I used a flow because business rules can't reliably set status.</li>
-            <li>Business rules require the right fields for vendor escalations, project work and monitoring alerts.</li>
-          </ul>
+        <h4 class="sub-h">Routing and agent experience</h4>
+        <ul class="ticks">
+          <li>Three review queues, Power Automate routing by Work Type, and a flow that keeps Status in sync with Waiting On.</li>
+          <li>Business rules require the right fields per case type. Redesigned the form and views, and turned on Copilot summaries.</li>
+          <li>Turned on auditing and fixed internal staff being recorded as customers.</li>
+        </ul>
+      </div>
+    </details>
 
-          <h4 class="sub-h">6. Agent experience</h4>
-          <ul class="ticks">
-            <li>Reworked the case form into a 35/65 layout so the timeline and Copilot panel have room. Removed panels nobody used.</li>
-            <li>Turned on Copilot case summaries and email drafting.</li>
-            <li>Rebuilt the case views around Status Reason, Waiting On, Work Type and Impact Scope, with newest cases first.</li>
-          </ul>
-
-          <h4 class="sub-h">7. Hardening</h4>
-          <ul class="ticks">
-            <li>Fixed internal staff being recorded as the customer on cases.</li>
-            <li>Turned on auditing after a case went missing, so every change can be traced.</li>
-          </ul>
-
-          <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li><li>Dataverse</li><li>Copilot</li></ul>
-        </div>
-      </article>
+    <ul class="tags"><li>Dynamics 365</li><li>Power Automate</li><li>Exchange Online</li><li>Dataverse</li></ul>
+  </div>
+</article>
 
       <article class="entry" id="migrations">
   <div class="entry-meta">Migration</div>
